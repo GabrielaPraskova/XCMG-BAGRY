@@ -1,13 +1,13 @@
 <template>
   <div>
     
-    <router-link to="/stroje">STROJE</router-link>|
-    <router-link to="/pujcovna">PŮJCOVNA</router-link>|
-    <router-link to="/servis">SERVIS</router-link>|
-    <router-link to="/spolecnost">O SPOLEČNOSTI</router-link>|
-    <router-link to="/kontakt">KONTAKT</router-link>
+    <router-link to="/stroje">Stroje</router-link>|
+    <router-link to="/pujcovna">Půjčovna</router-link>|
+    <router-link to="/servis">Servis</router-link>|
+    <router-link to="/spolecnost">O společnosti</router-link>|
+    <router-link to="/kontakt">Kontakt</router-link>
 
-    <h1>PŮJCOVNA</h1>
+    <h1>Půjčovna</h1>
   </div>
 </template>
 
