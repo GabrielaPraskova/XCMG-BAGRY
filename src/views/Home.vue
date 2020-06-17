@@ -8,7 +8,7 @@
 
       <ul class="menu">
         <router-link id="a" to="/stroje">Stroje</router-link>
-        <router-link id="a" to="/pujcovna">Pjčovna</router-link>
+        <router-link id="a" to="/pujcovna">Půjčovna</router-link>
         <router-link id="a" to="/servis">Servis</router-link>
         <router-link id="a" to="/spolecnost">O společnosti</router-link>
         <router-link id="a" to="/kontakt">Kontakt</router-link>
