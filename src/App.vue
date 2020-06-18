@@ -1,49 +1,51 @@
 
 <template>
-<div id="app">
-  <!-- <head>
+  <div id="app">
+    <!-- <head>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
-  </head> -->
+    </head>-->
+
+    <div id="nav">
+      <div class="prvniMenu">
+        <ul class="kontakt">
+          <li class="k">Kontakt</li>
+          <li class="telefon">
+            <v-icon color="black">mdi-phone</v-icon>+420 733 798 032
+          </li>
+          <li class="email">
+            <v-icon color="black">mdi-email</v-icon>xcmg@servis.com
+          </li>
+        </ul>
+
+        <div class="servis">
+          <li class="servisniHodiny">Servisní hodiny (9:00 - 17:30)</li>
+        </div>
+      </div>
+
+      <div class="druheMenu">
+        <div class="logo">
+          <router-link to="/">
+            <img src="/logo.png" alt="XCMG" />
+          </router-link>
+        </div>
+
+        <ul class="menu">
+          <router-link id="a" to="/stroje">Stroje</router-link>
+          <router-link id="a" to="/pujcovna">Půjčovna</router-link>
+          <router-link id="a" to="/servis">Servis</router-link>
+          <router-link id="a" to="/spolecnost">O společnosti</router-link>
+          <router-link id="a" to="/kontakt">Kontakt</router-link>
+        </ul>
+      </div>
+    </div>
+
   
-  <div id="nav">
-    <div class="prvniMenu">
-      <ul class="kontakt">
-        <li class="k">Kontakt</li>
-        <li class="telefon">
-          <v-icon color="black">mdi-phone</v-icon>+420 733 798 032
-        </li>
-        <li class="email">
-          <v-icon color="black">mdi-email</v-icon>xcmg@servis.com
-        </li>
-      </ul>
 
-      <div class="servis">
-        <li class="servisniHodiny">Servisní hodiny (9:00 - 17:30)</li>
-      </div>
-    </div>
-
-    <div class="druheMenu">
-      <div class="logo">
-        <router-link to="/">
-          <img src="/logo.png" alt="XCMG" />
-        </router-link>
-      </div>
-
-      <ul class="menu">
-        <router-link id="a" to="/stroje">Stroje</router-link>
-        <router-link id="a" to="/pujcovna">Půjčovna</router-link>
-        <router-link id="a" to="/servis">Servis</router-link>
-        <router-link id="a" to="/spolecnost">O společnosti</router-link>
-        <router-link id="a" to="/kontakt">Kontakt</router-link>
-      </ul>
-    </div>
+    <router-view />
   </div>
-
-  <router-view />
-</div>
 </template>
 
 <style>
