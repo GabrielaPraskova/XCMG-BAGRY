@@ -34,6 +34,7 @@ export default {};
 
 
 <style>
+
 .celniObr {
   max-width: 40%;
   height: auto;
@@ -52,10 +53,8 @@ export default {};
 
 .paticka {
   display: flex;
-  list-style: none;
- 
+  list-style: none; 
 }
-
 
 .kont,
 .servis {

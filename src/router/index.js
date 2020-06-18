@@ -6,7 +6,8 @@ import Spolecnost from '../views/Spolecnost.vue'
 import Pujcovna from '../views/Pujcovna.vue'
 import Servis from '../views/Servis.vue'
 import Kontakt from '../views/Kontakt.vue'
-import Konfigurator from '../views/Konfigurator.vue'
+import Konfigurator1 from '../views/Konfigurator1.vue'
+import Konfigurator2 from '../views/Konfigurator2.vue'
 
 Vue.use(VueRouter)
 
@@ -44,9 +45,14 @@ Vue.use(VueRouter)
     component: Kontakt
   },
   {
-    path: '/konfigurator',
-    name: 'Konfigurator',
-    component: Konfigurator
+    path: '/konfigurator1',
+    name: 'Konfigurator1',
+    component: Konfigurator1
+  },
+  {
+    path: '/konfigurator2',
+    name: 'Konfigurator2',
+    component: Konfigurator2
   },
 ]
 
