@@ -5,7 +5,7 @@
     
     <h1>Predstaveni o strojich a klik na konfigurator</h1>
 
-    <button> Konfigurátor</button>
+    <button> <router-link  to="/Konfigurator">Konfigurátor</router-link></button>
   </div>
 </template>
 
