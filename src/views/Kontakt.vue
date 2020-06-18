@@ -1,6 +1,6 @@
 <template>
   <div class="kontejner">
-    <div class="kontkat">
+    <div class="kontakat">
     <h1>Kontakt</h1>
     
     
@@ -16,15 +16,6 @@
       Ing. Radek Klofáč – jednatel – realizace<br/>
       tel: +420 777 728 063<br/>
       e-mail: klofac@pkbau.cz</p>
-      <h3>Stavební výroba</h3>
-      <p>Ing. Stanislav Drapák – stavbyvedoucí<br/>
-      tel: +420 601 300 141<br/>
-      e-mail: drapak@pkbau.cz<br/>
-      Marek Šemík – stavbyvedoucí<br/>
-      tel: +420 607 880 935<br/>
-      e-mail: semik@pkbau.cz<br/>
-     
-      </p>
       <h3>Kancelář</h3>
       <p>Ivana Jarošová – asistentka<br/>
       tel: +420 601 300 140<br/>

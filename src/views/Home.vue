@@ -1,7 +1,7 @@
 <template>
   <div>
-    <img class="celniObr" src="/ZL50G.jpg" alt="obrazekZJ50G" />
-    <img class="rypadloObr" src="/XE250.jpg" alt="obrazekXE250" />
+    <img class="celniObr" src="/LW800KN.jpg" alt="obrazekLW800KN" />
+    <img class="rypadloObr" src="/LP500JK.jpg" alt="obrazekLP500JK" />
 
     <v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn>
     <v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn>
@@ -36,12 +36,12 @@ export default {};
 <style>
 
 .celniObr {
-  max-width: 40%;
+  max-width: 5%;
   height: auto;
 }
 
 .rypadloObr {
-  max-width: 30%;
+  max-width: 50%;
   height: auto;
 }
 
