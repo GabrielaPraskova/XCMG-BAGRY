@@ -40,15 +40,20 @@ export default {};
 </script>
 
 <style>
-h1,
 h3{
   color:#3498db;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 50px}
+
+h1{
+  margin-top: 20px;
+  margin-left: 50px;
+  text-align: left;
 }
 p{
   text-align: left;
-  margin: 20px;
+  padding: 20px;
+  margin-left: 50px;
   
 }
 </style>
