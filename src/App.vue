@@ -1,22 +1,21 @@
 
 <template>
   <div id="app">
-    <!-- <head>
+    <head>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    </head>-->
+      rel="stylesheet"/>
+    </head>
 
     <div id="nav">
       <div class="prvniMenu">
         <ul class="kontakt">
-          <li class="k">Kontakt</li>
+          <li class="k"></li>
           <li class="telefon">
-            <v-icon color="black">mdi-phone</v-icon>+420 733 798 032
-          </li>
+            <v-icon color="#FFEB3B">mdi-phone</v-icon>+420 733 798 032
+            </li>
           <li class="email">
-            <v-icon color="black">mdi-email</v-icon>xcmg@servis.com
+            <v-icon color="#FFEB3B">mdi-email</v-icon>xcmg@servis.com
           </li>
         </ul>
 
@@ -28,7 +27,7 @@
       <div class="druheMenu">
         <div class="logo">
           <router-link to="/">
-            <img src="/logo.png" alt="XCMG" />
+            <img class="logo" src="/logo.png" alt="XCMG" />
           </router-link>
         </div>
 
@@ -52,16 +51,16 @@
 .prvniMenu {
   display: flex;
   justify-content: space-between;
+  text-align: center;
   background-color: white;
   border-top: grey solid 1px;
-  border-bottom: grey solid 1px;
-  align-items: center;
 }
 
 .druheMenu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-shrink: 1;
+  text-align: center;
   background-color: white;
   border-top: grey solid 1px;
   border-bottom: grey solid 1px;
@@ -72,6 +71,7 @@
   list-style: none;
   margin: 5px;
   padding: 0px;
+  font-size: 13px;
 }
 
 .servisniHodiny {
@@ -88,13 +88,13 @@
 
 #a {
   display: block;
-  padding: 15px 50px;
+  padding: 25px 50px;
   color: #3498db;
   text-decoration: none;
 }
 
 a:hover {
-  background-color: grey;
+  background-color: #EEEEEE;
   color: #3498db;
 }
 
@@ -116,7 +116,7 @@ a:hover {
 }
 
 #nav a.router-link-exact-active {
-  color: blue;
+  color: grey;
 }
 
 h1,
@@ -124,4 +124,6 @@ h2,
 h3{
   color:#3498db
 }
+
+
 </style>
