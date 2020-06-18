@@ -2,11 +2,11 @@
 
 export default [
   { koloveBagry:[
-    { id: O1, nazev: "LW180K", nosnost: 1.8, hmotnost: 6.2, obrazek: LW180K.jpg, motor: "Yuchai YC4D80-T3A1"
+    { id: 1, nazev: "LW180K", nosnost: 1.8, hmotnost: 6.2, obrazek: LW180K.jpg, motor: "Yuchai YC4D80-T3A1"
     },
-    { id: O2, nazev: "ZL3OG", nosnost: 3, hmotnost: 10.8, obrazek: ZL3OG.jpg, motor: "Perkins 1006D-6TA92"
+    { id: 2, nazev: "ZL3OG", nosnost: 3, hmotnost: 10.8, obrazek: ZL3OG.jpg, motor: "Perkins 1006D-6TA92"
     },
-    { id: O3, nazev: "ZL40G", nosnost: 4, hmotnost: 14.5, obrazek: ZL40G.jpg, motor: "Shanchai Sc8d"
+    { id: 3, nazev: "ZL40G", nosnost: 4, hmotnost: 14.5, obrazek: ZL40G.jpg, motor: "Shanchai Sc8d"
     },
     { id: O4, nazev: "ZL5OG",obrazek: ZL5OG.jpg, motor: ""
     },
