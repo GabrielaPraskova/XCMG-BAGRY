@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="kontejner">
+    <div class="kontkat">
     <h1>Kontakt</h1>
     
     
@@ -31,6 +32,11 @@
       <h3>Otevírací doba:</h3>
       <p>Po – Pá 8:00 – 17:30<br/>
       nebo dle telefonické dohody</p>
+      </div>
+      <div class="obrazek">
+        <img src="building.png" alt="budova">
+
+      </div>
     
   </div>
 </template>
@@ -40,6 +46,10 @@ export default {};
 </script>
 
 <style>
+.kontejner{
+  display: flex;
+  justify-content: space-around;
+}
 h3{
   color:#3498db;
   text-align: left;
@@ -49,6 +59,7 @@ h1{
   margin-top: 20px;
   margin-left: 50px;
   text-align: left;
+  margin-bottom: 30px;
 }
 p{
   text-align: left;
