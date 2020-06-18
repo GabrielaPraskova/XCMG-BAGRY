@@ -36,7 +36,7 @@
 
         <p>Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
 
-<p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
+        <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
         <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
       </div>
     </div>

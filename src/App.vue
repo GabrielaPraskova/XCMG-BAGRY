@@ -118,4 +118,10 @@ a:hover {
 #nav a.router-link-exact-active {
   color: blue;
 }
+
+h1,
+h2,
+h3{
+  color:#3498db
+}
 </style>

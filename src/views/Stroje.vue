@@ -5,7 +5,7 @@
     
     <h1>Predstaveni o strojich a klik na konfigurator</h1>
 
-    <button> <router-link  to="/Konfigurator">Konfigurátor</router-link></button>
+    <button id="tlacitkoKonfigurator"> <router-link  to="/Konfigurator">Konfigurátor</router-link></button>
   </div>
 </template>
 
@@ -14,4 +14,6 @@ export default {};
 </script>
 
 <style>
+
+
 </style>

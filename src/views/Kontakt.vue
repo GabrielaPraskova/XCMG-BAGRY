@@ -1,9 +1,37 @@
 <template>
   <div>
-    
-  
-
     <h1>Kontakt</h1>
+    
+    
+      <h3>Adresa</h3>
+      <p>Dolní 141 <br/>
+      582 91 Světlá nad Sázavou<br/>
+      IČ: 08757127 | DIČ: CZ08757127<br/>
+      info@pkbau.cz</p>
+      <h3>Vedení společnosti</h3>
+      <p>Ing. Ondřej Prášek – jednatel – nabídky<br/>
+      tel: +420 777 728 275<br/>
+      e-mail: prasek@pkbau.cz<br/>
+      Ing. Radek Klofáč – jednatel – realizace<br/>
+      tel: +420 777 728 063<br/>
+      e-mail: klofac@pkbau.cz</p>
+      <h3>Stavební výroba</h3>
+      <p>Ing. Stanislav Drapák – stavbyvedoucí<br/>
+      tel: +420 601 300 141<br/>
+      e-mail: drapak@pkbau.cz<br/>
+      Marek Šemík – stavbyvedoucí<br/>
+      tel: +420 607 880 935<br/>
+      e-mail: semik@pkbau.cz<br/>
+     
+      </p>
+      <h3>Kancelář</h3>
+      <p>Ivana Jarošová – asistentka<br/>
+      tel: +420 601 300 140<br/>
+      e-mail: pkbau@pkbau.cz</p>
+      <h3>Otevírací doba:</h3>
+      <p>Po – Pá 8:00 – 17:30<br/>
+      nebo dle telefonické dohody</p>
+    
   </div>
 </template>
 
@@ -12,4 +40,15 @@ export default {};
 </script>
 
 <style>
+h1,
+h3{
+  color:#3498db;
+  text-align: left;
+  margin-left: 20px;
+}
+p{
+  text-align: left;
+  margin: 20px;
+  
+}
 </style>
