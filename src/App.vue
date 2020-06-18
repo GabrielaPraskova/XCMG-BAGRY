@@ -4,11 +4,11 @@
       <div class="prvniRadek">
         <ul class="kontakt">
           <li class="k">Kontakt</li>
-          <li class="telefon">+420 733 798 032</li>
-          <li class="email">xcmg@servis.com</li>
+          <li class="telefon"><v-icon color="black">mdi-phone</v-icon>+420 733 798 032</li>
+          <li class="email"><v-icon color="black">mdi-email</v-icon>xcmg@servis.com</li>
         </ul>
 
-        <div class="servisniHodiny">
+        <div class="servis">
           <li class="servisniHodiny">Servisní hodiny (9:00 - 17:30)</li>
         </div>
       </div>
@@ -16,7 +16,7 @@
       <div class="druhyRadek">
         <div class="logo">
           <router-link to="/">
-            <img src="/logo.png" alt="XCMG" />
+            <img src="/logo.png" alt="XCMG"/>
           </router-link>
         </div>
 
@@ -38,17 +38,17 @@
 .prvniRadek {
   display: flex;
   justify-content: space-between;
-  background-color: silver;
-  color: #3498db;
+  background-color: white;
   border-top: grey solid 1px;
   border-bottom: grey solid 1px;
+   align-items: center;
 }
 
 .druhyRadek {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: beige;
+  background-color: white;
   color: #3498db;
   border-top: grey solid 1px;
   border-bottom: grey solid 1px;
@@ -57,8 +57,16 @@
 .kontakt {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 0px;
+
+
+}
+
+.servisniHodiny {
+ list-style: none;
+ margin: 5px;
+
 }
 
 .menu {
@@ -88,9 +96,9 @@ a:hover {
   color: #2c3e50;
 }
 
-#nav {
+/* #nav {
   padding: 30px;
-}
+} */
 
 #nav a {
   font-weight: bold;
