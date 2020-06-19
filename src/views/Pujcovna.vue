@@ -15,14 +15,18 @@
     <div class="obrazky">
       <div class="prvni">
         <img class="celniObr" src="/LW800KN.jpg" alt="obrazekLW800KN" />
-        <p>Popis</p>
-        <p>Cena</p>
+        <div>
+        <h3>LW800KN</h3>
+        alsdkfj;asdifj
+        <h3>Cena</h3>
+         od 1500 Kč
+        </div>
       </div>
       <div class="druhy">
         <img class="celniObr" src="/ZL50G.jpg" alt="obrazekLW800KN" />
       </div>
       <div class="treti">
-        <img class="celniObr" src="/ZL50G.jpg" alt="obrazekLW800KN" />
+        <img class="celniObr" src="/kolove/LW180K.jpg" alt="obrazekLW800KN" />
       </div>
     </div>
   </div>
@@ -43,5 +47,9 @@ p {
 
 .celniObr {
   max-width: 5%;
+}
+
+.prvni {
+  display: flex;
 }
 </style>
