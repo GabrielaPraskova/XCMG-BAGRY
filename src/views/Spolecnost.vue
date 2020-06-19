@@ -10,10 +10,10 @@
 
         <p>
           XCMG je
-          <strong>5</strong>. největší stavební strojní společnost na světě. Je na
-          <strong>65</strong>. místě v seznamu
-          <strong>500</strong> nejlepších čínských společností, na
-          <strong>44</strong>. místě v seznamu 100 nejlepších čínských výrobních podniků a 4. na seznamu 100 nejlepších čínských výrobců strojů.
+          <strong><span style="font-size: 18px;">5</span></strong>. největší stavební strojní společnost na světě. Je na
+          <strong><span style="font-size: 18px;">65</span></strong>. místě v seznamu
+          <strong><span style="font-size: 18px;">500</span></strong> nejlepších čínských společností, na
+          <strong><span style="font-size: 18px;">44</span></strong>. místě v seznamu 100 nejlepších čínských výrobních podniků a 4. na seznamu 100 nejlepších čínských výrobců strojů.
         </p>
 
         <p>XCMG pro váš úspěch!</p>
@@ -32,17 +32,14 @@ export default {};
   border: 1px solid grey;
   width: 500px;
   padding: 20px;
+  text-align: left;
+  /* font-size: px; */
 }
 
 .kontejner{
   display: flex;
   text-align:center;
   
-}
-
-.predstaveni,
-.obrazek {
-  text-align:center;
 }
 
 

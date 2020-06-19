@@ -1,34 +1,79 @@
 <template>
   <div class="kontejner">
     <div class="kontakat">
-    <h1>Kontakt</h1>
-    
-    
+      <h1>Kontakt</h1>
+
       <h3>Adresa</h3>
-      <p>Dolní 141 <br/>
-      582 91 Světlá nad Sázavou<br/>
-      IČ: 08757127 | DIČ: CZ08757127<br/>
-      info@pkbau.cz</p>
+      <p>
+        Dolní 141
+        <br />582 91 Světlá nad Sázavou
+        <br />IČ: 08757127 | DIČ: CZ08757127
+        <br />info@pkbau.cz
+      </p>
+      <hr />
+      <br />
       <h3>Vedení společnosti</h3>
-      <p>Ing. Ondřej Prášek – jednatel – nabídky<br/>
-      tel: +420 777 728 275<br/>
-      e-mail: prasek@pkbau.cz<br/>
-      Ing. Radek Klofáč – jednatel – realizace<br/>
-      tel: +420 777 728 063<br/>
-      e-mail: klofac@pkbau.cz</p>
+      <p>
+        Ing. Martin Prášek – jednatel
+        <br />tel: +420 777 728 275
+        <br />e-mail: prasek@xcmg.cz
+        <br />Ing. Radek Klofáč – jednatel
+        <br />tel: +420 777 728 063
+        <br />e-mail: klofac@xcmg.cz
+      </p>
+      <hr />
+      <br />
       <h3>Kancelář</h3>
-      <p>Ivana Jarošová – asistentka<br/>
-      tel: +420 601 300 140<br/>
-      e-mail: pkbau@pkbau.cz</p>
+      <p>
+        Ivana Jarošová – asistentka
+        <br />tel: +420 601 300 140
+        <br />e-mail: xcmg@xcmg.cz
+      </p>
+      <hr />
+      <br />
       <h3>Otevírací doba:</h3>
-      <p>Po – Pá 8:00 – 17:30<br/>
-      nebo dle telefonické dohody</p>
-      </div>
-      <div class="obrazek">
-        <img src="building.png" alt="budova">
+      <p>
+        Po – Pá 8:00 – 17:30
+        <br />nebo dle telefonické dohody
+      </p>
+    </div>
+    <div class="obrazek">
+      <div>
+        <img src="building.png" alt="budova" />
+        <h3>Napište nám</h3>
+        <br />
+        <hr />
+        <div class="jmenoPrijmeni">
+         <v-col cols="12" sm="6" md="6">
+          <v-text-field
+            label="Jméno"
+            outlined
+          ></v-text-field>
+        </v-col>
+         <v-col cols="12" sm="6" md="6">
+          <v-text-field
+            label="Příjmení"
+            outlined
+          ></v-text-field>
+        </v-col>
+        </div>
+        <v-col cols="12" sm="6" md="6">
+          <v-text-field
+            label="Předmět"
+            outlined
+          ></v-text-field>
+        </v-col>
+        
+        <v-textarea
+          outlined
+          name="input-7-4"
+          label="Outlined textarea"
+          value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+        ></v-textarea>
+        <v-btn class="ma-2" outlined color="#3498db">Odeslat</v-btn>
 
       </div>
-    
+    </div>
   </div>
 </template>
 
@@ -37,25 +82,29 @@ export default {};
 </script>
 
 <style>
-.kontejner{
+.kontejner {
   display: flex;
   justify-content: space-around;
 }
-h3{
-  color:#3498db;
+h3 {
+  color: #3498db;
   text-align: left;
-  margin-left: 50px}
+  margin-left: 50px;
+}
 
-h1{
+h1 {
   margin-top: 20px;
   margin-left: 50px;
   text-align: left;
   margin-bottom: 30px;
 }
-p{
+p {
   text-align: left;
   padding: 20px;
   margin-left: 50px;
-  
+}
+
+.jmenoPrijmeni {
+  display: flex;
 }
 </style>

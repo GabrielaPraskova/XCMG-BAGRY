@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="kontejner">
+      <div class="prvni">
       <img class="celniObr" src="/ZL50G.jpg" alt="obrazekZJ50G" />
-
-      <div class="prostredek">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat, alias libero quas quibusdam nisi? Labore magnam eum, exercitationem adipisci dolore velit architecto quae ipsa facilis aspernatur hic, odit aperiam!</p>
+</div>
+      <div class="druhy">
         <h1>ZL50G(CE)</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat, alias libero quas quibusdam nisi? Labore magnam eum, exercitationem adipisci dolore velit architecto quae ipsa facilis aspernatur hic, odit aperiam!</p>
+        
         <v-col class="d-flex" cols="12" sm="6">
           <v-select :items="items" label="Nosnost" dense solo></v-select>
         </v-col>
@@ -27,7 +29,7 @@
 
       </div>
 
-      <div class="pravaStrana">
+      <div class="treti">
         <h1>Cena</h1>
         <p>bagr 890 000,- Kč</p>
         <p>naklikane polozky</p>
@@ -53,8 +55,8 @@ export default {};
   margin: 50px;
 }
 
-.prostredek,
-.pravaStrana {
+.druhy,
+.treti {
   text-align: left;
 }
 
