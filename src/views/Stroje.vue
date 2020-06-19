@@ -5,8 +5,11 @@
     
     <h1>Predstaveni o strojich a klik na konfigurator</h1>
 
-    <button id="tlacitkoKonfigurator1"> <router-link  to="/Konfigurator1">Konfigurátor1</router-link></button>
-    <button id="tlacitkoKonfigurator1"> <router-link  to="/Konfigurator2">Konfigurátor2</router-link></button>
+    <v-btn class="ma-2"  outlined color="#3498db"><router-link  to="/Konfigurator1">Konfiguruj kolové</router-link></v-btn>
+    <v-btn class="ma-2" outlined color="#3498db"><router-link  to="/Konfigurator2">Konfiguruj rypadla</router-link></v-btn>
+
+    <!--https://vuetifyjs.com/en/styles/text-and-typography/ -->
+    
   </div>
 </template>
 
@@ -15,6 +18,7 @@ export default {};
 </script>
 
 <style>
+
 
 
 </style>

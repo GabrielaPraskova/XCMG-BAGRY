@@ -39,7 +39,7 @@
     </div>
     <div class="obrazek">
       <div>
-        <img src="building.png" alt="budova" />
+        <img src="mapa.jpg" alt="mapa" />
         <h3>Napište nám</h3>
         <br />
         <hr />
