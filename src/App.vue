@@ -21,7 +21,7 @@
       </ul>
 
       <div class="servis">
-        <li class="servisniHodiny">Servisní hodiny (9:00 - 17:30)</li>
+        <li class="servisniHodiny">Servisní hodiny (8:00 - 17:00)</li>
       </div>
     </div>
 
