@@ -22,15 +22,13 @@ export default [
     ],
     
     rypadla:[
-    { id: 11, nazev: "XE35E", hmotnost: 4.2, obrazek: "XE35E.jpg", motor:"3TNV88-B"},
-    { id: 12, nazev: "XE60C", hmotnost: 6, obrazek: "XE60C.jpg", motor: "4TNV94L-BVXG"},
-    { id: 13, nazev: "XE75D", hmotnost: 7.4, obrazek: "XE75D.jpg", motor: "V2607-DI-TE3B"},
-    { id: 14, nazev: "XE150D", hmotnost: 14.4, obrazek: "XE150D.jpg", motor: "Cummins 4BTAA3.9"},
-    { id: 15, nazev: "XE210C", hmotnost: 21, obrazek: "XE210C.jpg", motor: "QSB6.7"},
-    { id: 16, nazev: "XE250C", hmotnost: 24.8, obrazek: "XE250C.jpg", motor: "QSB6.7"},
-    { id: 17, nazev: "XE300C", hmotnost: 30.1, obrazek:" XE300C.jpg", motor: "QSB6.7"},
-    { id: 18, nazev: "XE370cb", hmotnost: 36.8, obrazek: "XE370cb.jpg", motor: "QSCB.3-C260"},]
-}]
+      { id: 11, nazev: "XE35E", hmotnost: 4.2, obrazek: "XE35E.jpg", motor:"3TNV88-B"},
+      { id: 12, nazev: "XE60C", hmotnost: 6, obrazek: "XE60C.jpg", motor: "4TNV94L-BVXG"},
+      { id: 14, nazev: "XE150D", hmotnost: 14.4, obrazek: "XE150D.jpg", motor: "Cummins 4BTAA3.9"},
+      { id: 15, nazev: "XE210C", hmotnost: 21, obrazek: "XE210C.jpg", motor: "QSB6.7"},
+      { id: 16, nazev: "XE250C", hmotnost: 24.8, obrazek: "XE250C.jpg", motor: "QSB6.7"},
+      { id: 18, nazev: "XE370cb", hmotnost: 36.8, obrazek: "XE370cb.jpg", motor: "QSCB.3-C260"},]
+  }]
     
     
     
