@@ -30,22 +30,14 @@ export default {};
 <style>
 .predstaveni {
   border: 1px solid grey;
-  width: 500px;
+  width: 700px;
   padding: 20px;
   text-align: left;
-  /* font-size: px; */
 }
 
-.kontejner{
-  display: flex;
-  justify-content: center;
-  
-}
 
-.predstaveni,
-.obrazek {
-  justify-content: center;
-}
+
+
 
 
   

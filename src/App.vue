@@ -78,12 +78,13 @@
   border-bottom: grey solid 1px;
 }
 
-.kontakt {
+.kontakt,
+.servisniHodiny {
   display: flex;
   list-style: none;
   margin: 5px;
   padding: 0px;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .servisniHodiny {
@@ -96,6 +97,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 25px;
 }
 
 #a {
@@ -135,5 +137,9 @@ h1,
 h2,
 h3 {
   color: #3498db;
+}
+
+.logo {
+  max-width: 100%;
 }
 </style>

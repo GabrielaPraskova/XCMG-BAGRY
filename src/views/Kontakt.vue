@@ -1,7 +1,26 @@
 <template>
   <div class="kontejner">
     <div class="kontakat">
-      <h1>Kontakt</h1>
+      <div class="formular">
+        <h3>Napište nám</h3>
+        <br />
+
+        <div class="jmenoPrijmeni">
+          <v-col cols="12" sm="6" md="6">
+            <v-text-field label="Jméno" outlined color="#3498db"></v-text-field>
+          </v-col>
+          <v-col cols="12" sm="6" md="6">
+            <v-text-field label="Příjmení" outlined color="#3498db"></v-text-field>
+          </v-col>
+        </div>
+        <v-col cols="12" sm="6" md="6">
+          <v-text-field label="Předmět" outlined color="#3498db"></v-text-field>
+        </v-col>
+
+        <v-textarea outlined color="#3498db" name="input-7-4" label value></v-textarea>
+        <v-btn class="ma-2" outlined color="#3498db">Odeslat</v-btn>
+      </div>
+      <!-- <h1>Kontakt</h1>
 
       <h3>Adresa</h3>
       <p>
@@ -35,43 +54,11 @@
       <p>
         Po – Pá 8:00 – 17:30
         <br />nebo dle telefonické dohody
-      </p>
+      </p>-->
     </div>
     <div class="obrazek">
       <div>
-        <img src="mapa.jpg" alt="mapa" />
-        <h3>Napište nám</h3>
-        <br />
-        <hr />
-        <div class="jmenoPrijmeni">
-         <v-col cols="12" sm="6" md="6">
-          <v-text-field
-            label="Jméno"
-            outlined color="#3498db"
-          ></v-text-field>
-        </v-col>
-         <v-col cols="12" sm="6" md="6">
-          <v-text-field
-            label="Příjmení"
-            outlined color="#3498db"
-          ></v-text-field>
-        </v-col>
-        </div>
-        <v-col cols="12" sm="6" md="6" >
-          <v-text-field
-            label="Předmět"
-            outlined color="#3498db"
-          ></v-text-field>
-        </v-col>
-        
-        <v-textarea
-          outlined color="#3498db"
-          name="input-7-4"
-          label=""
-          value=""
-        ></v-textarea>
-        <v-btn class="ma-2" outlined color="#3498db">Odeslat</v-btn>
-
+        <img class="mapa" src="mapa.jpg" alt="mapa" />
       </div>
     </div>
   </div>
@@ -106,5 +93,9 @@ p {
 
 .jmenoPrijmeni {
   display: flex;
+}
+
+.mapa {
+  max-width: 100%;
 }
 </style>
