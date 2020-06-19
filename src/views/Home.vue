@@ -3,7 +3,7 @@
     <img class="celniObr" src="/LW800KN.jpg" alt="obrazekLW800KN" />
     <img class="rypadloObr" src="/LP500JK.jpg" alt="obrazekLP500JK" />
 
-    <v-btn class="ma-2" outlined color="#3498db"><router-link  to="/Konfigurator1">Konfiguruj</router-link></v-btn>
+    <router-link  to="/Konfigurator1"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link>
     <v-btn class="ma-2" outlined color="#3498db"><router-link  to="/Konfigurator2">Konfiguruj</router-link></v-btn>
 
     <v-footer>

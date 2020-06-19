@@ -18,7 +18,7 @@
 
     <h3>Náhradní díly pro stroje SANY, CAT, Volvo, Komatsu, Bobcat, JCB objednávejte:</h3>
 
-    <p >Telefon: +420 604 446 813 
+    <p>Telefon: +420 604 446 813 
 
     <br/>E-Mail: dily@caracal-machines.cz   </p>
     <p></p>
