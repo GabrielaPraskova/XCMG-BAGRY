@@ -47,28 +47,28 @@
          <v-col cols="12" sm="6" md="6">
           <v-text-field
             label="Jméno"
-            outlined
+            outlined color="#3498db"
           ></v-text-field>
         </v-col>
          <v-col cols="12" sm="6" md="6">
           <v-text-field
             label="Příjmení"
-            outlined
+            outlined color="#3498db"
           ></v-text-field>
         </v-col>
         </div>
-        <v-col cols="12" sm="6" md="6">
+        <v-col cols="12" sm="6" md="6" >
           <v-text-field
             label="Předmět"
-            outlined
+            outlined color="#3498db"
           ></v-text-field>
         </v-col>
         
         <v-textarea
-          outlined
+          outlined color="#3498db"
           name="input-7-4"
-          label="Outlined textarea"
-          value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+          label=""
+          value=""
         ></v-textarea>
         <v-btn class="ma-2" outlined color="#3498db">Odeslat</v-btn>
 

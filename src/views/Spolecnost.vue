@@ -38,8 +38,13 @@ export default {};
 
 .kontejner{
   display: flex;
-  text-align:center;
+  justify-content: center;
   
+}
+
+.predstaveni,
+.obrazek {
+  justify-content: center;
 }
 
 
