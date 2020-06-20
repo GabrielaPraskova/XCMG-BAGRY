@@ -37,7 +37,7 @@
           <v-subheader>Nadstandartní výbava</v-subheader>
 
           <v-checkbox
-            v-for="(vec, index) in Detail.nadstandart"
+            v-for="(vec, index) in Data.nadstandart"
             v-bind:key="index"
             v-model="aktivniNadstandart[vec.id]"
             :label="`${(vec.nazev)}`"
@@ -47,7 +47,7 @@
 
             <button
               v-on:click="vyberBarvu(barva)"
-              v-for="(barva, index) in Detail.barvy"
+              v-for="(barva, index) in Data.barvy"
               v-bind:key="index"
               v-bind:style="`background: ${barva}`"
             ></button>
@@ -90,21 +90,22 @@
 
         <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
         <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
+        {{vyberNastandart}}
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Detail from "./../assets/Data/data.js";
+import Data from "./../assets/Data/data.js";
 
-console.log(Detail.prislusenstvi);
-let bagry = Detail.stroje.filter(stroj => stroj.typ === "bagr");
+console.log(Data.prislusenstvi);
+let bagry = Data.stroje.filter(stroj => stroj.typ === "bagr");
 
 export default {
   data() {
     return {
-      Detail,
+      Data,
       aktivniBagr: bagry[0],
       bagry,
       aktivniStranka: 0,
@@ -116,13 +117,25 @@ export default {
 
   computed: {
     vyberKolove() {
-      const kolove = Detail.prislusenstvi.filter(
+      const kolove = Data.prislusenstvi.filter(
         polozka => polozka.typ === "bagr"
       );
       console.log(kolove);
       return kolove;
-     },
-     
+    },
+
+    vyberNastandart(){
+      const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
+        .filter(nadstandard => nadstandard[1] === true)
+        .map(fruit =>
+        {
+          const id = fruit[0];
+          const nadstandardnaPolozka = Data.nadstandart.find( polozka => polozka.id.toString() === id.toString() );
+          return nadstandardnaPolozka.nazev
+        })
+
+      return nazvyNadstandart
+    },
   },
 
   methods: {
