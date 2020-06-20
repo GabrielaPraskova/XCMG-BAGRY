@@ -65,41 +65,52 @@
       </div>
 
       <div class="druhy2" v-if="aktivniStranka === 1">
-           <v-subheader>Nadstandartní výbava</v-subheader>
-        
-          <v-checkbox 
+        <v-subheader>Nadstandartní výbava</v-subheader>
+
+        <v-checkbox
           v-for="(vec, index) in Detail.nadstandart"
           v-bind:key="index"
-          v-model="checkbox1" :label="`${(vec.nazev)}`"></v-checkbox>
-          <div class="barvy">
-            <v-subheader>Barva</v-subheader>
+          v-model="checkbox1"
+          :label="`${(vec.nazev)}`"
+        ></v-checkbox>
+        <div class="barvy">
+          <v-subheader>Barva</v-subheader>
 
-            <button  
+          <button
             v-for="(barva, index) in Detail.barvy"
             v-bind:key="index"
-            v-bind:style="`background: ${barva}`" > XYZ </button>
-            
-          </div>       
-        
-               
+            v-bind:style="`background: ${barva}`"
+          >XYZ</button>
+        </div>
       </div>
 
-<!-- v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)" -->
-
-
-       <div  class="druhy3" v-if="aktivniStranka === 2">
-       <img 
-       v-for="(polozka, index) in Detail.prislusentvi"
-       v-bind:key="index"
-       class="prislusenstvi" v-bind:src="(`/kolove/${polozka.obrazek}`)" alt="lzice">
-       <input type="checkbox">
-      
-        
+      <div class="druhy3" v-if="aktivniStranka === 2">
+        <img
+          v-for="(polozka, index) in Detail.prislusentvi"
+          v-bind:key="index"
+          class="prislusenstvi"
+          v-bind:src="(`/kolove/${polozka.obrazek}`)"
+          alt="lzice"
+        />
+        <input type="checkbox" />
       </div>
-      <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">PREVIOUS</v-btn> {{ aktivniStranka}}
-      <v-btn v-on:click="next" class="ma-2" outlined color="#3498db" v-if="aktivniStranka < 3" >NEXT </v-btn>
-    </div>
-
+      <div>
+        <v-btn
+          v-on:click="prev"
+          class="ma-2"
+          outlined
+          color="#3498db"
+          v-if="aktivniStranka > 0"
+        >PREVIOUS</v-btn>
+        {{ aktivniStranka}}
+        <v-btn
+          v-on:click="next"
+          class="ma-2"
+          outlined
+          color="#3498db"
+          v-if="aktivniStranka < 3"
+        >NEXT</v-btn>
+      </div>
 
       <div class="treti">
         <h1>Cena</h1>
@@ -135,9 +146,11 @@ export default {
 
   computed: {
     vyberKolove() {
-    const kolove = Detail.prislusenstvi.filter(polozka => polozka.typ === 'bagr')
-    console.log(kolove)
-    return kolove
+      const kolove = Detail.prislusenstvi.filter(
+        polozka => polozka.typ === "bagr"
+      );
+      console.log(kolove);
+      return kolove;
     }
   },
 
