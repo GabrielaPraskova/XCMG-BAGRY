@@ -103,7 +103,7 @@ export default {
           id: 4,
           typ: "bagr",
           nazev: "ZL5OG",
-          obrazek: "ZZL5OG.jpg",
+          obrazek: "ZL5OG.jpg",
           motor: [
             { nazevMotoru: "Shanchai Sc8d", cenaMotoruBez: 0, vykon: "125 kW/2200 rpm", krouticiMoment: "700 Nm / 1400~1600 rpm", prevodovka: "převodník točivého momentu" },
             { nazevMotoru: "Perkins 1204J-E44", cenaMotoruBez: 258000, vykon: "39.8 kW/2000 - 2200 rpm", krouticiMoment: "815Nm / 1400 rpm", prevodovka: "převodník točivého momentu" }],
