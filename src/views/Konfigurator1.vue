@@ -5,7 +5,10 @@
         <img class="celniObr" src="/ZL50G.jpg" alt="obrazekZJ50G" />
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat, alias libero quas quibusdam nisi? Labore magnam eum, exercitationem adipisci dolore velit architecto quae ipsa facilis aspernatur hic, odit aperiam!</p>
       </div>
-      <div v-if="viditelne === true" class="druhy">
+
+      <div class="tlacitkaKonfigurator">
+
+      <div v-if="aktivniStranka === 0" class="druhy">
         <h1>ZL50G(CE)</h1>
         <button
           v-on:click="nastavAktivnibagr(bagr)"
@@ -25,20 +28,31 @@
           </v-radio-group>
         </v-col>
 
-        <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db">PREVIOS</v-btn>
-        <v-btn v-on:click="next" class="ma-2" outlined color="#3498db">NEXT</v-btn>
       </div>
 
-      <div v-else class="druhy2">
+      <div class="druhy2" v-if="aktivniStranka === 1">
         <v-col class="d-flex" cols="12" sm="14">
           <v-select :items="items" filled label="Nadstandardní výbava" dense></v-select>
         </v-col>
         <v-col class="d-flex" cols="12" sm="14">
           <v-select :items="items" label="Příslušenství" dense outlined></v-select>
         </v-col>
-        <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db">PREVIOS</v-btn>
-        <v-btn v-on:click="next" class="ma-2" outlined color="#3498db">NEXT</v-btn>
+        
       </div>
+
+       <div  class="druhy3" v-if="aktivniStranka === 2">
+        <v-col class="d-flex" cols="12" sm="14">
+          <v-select :items="items" filled label="Barva" dense></v-select>
+        </v-col>
+        <v-col class="d-flex" cols="12" sm="14">
+          <v-select :items="items" label="Příslušenství" dense outlined></v-select>
+        </v-col>
+        
+      </div>
+      <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db">PREVIOS</v-btn>
+      <v-btn v-on:click="next" class="ma-2" outlined color="#3498db">NEXT </v-btn>
+    </div>
+
 
       <div class="treti">
         <h1>Cena</h1>
@@ -79,8 +93,16 @@ export default {
     },
 
     next() {
-      this.viditelne = !this.viditelne
+      this.aktivniStranka++;
+      
+    },
+
+    prev(){
+      this.aktivniStranka--
+      
     }
+
+
   }
 };
 </script>
