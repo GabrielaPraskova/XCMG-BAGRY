@@ -32,13 +32,13 @@
       </div>
 
       <ul class="menu">
-        <router-link class="menuLink" to="/stroje">
+        <div class="menuLink" >
           Stroje
           <div class="podmenu">
             <router-link class="menuLink" to="/Konfigurator1">Kolové bagry</router-link>
             <router-link class="menuLink" to="/Konfigurator2">Rypadla</router-link>
           </div>
-        </router-link>
+        </div>
         <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>
         <router-link class="menuLink" to="/servis">Servis</router-link>
         <router-link class="menuLink" to="/spolecnost">O společnosti</router-link>

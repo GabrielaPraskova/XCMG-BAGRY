@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Stroje from '../views/Stroje.vue'
+
 import Spolecnost from '../views/Spolecnost.vue'
 import Pujcovna from '../views/Pujcovna.vue'
 import Servis from '../views/Servis.vue'
@@ -17,11 +17,7 @@ Vue.use(VueRouter)
     name: 'Home',
     component: Home
   },
-  {
-    path: '/stroje',
-    name: 'Stroje',
-    component: Stroje
-  },
+  
   {
     path: '/pujcovna',
     name: 'Pujcovna',
