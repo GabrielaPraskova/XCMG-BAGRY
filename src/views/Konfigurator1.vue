@@ -2,61 +2,67 @@
   <div>
     <div class="kontejner">
       <div class="prvni">
-        <img class="celniObr" v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)" alt="obrazekBagrKolove" />
+        <img
+          class="celniObr"
+          v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)"
+          alt="obrazekBagrKolove"
+        />
         <p>{{aktivniBagr.technickeParametry}}</p>
       </div>
 
       <div class="tlacitkaKonfigurator">
+        <div v-if="aktivniStranka === 0" class="druhy">
+          <h1>ZL50G(CE)</h1>
+          <button
+            v-on:click="nastavAktivnibagr(bagr)"
+            v-bind:class="{active: bagr === aktivniBagr}"
+            v-for="(bagr,index) in bagry"
+            v-bind:key="index"
+          >
+            <div>Nosnost: {{bagr.technickeParametry.nosnost}}t</div>
+            <div>Hmotnost:{{bagr.technickeParametry.hmotnost}}t</div>
+          </button>
 
-      <div v-if="aktivniStranka === 0" class="druhy">
-        <h1>ZL50G(CE)</h1>
-        <button
-          v-on:click="nastavAktivnibagr(bagr)"
-          v-bind:class="{active: bagr.id === aktivniId}"
-          v-for="(bagr,index) in bagry"
-          v-bind:key="index"
-        >
-          <div>Nosnost: {{bagr.technickeParametry.nosnost}}t</div>
-          <div>Hmotnost:{{bagr.technickeParametry.hmotnost}}t</div>
-        </button>
+          <v-col cols="12" sm="6" md="4">
+            <v-subheader>Motor</v-subheader>
+            <v-radio-group v-model="direction" hide-details>
+              <v-radio value="top" label="MT30"></v-radio>
+              <v-radio value="right" label="XD50"></v-radio>
+            </v-radio-group>
+          </v-col>
+        </div>
 
-        <v-col cols="12" sm="6" md="4">
-          <v-subheader>Motor</v-subheader>
-          <v-radio-group v-model="direction" hide-details>
-            <v-radio value="top" label="MT30"></v-radio>
-            <v-radio value="right" label="XD50"></v-radio>
-          </v-radio-group>
-        </v-col>
+        <div class="druhy2" v-if="aktivniStranka === 1">
+          <v-checkbox
+            v-for="(vec, index) in Detail.nadstandart"
+            v-bind:key="index"
+            v-model="checkbox1"
+            :label="`${(vec.nazev)}`"
+          ></v-checkbox>
+        </div>
 
+        <div class="druhy3" v-if="aktivniStranka === 2">
+          <div v-for="(polozka, index) in vyberKolove" v-bind:key="index">
+            <img class="prislusenstvi" v-bind:src="(`/kolove/${polozka.obrazek}`)" alt="lzice" />
+            <v-checkbox v-model="checkbox1" :label="`${polozka.nazev}`"></v-checkbox>
+          </div>
+        </div>
+        <v-btn
+          v-on:click="prev"
+          class="ma-2"
+          outlined
+          color="#3498db"
+          v-if="aktivniStranka > 0"
+        >PREVIOUS</v-btn>
+        {{ aktivniStranka}}
+        <v-btn
+          v-on:click="next"
+          class="ma-2"
+          outlined
+          color="#3498db"
+          v-if="aktivniStranka < 3"
+        >NEXT</v-btn>
       </div>
-
-      <div class="druhy2" v-if="aktivniStranka === 1">
-        
-          <v-checkbox 
-          v-for="(vec, index) in Detail.nadstandart"
-          v-bind:key="index"
-          v-model="checkbox1" :label="`${(vec.nazev)}`"></v-checkbox>
-          
-        
-               
-      </div>
-
-<!-- v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)" -->
-
-
-       <div  class="druhy3" v-if="aktivniStranka === 2">
-       <img 
-       v-for="(polozka, index) in Detail.prislusentvi"
-       v-bind:key="index"
-       class="prislusenstvi" v-bind:src="(`/kolove/${polozka.obrazek}`)" alt="lzice">
-       <input type="checkbox">
-      
-        
-      </div>
-      <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">PREVIOUS</v-btn> {{ aktivniStranka}}
-      <v-btn v-on:click="next" class="ma-2" outlined color="#3498db" v-if="aktivniStranka < 3" >NEXT </v-btn>
-    </div>
-
 
       <div class="treti">
         <h1>Cena</h1>
@@ -77,10 +83,8 @@
 <script>
 import Detail from "./../assets/Data/data.js";
 
-console.log(Detail);
+console.log(Detail.prislusenstvi);
 let bagry = Detail.stroje.filter(stroj => stroj.typ === "bagr");
-console.log(bagry);
-
 
 export default {
   data() {
@@ -88,8 +92,16 @@ export default {
       Detail,
       aktivniBagr: "",
       bagry,
-      aktivniStranka: 0,
+      aktivniStranka: 0
     };
+  },
+
+  computed: {
+    vyberKolove() {
+    const kolove = Detail.prislusenstvi.filter(polozka => polozka.typ === 'bagr')
+    console.log(kolove)
+    return kolove
+    }
   },
 
   methods: {
@@ -99,15 +111,11 @@ export default {
 
     next() {
       this.aktivniStranka++;
-      
     },
 
-    prev(){
-      this.aktivniStranka--
-      
+    prev() {
+      this.aktivniStranka--;
     }
-
-
   }
 };
 </script>
@@ -145,5 +153,10 @@ button {
   border-radius: 5px;
   text-align: left;
   margin: 10px;
+}
+
+.prislusenstvi {
+  max-width: 10%;
+  display: block;
 }
 </style>
