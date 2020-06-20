@@ -59,25 +59,23 @@
             <v-checkbox v-model="checkbox1" :label="`${polozka.nazev}`"></v-checkbox>
           </div>
         </div>
+        <div>
+          <v-btn
+            v-on:click="prev"
+            class="ma-2"
+            outlined
+            color="#3498db"
+            v-if="aktivniStranka > 0"
+          >PREVIOUS</v-btn>
 
-      </div>
-
-      <div>
-        <v-btn
-          v-on:click="prev"
-          class="ma-2"
-          outlined
-          color="#3498db"
-          v-if="aktivniStranka > 0"
-        >PREVIOUS</v-btn>
-       
-        <v-btn
-          v-on:click="next"
-          class="ma-2"
-          outlined
-          color="#3498db"
-          v-if="aktivniStranka < 3"
-        >NEXT</v-btn>
+          <v-btn
+            v-on:click="next"
+            class="ma-2"
+            outlined
+            color="#3498db"
+            v-if="aktivniStranka < 3"
+          >NEXT</v-btn>
+        </div>
       </div>
 
       <div class="treti">
