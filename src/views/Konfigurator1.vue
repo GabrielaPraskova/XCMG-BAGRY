@@ -82,7 +82,7 @@
       <div class="treti">
         <h1>Cena</h1>
         <p>bagr 890 000,- Kč</p>
-        <p>naklikane polozky {{aktivniNadstandart}}, {{aktivniBarva}} </p>
+        <p>naklikane polozky {{aktivniNadstandart}}, {{aktivniBarva}}, {{aktivniMotor}}</p>
         <hr />
         <p>Cena celkem bez DPH</p>
 
@@ -105,12 +105,11 @@ export default {
   data() {
     return {
       Detail,
-      aktivniBagr: "",
-      aktivniRadio: "",
+      aktivniBagr: bagry[0],
       bagry,
       aktivniStranka: 0,
-      aktivniMotor: "",
-      aktivniBarva:"",
+      aktivniMotor: bagry[0].motor[0].nazevMotoru,
+      aktivniBarva: "yellow",
       aktivniNadstandart:{}
     };
   },
@@ -122,12 +121,14 @@ export default {
       );
       console.log(kolove);
       return kolove;
-    }
+     },
+     
   },
 
   methods: {
-    nastavAktivnibagr(id) {
-      this.aktivniBagr = id;
+    nastavAktivnibagr(bagr) {
+      this.aktivniBagr = bagr;
+      this.aktivniMotor = this.aktivniBagr.motor[0].nazevMotoru;
     },
 
 
