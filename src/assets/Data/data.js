@@ -335,5 +335,7 @@ export default {
       {id:2, typ: "bagr", nazev:"elektronicky ovládaný joystick", cenaSDPH: 24900, cenaBezDPH: 30129},
       {id:3, typ: "bagr", nazev:"zpětná kamera", cenaSDPH: 4900, cenaBezDPH: 5929},
       {id:4, typ: "bagr", nazev:"SPZ", cenaSDPH: 24900, cenaBezDPH: 30129}
-    ]
-  };
+    ],
+
+    barvy:["red", "black", "blue", "yellow", "green"]
+  }

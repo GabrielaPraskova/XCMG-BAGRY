@@ -31,12 +31,21 @@
       </div>
 
       <div class="druhy2" v-if="aktivniStranka === 1">
+           <v-subheader>Nadstandartní výbava</v-subheader>
         
           <v-checkbox 
           v-for="(vec, index) in Detail.nadstandart"
           v-bind:key="index"
           v-model="checkbox1" :label="`${(vec.nazev)}`"></v-checkbox>
-          
+          <div class="barvy">
+            <v-subheader>Barva</v-subheader>
+
+            <button  
+            v-for="(barva, index) in Detail.barvy"
+            v-bind:key="index"
+            v-bind:style="`background: ${barva}`" > XYZ </button>
+            
+          </div>       
         
                
       </div>
