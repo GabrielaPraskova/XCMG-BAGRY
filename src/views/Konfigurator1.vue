@@ -7,29 +7,29 @@
       </div>
       <div class="druhy">
         <h1>ZL50G(CE)</h1>
+        <button
+          v-on:click="nastavAktivniId(bagr.id)"
+          v-bind:class="{active: bagr.id === aktivniId}"
+          v-for="(bagr,index) in ahoj"
+          v-bind:key="index"
+        >
+          <div>Nosnost:</div>
+          <div>Hmotnost:</div>
+        </button>
 
-        <v-col class="d-flex" cols="12" sm="14">
-          <v-select :items="items" label="Nosnost" dense solo></v-select>
-        </v-col>
-
-        <v-col class="d-flex" cols="12" sm="14">
-          <v-select :items="items" label="Hmotnost" dense outlined></v-select>
-        </v-col>
         <v-col cols="12" sm="6" md="4">
           <v-subheader>Motor</v-subheader>
           <v-radio-group v-model="direction" hide-details>
-            <div class="radioButton">
-              <v-radio value="top" label="MT30"></v-radio>
-              <v-radio value="right" label="XD50"></v-radio>
-            </div>
+            <v-radio value="top" label="MT30"></v-radio>
+            <v-radio value="right" label="XD50"></v-radio>
           </v-radio-group>
         </v-col>
-        <v-col class="d-flex" cols="12" sm="14">
+        <!-- <v-col class="d-flex" cols="12" sm="14">
           <v-select :items="items" filled label="Nadstandardní výbava" dense></v-select>
         </v-col>
         <v-col class="d-flex" cols="12" sm="14">
           <v-select :items="items" label="Příslušenství" dense outlined></v-select>
-        </v-col>
+        </v-col>-->
       </div>
 
       <div class="treti">
@@ -49,15 +49,34 @@
 </template>
 
 <script>
-import Detail from "./../assets/Data/data.js"
+  import Detail from "./../assets/Data/data.js";
+  
+  console.log(Detail);
+  
+  let bagry = Detail.stroje.filter(stroj => stroj.typ === "bagr");
+  console.log(bagry);
+export default {
+  data() {
+    return {
+      aktivniId: "",
 
-console.log(Detail);
+      ahoj: [
+        { id: 2, hmotnost: 56, nosnost: 66 },
+        { id: 5, hmotnost: 55, nosnost: 23 },
+        { id: 8, hmotnost: 99, nosnost: 89 },
+        { id: 6, hmotnost: 22, nosnost: 12 }
+      ]
+    };
+  },
 
-let bagry = Detail.stroje.filter( stroj => stroj.typ === "bagr" );
-console.log(bagry)
+  methods: {
+    nastavAktivniId(id) {
+      this.aktivniId = id;
+    }
+  }
+};
 
 
-export default {};
 </script>
 
 <style>
@@ -67,7 +86,7 @@ export default {};
 
 .prvni,
 .druhy {
-  padding-right: 50px
+  padding-right: 50px;
 }
 .druhy,
 .treti {
@@ -76,10 +95,14 @@ export default {};
 
 .celniObr {
   max-width: 50%;
-  height: auto;
+  align-self: center;
 }
 
-.radioButton {
-  display: flex;
+.active {
+  border: 1px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  margin: 10px;
 }
 </style>
