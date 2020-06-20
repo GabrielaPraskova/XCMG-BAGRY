@@ -24,10 +24,11 @@
           </button>
 
           <v-col cols="12" sm="6" md="4">
-            <v-subheader>Motor</v-subheader>
-            <v-radio-group v-model="direction" hide-details>
-              <v-radio value="top" label="MT30"></v-radio>
-              <v-radio value="right" label="XD50"></v-radio>
+            <v-subheader>{{aktivniMotor}}</v-subheader>
+            <v-radio-group v-model="aktivniMotor" hide-details>
+              <v-radio v-for="(motor, index) in aktivniBagr.motor" 
+            v-bind:key="index" :value="motor.nazevMotoru" :label="motor.nazevMotoru"></v-radio>
+              <!-- <v-radio value="XD50" label={{motor.nazevMotoru}}></v-radio> -->
             </v-radio-group>
           </v-col>
         </div>
@@ -104,8 +105,10 @@ export default {
     return {
       Detail,
       aktivniBagr: "",
+      aktivniRadio: "",
       bagry,
-      aktivniStranka: 0
+      aktivniStranka: 0,
+      aktivniMotor: "",
     };
   },
 
@@ -124,13 +127,16 @@ export default {
       this.aktivniBagr = id;
     },
 
+
     next() {
       this.aktivniStranka++;
     },
 
     prev() {
       this.aktivniStranka--;
-    }
+    },
+
+    
   }
 };
 </script>
