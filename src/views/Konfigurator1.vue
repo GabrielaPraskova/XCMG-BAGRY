@@ -31,13 +31,14 @@
       </div>
 
       <div class="druhy2" v-if="aktivniStranka === 1">
-        <v-col class="d-flex" cols="12" sm="14">
-          <v-select :items="items" filled label="Nadstandardní výbava" dense></v-select>
-        </v-col>
-        <v-col class="d-flex" cols="12" sm="14">
-          <v-select :items="items" label="Příslušenství" dense outlined></v-select>
-        </v-col>
         
+          <v-checkbox 
+          v-for="(vec, index) in Detail.nadstandart"
+          v-bind:key="index"
+          v-model="checkbox1" :label="`${(vec.nazev)}`"></v-checkbox>
+          
+        
+               
       </div>
 
        <div  class="druhy3" v-if="aktivniStranka === 2">
@@ -49,7 +50,7 @@
         </v-col>
         
       </div>
-      <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">PREVIOUS</v-btn>
+      <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">PREVIOUS</v-btn> {{ aktivniStranka}}
       <v-btn v-on:click="next" class="ma-2" outlined color="#3498db" v-if="aktivniStranka < 3" >NEXT </v-btn>
     </div>
 
@@ -74,12 +75,14 @@
 import Detail from "./../assets/Data/data.js";
 
 console.log(Detail);
-
 let bagry = Detail.stroje.filter(stroj => stroj.typ === "bagr");
 console.log(bagry);
+
+
 export default {
   data() {
     return {
+      Detail,
       aktivniBagr: "",
       bagry,
       aktivniStranka: 0,
