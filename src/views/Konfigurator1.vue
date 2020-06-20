@@ -49,8 +49,8 @@
         </v-col>
         
       </div>
-      <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db">PREVIOS</v-btn>
-      <v-btn v-on:click="next" class="ma-2" outlined color="#3498db">NEXT </v-btn>
+      <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">PREVIOUS</v-btn>
+      <v-btn v-on:click="next" class="ma-2" outlined color="#3498db" v-if="aktivniStranka < 3" >NEXT </v-btn>
     </div>
 
 
