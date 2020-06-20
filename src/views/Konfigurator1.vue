@@ -33,12 +33,23 @@
         </div>
 
         <div class="druhy2" v-if="aktivniStranka === 1">
+          <v-subheader>Nadstandartní výbava</v-subheader>
+
           <v-checkbox
             v-for="(vec, index) in Detail.nadstandart"
             v-bind:key="index"
             v-model="checkbox1"
             :label="`${(vec.nazev)}`"
           ></v-checkbox>
+          <div class="barvy">
+            <v-subheader>Barva</v-subheader>
+
+            <button
+              v-for="(barva, index) in Detail.barvy"
+              v-bind:key="index"
+              v-bind:style="`background: ${barva}`"
+            >XYZ</button>
+          </div>
         </div>
 
         <div class="druhy3" v-if="aktivniStranka === 2">
@@ -47,53 +58,9 @@
             <v-checkbox v-model="checkbox1" :label="`${polozka.nazev}`"></v-checkbox>
           </div>
         </div>
-        <v-btn
-          v-on:click="prev"
-          class="ma-2"
-          outlined
-          color="#3498db"
-          v-if="aktivniStranka > 0"
-        >PREVIOUS</v-btn>
-        {{ aktivniStranka}}
-        <v-btn
-          v-on:click="next"
-          class="ma-2"
-          outlined
-          color="#3498db"
-          v-if="aktivniStranka < 3"
-        >NEXT</v-btn>
+
       </div>
 
-      <div class="druhy2" v-if="aktivniStranka === 1">
-        <v-subheader>Nadstandartní výbava</v-subheader>
-
-        <v-checkbox
-          v-for="(vec, index) in Detail.nadstandart"
-          v-bind:key="index"
-          v-model="checkbox1"
-          :label="`${(vec.nazev)}`"
-        ></v-checkbox>
-        <div class="barvy">
-          <v-subheader>Barva</v-subheader>
-
-          <button
-            v-for="(barva, index) in Detail.barvy"
-            v-bind:key="index"
-            v-bind:style="`background: ${barva}`"
-          >XYZ</button>
-        </div>
-      </div>
-
-      <div class="druhy3" v-if="aktivniStranka === 2">
-        <img
-          v-for="(polozka, index) in Detail.prislusentvi"
-          v-bind:key="index"
-          class="prislusenstvi"
-          v-bind:src="(`/kolove/${polozka.obrazek}`)"
-          alt="lzice"
-        />
-        <input type="checkbox" />
-      </div>
       <div>
         <v-btn
           v-on:click="prev"
@@ -102,7 +69,7 @@
           color="#3498db"
           v-if="aktivniStranka > 0"
         >PREVIOUS</v-btn>
-        {{ aktivniStranka}}
+       
         <v-btn
           v-on:click="next"
           class="ma-2"
