@@ -12,8 +12,6 @@
           v-bind:class="{active: bagr.id === aktivniId}"
           v-for="(bagr,index) in ahoj"
           v-bind:key="index"
-          
-
         >
           <div>Nosnost:</div>
           <div>Hmotnost:</div>
@@ -31,7 +29,7 @@
         </v-col>
         <v-col class="d-flex" cols="12" sm="14">
           <v-select :items="items" label="Příslušenství" dense outlined></v-select>
-        </v-col> -->
+        </v-col>-->
       </div>
 
       <div class="treti">
@@ -51,28 +49,34 @@
 </template>
 
 <script>
+  import Detail from "./../assets/Data/data.js";
+  
+  console.log(Detail);
+  
+  let bagry = Detail.stroje.filter(stroj => stroj.typ === "bagr");
+  console.log(bagry);
 export default {
-   data() {
-        return {
-            aktivniId: '',
+  data() {
+    return {
+      aktivniId: "",
 
-            ahoj: [
-              {id: 2, hmotnost: 56, nosnost: 66},
-              {id: 5, hmotnost: 55, nosnost: 23},
-              {id: 8, hmotnost: 99, nosnost: 89},
-              {id: 6, hmotnost: 22, nosnost: 12}
-            ]
-           
-        }
-    },
+      ahoj: [
+        { id: 2, hmotnost: 56, nosnost: 66 },
+        { id: 5, hmotnost: 55, nosnost: 23 },
+        { id: 8, hmotnost: 99, nosnost: 89 },
+        { id: 6, hmotnost: 22, nosnost: 12 }
+      ]
+    };
+  },
 
-    methods: {
-      nastavAktivniId(id) {
-        this.aktivniId = id;
-       
-        }
+  methods: {
+    nastavAktivniId(id) {
+      this.aktivniId = id;
     }
-}
+  }
+};
+
+
 </script>
 
 <style>
