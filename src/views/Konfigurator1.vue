@@ -3,7 +3,7 @@
     <div class="kontejner">
       <div class="prvni">
         <img class="celniObr" v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)" alt="obrazekBagrKolove" />
-        <p>{{aktivniBagr.technickeParametry.lopata}}</p>
+        <p>c;lkasdpiou</p>
       </div>
       <div v-if="viditelne === true" class="druhy">
         <h1>ZL50G(CE)</h1>
