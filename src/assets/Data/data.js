@@ -315,7 +315,7 @@ export default {
         },
       ],
       prislusenstvi:[
-        {id:1, typ:"bagr", nazev:"paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:""},
+        {id:1, typ:"bagr", nazev:"paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"smetak.jpg"},
         {id:2, typ:"bagr", nazev:"lžíce 4 v 1", cenaSDPH: 44900, cenaBezDPH: 54329, obrazek:"lzice4v1.jpg"},
         {id:3, typ:"bagr", nazev:"míchačka betonu", cenaSDPH: 89000, cenaBezDPH: 107690, obrazek:"michackaBetonu.jpg"},    
         {id:4, typ:"bagr", nazev:"smeták", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"smetak.jpg"},
