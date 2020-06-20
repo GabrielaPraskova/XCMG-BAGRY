@@ -5,16 +5,16 @@
         <img class="celniObr" src="/ZL50G.jpg" alt="obrazekZJ50G" />
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat, alias libero quas quibusdam nisi? Labore magnam eum, exercitationem adipisci dolore velit architecto quae ipsa facilis aspernatur hic, odit aperiam!</p>
       </div>
-      <div class="druhy">
+      <div v-if="viditelne === true" class="druhy">
         <h1>ZL50G(CE)</h1>
         <button
-          v-on:click="nastavAktivniId(bagr.id)"
+          v-on:click="nastavAktivnibagr(bagr)"
           v-bind:class="{active: bagr.id === aktivniId}"
-          v-for="(bagr,index) in ahoj"
+          v-for="(bagr,index) in bagry"
           v-bind:key="index"
         >
-          <div>Nosnost:</div>
-          <div>Hmotnost:</div>
+          <div>Nosnost: {{bagr.nosnost}}</div>
+          <div>Hmotnost:{{bagr.hmotnost}}</div>
         </button>
 
         <v-col cols="12" sm="6" md="4">
@@ -24,12 +24,20 @@
             <v-radio value="right" label="XD50"></v-radio>
           </v-radio-group>
         </v-col>
-        <!-- <v-col class="d-flex" cols="12" sm="14">
+
+        <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db">PREVIOS</v-btn>
+        <v-btn v-on:click="next" class="ma-2" outlined color="#3498db">NEXT</v-btn>
+      </div>
+
+      <div v-else class="druhy2">
+        <v-col class="d-flex" cols="12" sm="14">
           <v-select :items="items" filled label="Nadstandardní výbava" dense></v-select>
         </v-col>
         <v-col class="d-flex" cols="12" sm="14">
           <v-select :items="items" label="Příslušenství" dense outlined></v-select>
-        </v-col>-->
+        </v-col>
+        <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db">PREVIOS</v-btn>
+        <v-btn v-on:click="next" class="ma-2" outlined color="#3498db">NEXT</v-btn>
       </div>
 
       <div class="treti">
@@ -49,34 +57,32 @@
 </template>
 
 <script>
-  import Detail from "./../assets/Data/data.js";
-  
-  console.log(Detail);
-  
-  let bagry = Detail.stroje.filter(stroj => stroj.typ === "bagr");
-  console.log(bagry);
+import Detail from "./../assets/Data/data.js";
+
+console.log(Detail);
+
+let bagry = Detail.stroje.filter(stroj => stroj.typ === "bagr");
+console.log(bagry);
 export default {
   data() {
     return {
       aktivniId: "",
-
-      ahoj: [
-        { id: 2, hmotnost: 56, nosnost: 66 },
-        { id: 5, hmotnost: 55, nosnost: 23 },
-        { id: 8, hmotnost: 99, nosnost: 89 },
-        { id: 6, hmotnost: 22, nosnost: 12 }
-      ]
+      bagry,
+      viditelne: true,
+      aktivniStranka: 0,
     };
   },
 
   methods: {
-    nastavAktivniId(id) {
+    nastavAktivnibagr(id) {
       this.aktivniId = id;
+    },
+
+    next() {
+      this.viditelne = !this.viditelne
     }
   }
 };
-
-
 </script>
 
 <style>
@@ -99,6 +105,14 @@ export default {
 }
 
 .active {
+  border: 2px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  margin: 10px;
+}
+
+button {
   border: 1px solid #3498db;
   padding: 10px;
   border-radius: 5px;
