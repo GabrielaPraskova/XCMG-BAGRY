@@ -3,7 +3,7 @@
     <div class="kontejner">
       <div class="prvni">
         <img class="celniObr" v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)" alt="obrazekBagrKolove" />
-        <p>c;lkasdpiou</p>
+        <p>{{aktivniBagr.technickeParametry}}</p>
       </div>
 
       <div class="tlacitkaKonfigurator">
@@ -41,13 +41,16 @@
                
       </div>
 
+<!-- v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)" -->
+
+
        <div  class="druhy3" v-if="aktivniStranka === 2">
-        <v-col class="d-flex" cols="12" sm="14">
-          <v-select :items="items" filled label="Barva" dense></v-select>
-        </v-col>
-        <v-col class="d-flex" cols="12" sm="14">
-          <v-select :items="items" label="Příslušenství" dense outlined></v-select>
-        </v-col>
+       <img 
+       v-for="(polozka, index) in Detail.prislusentvi"
+       v-bind:key="index"
+       class="prislusenstvi" v-bind:src="(`/kolove/${polozka.obrazek}`)" alt="lzice">
+       <input type="checkbox">
+      
         
       </div>
       <v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">PREVIOUS</v-btn> {{ aktivniStranka}}

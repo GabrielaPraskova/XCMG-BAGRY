@@ -43,8 +43,8 @@ export default {
         {
           id: 2,
           typ: "bagr",
-          nazev: "ZL3OG",
-          obrazek: "ZL3OG.jpg",
+          nazev: "ZL30G",
+          obrazek: "ZL30G.jpg",
           motor: [
             { nazevMotoru: "Perkins 1006D-6TA92", cenaMotoruBez: 0, vykon: "92 kW/ 2300 rpm", krouticiMoment: "460Nm / 1400~1600 rpm", prevodovka: "převodník točivého momentu" },
             { nazevMotoru: "Perkins 904J-E36TA", cenaMotoruBez: 198000, vykon: "100 kW/2000- 2400 rpm", krouticiMoment: "550Nm / 1500 rpm", prevodovka: "převodník točivého momentu" }],
@@ -102,8 +102,8 @@ export default {
         {
           id: 4,
           typ: "bagr",
-          nazev: "ZL5OG",
-          obrazek: "ZL5OG.jpg",
+          nazev: "ZL50G",
+          obrazek: "ZL50G.jpg",
           motor: [
             { nazevMotoru: "Shanchai Sc8d", cenaMotoruBez: 0, vykon: "125 kW/2200 rpm", krouticiMoment: "700 Nm / 1400~1600 rpm", prevodovka: "převodník točivého momentu" },
             { nazevMotoru: "Perkins 1204J-E44", cenaMotoruBez: 258000, vykon: "39.8 kW/2000 - 2200 rpm", krouticiMoment: "815Nm / 1400 rpm", prevodovka: "převodník točivého momentu" }],
@@ -315,7 +315,7 @@ export default {
         },
       ],
       prislusenstvi:[
-        {id:1, typ:"bagr", nazev:"paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:""},
+        {id:1, typ:"bagr", nazev:"paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"smetak.jpg"},
         {id:2, typ:"bagr", nazev:"lžíce 4 v 1", cenaSDPH: 44900, cenaBezDPH: 54329, obrazek:"lzice4v1.jpg"},
         {id:3, typ:"bagr", nazev:"míchačka betonu", cenaSDPH: 89000, cenaBezDPH: 107690, obrazek:"michackaBetonu.jpg"},    
         {id:4, typ:"bagr", nazev:"smeták", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"smetak.jpg"},
