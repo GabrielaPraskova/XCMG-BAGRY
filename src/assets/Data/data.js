@@ -1,9 +1,9 @@
 // nosnost a hmotnost je uvedena v tunách (t)
-//motor: Perkins, Cummins, Kubota jsou EU => vždy jeden motor 
+//motor: Perkins, Cummins, Kubota jsou EU 
 //ostatní bude možnost měnit motor
 //možnost volení barvy
 // !!cesta k obrazku je jen přednastavená
-//pokud EU motor navíc přidává se cena + cenaEU
+//pokud EU motor navíc přidává se cena 
 
 
 export default [
@@ -170,7 +170,7 @@ export default [
     cenaSDPH: 5311900, 
     technickeParametry: 
         [
-          {rozmery:[{celkovaDelka :"10139 mm", sirkaLopaty: "3639 mm", vyska: "4028 mm", rozvor: "3700", svetlaVyska: "500 mm"}]},
+           {rozmery:[{celkovaDelka :"10139 mm", sirkaLopaty: "3639 mm", vyska: "4028 mm", rozvor: "3700", svetlaVyska: "500 mm"}]},
           {specifikace: 
           [{nosnost: 22, 
             hmotnost: 35, 
@@ -187,4 +187,105 @@ export default [
              minPolomerOtaceni: "6308 mm",
              pneu: "29.5 - 25"}
             ]}]},
-      ]}];
+    {id: 7, 
+      typ: "rypadlo",
+      nazev: "XE35U",       
+      obrazek: "XE35U.jpg", 
+      motor:[
+          {nazevMotoru:"3TNV88-B", pocetValcu: 3, cenaMotoruBez:0, vykon: "21.4 kW/2400 rpm", krouticiMoment: "106.4 Nm / 1000 rpm" },
+          {nazevMotoru: "Perkins 403J-E17T", pocetValcu: 3, cenaMotoruBez:98000, vykon: "36 kW/2800 rpm", krouticiMoment: "166 Nm / 1600 rpm"}
+        ], 
+      prislusentvi: true,
+      nadstandart: false,
+      cenaBezDPH: 999000, 
+      cenaSDPH: 1197900, 
+      technickeParametry: 
+        [ {specifikace: [{hmotnost: 4.2, objemLopaty: "0.11 m3", rychlost: "3.6/2.2 km/h", maxStoupani: "30°", rypnaSila: "27 kN" }]},
+          {rozmery:[{celkovaDelka :"4960 mm", celkovaSirka: "1740", vyska: "2550 mm", sirkaPodvozku: "1340 mm", delkaPodvozku: "1440 mm", sirkaPasu: "300 mm", svetlaVyska: "297 mm", maxDosahRamene: "5415", polomerOtaceni:"2170"}]}]},
+    {id: 8, 
+      typ: "rypadlo",
+      nazev: "XE60C",       
+      obrazek: "XE60C.jpg", 
+      motor:[
+          {nazevMotoru:"4TNV94L-BVXG", pocetValcu: 4, cenaMotoruBez:0, vykon: "33.7 kW/2100 rpm", krouticiMoment: "193.2 - 210.6 Nm / 1260 rpm" },
+          {nazevMotoru: "Perkins 404J-E22T", pocetValcu: 4, cenaMotoruBez: 128000, vykon: "45 kW/2800 rpm", krouticiMoment: "222 Nm / 1600 rpm"}
+        ], 
+      prislusentvi: true,
+      nadstandart: false,
+      cenaBezDPH: 1490000, 
+      cenaSDPH: 1802900, 
+      technickeParametry: 
+        [ {specifikace: [{hmotnost: 6, objemLopaty: "0.23 m3", rychlost: "4.2/2.2 km/h", maxStoupani: "35°", rypnaSila: "48.3 kN" }]},
+          {rozmery:[{celkovaDelka :"5860 mm", celkovaSirka: "1920", vyska: "2585 mm", sirkaPodvozku: "1920 mm", delkaPodvozku: "1990 mm", sirkaPasu: "400 mm", svetlaVyska: "385 mm", maxDosahRamene: "6130", polomerOtaceni:"2460"}]}]},
+    {id: 9, 
+      typ: "rypadlo",
+      nazev: "XE150D",       
+      obrazek: "XE150D.jpg", 
+      motor:[
+          {nazevMotoru:"Cummins 4BTAAA4.9", pocetValcu: 4, cenaMotoruBez:0, vykon: "85.4 kW/2200 rpm", krouticiMoment: "447 Nm / 1500 rpm" },
+        ], 
+      prislusentvi: true,
+      nadstandart: false,
+      cenaBezDPH: 2379000, 
+      cenaSDPH: 2878590, 
+      technickeParametry: 
+        [ {specifikace: [{hmotnost: 14.4, objemLopaty: "0.4-0.61 m3", rychlost: "5.2/3.4 km/h", maxStoupani: "70°", rypnaSila: "85 kN" }]},
+          {rozmery:[{celkovaDelka :"7801 mm", celkovaSirka: "2590", vyska: "2880 mm", sirkaPodvozku: "2512 mm", delkaPodvozku: "3660 mm", sirkaPasu: "600 mm", svetlaVyska: "478 mm", maxDosahRamene: "8296", polomerOtaceni:"2335"}]}]},
+    {id: 10, 
+      typ: "rypadlo",
+      nazev: "XE210C",       
+      obrazek: "XE210C.jpg", 
+      motor:[
+            {nazevMotoru:"QSB6.7", pocetValcu: 6, cenaMotoruBez:0, vykon: "116 kW/2000 rpm", krouticiMoment: "622 Nm / 1500 rpm" },
+            {nazevMotoru:"Perkins 904J-E36TA", pocetValcu: 6, cenaMotoruBez: 198000, vykon: "100 kW/2000 - 2400 rpm", krouticiMoment: "550 Nm / 1500 rpm" }
+            ], 
+      prislusentvi: false,
+      nadstandart: false,
+      cenaBezDPH: 3691815, 
+      cenaSDPH: 4467097, 
+      technickeParametry: 
+          [ {specifikace: [{hmotnost: 21.1, objemLopaty: "0.8-1.2 m3", rychlost: "5.4/3.1 km/h", maxStoupani: "70°", rypnaSila: "149 kN" }]},
+            {rozmery:[{celkovaDelka :"9625 mm", celkovaSirka: "2990", vyska:"3100 mm", sirkaPodvozku: "2990 mm", delkaPodvozku: "4255 mm", sirkaPasu: "600 mm", svetlaVyska: "475 mm", maxDosahRamene: "9940", polomerOtaceni:"3530"}]}]},
+    {id: 11, 
+      typ: "rypadlo",
+      nazev: "XE250C",       
+      obrazek: "XE250C.jpg", 
+      motor:[
+            {nazevMotoru:"QSB6.7", pocetValcu: 6, cenaMotoruBez:0, vykon: "142 kW/2200 rpm", krouticiMoment: "756 Nm / 1800 rpm" },
+            {nazevMotoru:"Perkins 1204J-E44", pocetValcu: 4, cenaMotoruBez:258000, vykon: "139.8 kW/2000 - 2200 rpm", krouticiMoment: "815 Nm / 1400 rpm" }
+            ], 
+      prislusentvi: false,
+      nadstandart: false,
+      cenaBezDPH: 4590000, 
+      cenaSDPH: 5553900, 
+      technickeParametry: 
+          [ {specifikace: [{hmotnost: 24.8, objemLopaty: "1.2 m3", rychlost: "5.5/3.5 km/h", maxStoupani: "70°", rypnaSila: "163 kN" }]},
+            {rozmery:[{celkovaDelka :"10195 mm", celkovaSirka: "3190", vyska:"3100 mm", sirkaPodvozku: "2830 mm", delkaPodvozku: "4640 mm", sirkaPasu: "600 mm", svetlaVyska: "485 mm", maxDosahRamene: "9760", polomerOtaceni:"3850"}]}]},
+    {id: 12, 
+      typ: "rypadlo",
+      nazev: "XE370CB",       
+      obrazek: "XE370CB.jpg", 
+      motor:[
+            {nazevMotoru:"QSC8.3-C260", pocetValcu: 6, cenaMotoruBez:0, vykon: "194 kW/2200 rpm", krouticiMoment: "1180 Nm / 1500 rpm" },
+            {nazevMotoru:"Perkins 1206J-E70TTA", pocetValcu: 6, cenaMotoruBez:328000, vykon: "239 kW/2000 - 2200 rpm", krouticiMoment: "1268 Nm / 1500 rpm" }
+            ], 
+      prislusentvi: false,
+      nadstandart: false,
+      cenaBezDPH: 5301571, 
+      cenaSDPH: 6414901, 
+      technickeParametry: 
+          [ {specifikace: [{hmotnost: 36.8, objemLopaty: "1.4 m3", rychlost: "5.4/3.2 km/h", maxStoupani: "70°", rypnaSila: "263 kN" }]},
+            {rozmery:[{celkovaDelka :"11386 mm", celkovaSirka: "3190", vyska:"3530 mm", sirkaPodvozku: "3030 mm", delkaPodvozku: "5035 mm", sirkaPasu: "600 mm", svetlaVyska: "500 mm", maxDosahRamene: "10720", polomerOtaceni:"4510"}]}]},
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          ]}];
