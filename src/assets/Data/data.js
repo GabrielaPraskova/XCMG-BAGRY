@@ -6,8 +6,7 @@
 //pokud EU motor navíc přidává se cena 
 
 
-export default [
-  {
+export default {
     stroje:
       [
         {
@@ -342,4 +341,4 @@ export default [
         {id:13, typ: "rypadlo", nazev:"vrták", cenaSDPH: 54000, cenaBezDPH: 65340, obrazek:"" },
         {id:14, typ: "rypadlo", nazev:"zametač", cenaSDPH: 56900, cenaBezDPH: 65340, obrazek:"" },
           ]
-  }];
+  };

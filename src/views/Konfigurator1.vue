@@ -49,6 +49,14 @@
 </template>
 
 <script>
+import Detail from "./../assets/Data/data.js"
+
+console.log(Detail);
+
+let bagry = Detail.stroje.filter( stroj => stroj.typ === "bagr" );
+console.log(bagry)
+
+
 export default {};
 </script>
 
