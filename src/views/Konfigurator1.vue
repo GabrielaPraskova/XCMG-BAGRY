@@ -2,8 +2,8 @@
   <div>
     <div class="kontejner">
       <div class="prvni">
-        <img class="celniObr" src="/ZL50G.jpg" alt="obrazekZJ50G" />
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae fugiat, alias libero quas quibusdam nisi? Labore magnam eum, exercitationem adipisci dolore velit architecto quae ipsa facilis aspernatur hic, odit aperiam!</p>
+        <img class="celniObr" v-bind:src="(`/kolove/${aktivniBagr.obrazek}`)" alt="obrazekBagrKolove" />
+        <p>{{aktivniBagr.technickeParametry.lopata}}</p>
       </div>
 
       <div class="tlacitkaKonfigurator">
@@ -16,8 +16,8 @@
           v-for="(bagr,index) in bagry"
           v-bind:key="index"
         >
-          <div>Nosnost: {{bagr.nosnost}}</div>
-          <div>Hmotnost:{{bagr.hmotnost}}</div>
+          <div>Nosnost: {{bagr.technickeParametry.nosnost}}t</div>
+          <div>Hmotnost:{{bagr.technickeParametry.hmotnost}}t</div>
         </button>
 
         <v-col cols="12" sm="6" md="4">
@@ -80,16 +80,15 @@ console.log(bagry);
 export default {
   data() {
     return {
-      aktivniId: "",
+      aktivniBagr: "",
       bagry,
-      viditelne: true,
       aktivniStranka: 0,
     };
   },
 
   methods: {
     nastavAktivnibagr(id) {
-      this.aktivniId = id;
+      this.aktivniBagr = id;
     },
 
     next() {

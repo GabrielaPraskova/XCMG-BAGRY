@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="pujcovna">
     <h1>Půjčovna</h1>
     <p>Každý stavař zná situaci, kdy termíny realizace zakázek tlačí a stávající technika vypoví službu. Ať už jste malý podnikatel s velkými záměry nebo velký podnikatel s malými záměry, anebo úplně jinak, věříme, že jsme schopni pokrýt jakoukoliv vaší poptávku, dlouhodobého i krátkodobého charakteru, na zapůjčení techniky pro realizaci toho, co jste si předsevzali.</p>
 
@@ -37,11 +37,11 @@ export default {};
 </script>
 
 <style>
-p {
+#pujcovna p {
   margin: 10px;
 }
 
-.obrazky {
+#pujcovna .obrazky {
   display: flex;
 }
 
@@ -49,7 +49,7 @@ p {
   max-width: 5%;
 }
 
-.prvni {
+#pujcovna .prvni {
   display: flex;
 }
 </style>
