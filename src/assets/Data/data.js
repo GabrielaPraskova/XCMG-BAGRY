@@ -23,28 +23,22 @@ export default {
           cenaBezDPH: 890000,
           cenaSDPH: 1076900,
           technickeParametry:
-            [
-              { rozmery: [{ celkovaDelka: "5980 mm", sirkaLopaty: "2060 mm", vyska: "3200 mm", rozvor: "2300", svetlaVyska: "298 mm" }] },
-              {
-                specifikace:
-                  [{
-                    nosnost: 1.8,
-                    hmotnost: 6.2,
-                    objemLopaty: "0.9～1.1 m3",
-                    rychlost:
-                      [{ vpredI: "9 km/h", vpredII: "26 km/h", vzadI: "9 km/h", vzadII: "26 km/h" }],
-                    maxTaznaSila: "45 KN",
-                    maxStoupani: "28 °",
-                    maxSklopnyUhel: "45 °",
-                    maxSklopnaVyska: "2680",
-                    fceAutoVyrovnaniLopaty: "ano",
-                    maxPreklopnaSika: "55KN",
-                    pracovniCyklus: "≦ 8.5 S",
-                    minPolomerOtaceni: "5180 mm",
-                    pneu: "16/70-20"
-                  }]
-              }
-            ]
+          {
+            rozmery: { celkovaDelka: "5980 mm", sirkaLopaty: "2060 mm", vyska: "3200 mm", rozvor: "2300", svetlaVyska: "298 mm" },
+            nosnost: 1.8,
+            hmotnost: 6.2,
+            objemLopaty: "0.9～1.1 m3",
+            rychlost: { vpredI: "9 km/h", vpredII: "26 km/h", vzadI: "9 km/h", vzadII: "26 km/h" },
+            maxTaznaSila: "45 KN",
+            maxStoupani: "28 °",
+            maxSklopnyUhel: "45 °",
+            maxSklopnaVyska: "2680",
+            fceAutoVyrovnaniLopaty: "ano",
+            maxPreklopnaSika: "55KN",
+            pracovniCyklus: "≦ 8.5 S",
+            minPolomerOtaceni: "5180 mm",
+            pneu: "16/70-20"
+          }
         },
         {
           id: 2,
@@ -58,30 +52,24 @@ export default {
           nadstandart: true,
           cenaBezDPH: 1190000,
           cenaSDPH: 1439900,
-          technickeParametry:
-            [
-              { rozmery: [{ celkovaDelka: "7250 mm", sirkaLopaty: "2470 mm", vyska: "3290 mm", rozvor: "2900", svetlaVyska: "370 mm" }] },
-              {
-                specifikace:
-                  [{
-                    nosnost: 3,
-                    hmotnost: 10.8,
-                    objemLopaty: "1,8 m3",
-                    rychlost:
-                      [{ vpredI: "8 km/h", vpredII: "13 km/h", vpredIII: "27 km/h", vzadI: "8 km/h", vzadII: "13 km/h", vzadIII: "27 km/h" }],
-                    maxTaznaSila: "90 KN",
-                    maxStoupani: "28 °",
-                    maxSklopnyUhel: "45 °",
-                    maxSklopnaVyska: "2930",
-                    fceAutoVyrovnaniLopaty: "ano",
-                    maxPreklopnaSika: "130KN",
-                    pracovniCyklus: "10 S",
-                    minPolomerOtaceni: "6000 mm",
-                    pneu: "17.5 - 25"
-                  }]
+          technickeParametry:{            
+            rozmery: { celkovaDelka: "7250 mm", sirkaLopaty: "2470 mm", vyska: "3290 mm", rozvor: "2900", svetlaVyska: "370 mm" } ,
+            nosnost: 3,
+            hmotnost: 10.8,
+            objemLopaty: "1,8 m3",
+            rychlost:
+              [{ vpredI: "8 km/h", vpredII: "13 km/h", vpredIII: "27 km/h", vzadI: "8 km/h", vzadII: "13 km/h", vzadIII: "27 km/h" }],
+            maxTaznaSila: "90 KN",
+            maxStoupani: "28 °",
+            maxSklopnyUhel: "45 °",
+            maxSklopnaVyska: "2930",
+            fceAutoVyrovnaniLopaty: "ano",
+            maxPreklopnaSika: "130KN",
+            pracovniCyklus: "10 S",
+            minPolomerOtaceni: "6000 mm",
+            pneu: "17.5 - 25"                  
               }
-            ]
-        },
+              },
         {
           id: 3,
           typ: "bagr",
@@ -94,28 +82,22 @@ export default {
           nadstandart: true,
           cenaBezDPH: 1590000,
           cenaSDPH: 1923900,
-          technickeParametry:
-            [
-              { rozmery: [{ celkovaDelka: "7913 mm", sirkaLopaty: "2786 mm", vyska: "3494 mm", rozvor: "3100", svetlaVyska: "430 mm" }] },
-              {
-                specifikace:
-                  [{
-                    nosnost: 4,
-                    hmotnost: 14.5,
-                    objemLopaty: "2.4 m3",
-                    rychlost:
-                      [{ vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "23 km/h" }],
-                    maxTaznaSila: "123 KN",
-                    maxStoupani: "28 °",
-                    maxSklopnyUhel: "45 °",
-                    maxSklopnaVyska: "≥2841 mm",
-                    fceAutoVyrovnaniLopaty: "ano",
-                    maxPreklopnaSika: "130 KN",
-                    pracovniCyklus: "≤10.5 S",
-                    minPolomerOtaceni: "6905 mm",
-                    pneu: "20.5 - 25"
-                  }]
-              }]
+          technickeParametry:{ 
+          rozmery: { celkovaDelka: "7913 mm", sirkaLopaty: "2786 mm", vyska: "3494 mm", rozvor: "3100", svetlaVyska: "430 mm" },
+          nosnost: 4,
+          hmotnost: 14.5,
+          objemLopaty: "2.4 m3",
+          rychlost:
+            { vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "23 km/h" },
+          maxTaznaSila: "123 KN",
+          maxStoupani: "28 °",
+          maxSklopnyUhel: "45 °",
+          maxSklopnaVyska: "≥2841 mm",
+          fceAutoVyrovnaniLopaty: "ano",
+          maxPreklopnaSika: "130 KN",
+          pracovniCyklus: "≤10.5 S",
+          minPolomerOtaceni: "6905 mm",
+          pneu: "20.5 - 25"}       
         },
         {
           id: 4,
@@ -129,29 +111,23 @@ export default {
           nadstandart: false,
           cenaBezDPH: 2190000,
           cenaSDPH: 2649900,
-          technickeParametry:
-            [
-              { rozmery: [{ celkovaDelka: "8513 mm", sirkaLopaty: "2986 mm", vyska: "3494 mm", rozvor: "3100", svetlaVyska: "430 mm" }] },
-              {
-                specifikace:
-                  [{
-                    nosnost: 5,
-                    hmotnost: 19.5,
-                    objemLopaty: "3.2 m3",
-                    rychlost:
-                      [{ vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "23 km/h" }],
-                    maxTaznaSila: "183 KN",
-                    maxStoupani: "28 °",
-                    maxSklopnyUhel: "45 °",
-                    maxSklopnaVyska: "≥2841 mm",
-                    fceAutoVyrovnaniLopaty: "ano",
-                    maxPreklopnaSika: "180 KN",
-                    pracovniCyklus: "≤10.5 S",
-                    minPolomerOtaceni: "6905 mm",
-                    pneu: "20.5 - 25"
-                  }
-                  ]
-              }]
+          technickeParametry:{ 
+            rozmery:{ celkovaDelka: "8513 mm", sirkaLopaty: "2986 mm", vyska: "3494 mm", rozvor: "3100", svetlaVyska: "430 mm" } ,
+          nosnost: 5,
+          hmotnost: 19.5,
+          objemLopaty: "3.2 m3",
+          rychlost:
+            { vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "23 km/h" },
+          maxTaznaSila: "183 KN",
+          maxStoupani: "28 °",
+          maxSklopnyUhel: "45 °",
+          maxSklopnaVyska: "≥2841 mm",
+          fceAutoVyrovnaniLopaty: "ano",
+          maxPreklopnaSika: "180 KN",
+          pracovniCyklus: "≤10.5 S",
+          minPolomerOtaceni: "6905 mm",
+          pneu: "20.5 - 25"
+                  }                  
         },
         {
           id: 5,
@@ -164,29 +140,23 @@ export default {
           nadstandart: false,
           cenaBezDPH: 2890000,
           cenaSDPH: 3496900,
-          technickeParametry:
-            [
-              { rozmery: [{ celkovaDelka: "9300 mm", sirkaLopaty: "3550 mm", vyska: "3700 mm", rozvor: "3600", svetlaVyska: "500 mm" }] },
-              {
-                specifikace:
-                  [{
-                    nosnost: 8,
-                    hmotnost: 28.5,
-                    objemLopaty: "4.5 m3",
-                    rychlost:
-                      [{ vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vpredIV: "36 km/H", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "24 km/h" }],
-                    maxTaznaSila: "245 KN",
-                    maxStoupani: ">25 °",
-                    maxSklopnyUhel: "45 °",
-                    maxSklopnaVyska: "3400 mm",
-                    fceAutoVyrovnaniLopaty: "ano",
-                    maxPreklopnaSika: "260 KN",
-                    pracovniCyklus: "≤12 S",
-                    minPolomerOtaceni: "6175 mm",
-                    pneu: "29.5 - 25"
-                  }
-                  ]
-              }]
+          technickeParametry: { 
+            rozmery: { celkovaDelka: "9300 mm", sirkaLopaty: "3550 mm", vyska: "3700 mm", rozvor: "3600", svetlaVyska: "500 mm" },
+            nosnost: 8,
+            hmotnost: 28.5,
+            objemLopaty: "4.5 m3",
+            rychlost:
+              { vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vpredIV: "36 km/H", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "24 km/h" },
+            maxTaznaSila: "245 KN",
+            maxStoupani: ">25 °",
+            maxSklopnyUhel: "45 °",
+            maxSklopnaVyska: "3400 mm",
+            fceAutoVyrovnaniLopaty: "ano",
+            maxPreklopnaSika: "260 KN",
+            pracovniCyklus: "≤12 S",
+            minPolomerOtaceni: "6175 mm",
+            pneu: "29.5 - 25"
+            }                  
         },
         {
           id: 6,
@@ -199,29 +169,23 @@ export default {
           nadstandart: false,
           cenaBezDPH: 4390000,
           cenaSDPH: 5311900,
-          technickeParametry:
-            [
-              { rozmery: [{ celkovaDelka: "10139 mm", sirkaLopaty: "3639 mm", vyska: "4028 mm", rozvor: "3700", svetlaVyska: "500 mm" }] },
-              {
-                specifikace:
-                  [{
-                    nosnost: 22,
-                    hmotnost: 35,
-                    objemLopaty: "5.5 m3",
-                    rychlost:
-                      [{ vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vpredIV: "36 km/H", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "25 km/h" }],
-                    maxTaznaSila: "290 KN",
-                    maxStoupani: ">25 °",
-                    maxSklopnyUhel: "45 °",
-                    maxSklopnaVyska: "3400 mm",
-                    fceAutoVyrovnaniLopaty: "ano",
-                    maxPreklopnaSika: "260 KN",
-                    pracovniCyklus: "≤13.5 S",
-                    minPolomerOtaceni: "6308 mm",
-                    pneu: "29.5 - 25"
-                  }
-                  ]
-              }]
+          technickeParametry:{ 
+            rozmery: { celkovaDelka: "10139 mm", sirkaLopaty: "3639 mm", vyska: "4028 mm", rozvor: "3700", svetlaVyska: "500 mm" },
+          nosnost: 22,
+          hmotnost: 35,
+          objemLopaty: "5.5 m3",
+          rychlost:
+            { vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vpredIV: "36 km/H", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "25 km/h" },
+          maxTaznaSila: "290 KN",
+          maxStoupani: ">25 °",
+          maxSklopnyUhel: "45 °",
+          maxSklopnaVyska: "3400 mm",
+          fceAutoVyrovnaniLopaty: "ano",
+          maxPreklopnaSika: "260 KN",
+          pracovniCyklus: "≤13.5 S",
+          minPolomerOtaceni: "6308 mm",
+          pneu: "29.5 - 25"
+          }
         },
         {
           id: 7,
@@ -236,10 +200,15 @@ export default {
           nadstandart: false,
           cenaBezDPH: 999000,
           cenaSDPH: 1197900,
-          technickeParametry:
-            [{ specifikace: [{ hmotnost: 4.2, objemLopaty: "0.11 m3", rychlost: "3.6/2.2 km/h", maxStoupani: "30°", rypnaSila: "27 kN" }] },
-            { rozmery: [{ celkovaDelka: "4960 mm", celkovaSirka: "1740", vyska: "2550 mm", sirkaPodvozku: "1340 mm", delkaPodvozku: "1440 mm", sirkaPasu: "300 mm", svetlaVyska: "297 mm", maxDosahRamene: "5415", polomerOtaceni: "2170" }] }]
-        },
+          technickeParametry:{ 
+            hmotnost: 4.2, 
+            objemLopaty: "0.11 m3", 
+            rychlost: "3.6/2.2 km/h", 
+            maxStoupani: "30°", 
+            rypnaSila: "27 kN" ,
+            rozmery: { celkovaDelka: "4960 mm", celkovaSirka: "1740", vyska: "2550 mm", sirkaPodvozku: "1340 mm", delkaPodvozku: "1440 mm", sirkaPasu: "300 mm", svetlaVyska: "297 mm", maxDosahRamene: "5415", polomerOtaceni: "2170"  }
+        }
+      },
         {
           id: 8,
           typ: "rypadlo",
@@ -253,10 +222,14 @@ export default {
           nadstandart: false,
           cenaBezDPH: 1490000,
           cenaSDPH: 1802900,
-          technickeParametry:
-            [{ specifikace: [{ hmotnost: 6, objemLopaty: "0.23 m3", rychlost: "4.2/2.2 km/h", maxStoupani: "35°", rypnaSila: "48.3 kN" }] },
-            { rozmery: [{ celkovaDelka: "5860 mm", celkovaSirka: "1920", vyska: "2585 mm", sirkaPodvozku: "1920 mm", delkaPodvozku: "1990 mm", sirkaPasu: "400 mm", svetlaVyska: "385 mm", maxDosahRamene: "6130", polomerOtaceni: "2460" }] }]
-        },
+          technickeParametry:{ 
+            hmotnost: 6, 
+            objemLopaty: "0.23 m3", 
+            rychlost: "4.2/2.2 km/h", 
+            maxStoupani: "35°", 
+            rypnaSila: "48.3 kN" ,
+            rozmery: { celkovaDelka: "5860 mm", celkovaSirka: "1920", vyska: "2585 mm", sirkaPodvozku: "1920 mm", delkaPodvozku: "1990 mm", sirkaPasu: "400 mm", svetlaVyska: "385 mm", maxDosahRamene: "6130", polomerOtaceni: "2460" } 
+        }},
         {
           id: 9,
           typ: "rypadlo",
@@ -269,9 +242,13 @@ export default {
           nadstandart: false,
           cenaBezDPH: 2379000,
           cenaSDPH: 2878590,
-          technickeParametry:
-            [{ specifikace: [{ hmotnost: 14.4, objemLopaty: "0.4-0.61 m3", rychlost: "5.2/3.4 km/h", maxStoupani: "70°", rypnaSila: "85 kN" }] },
-            { rozmery: [{ celkovaDelka: "7801 mm", celkovaSirka: "2590", vyska: "2880 mm", sirkaPodvozku: "2512 mm", delkaPodvozku: "3660 mm", sirkaPasu: "600 mm", svetlaVyska: "478 mm", maxDosahRamene: "8296", polomerOtaceni: "2335" }] }]
+          technickeParametry:{ 
+            hmotnost: 14.4, 
+            objemLopaty: "0.4-0.61 m3", 
+            rychlost: "5.2/3.4 km/h", 
+            maxStoupani: "70°", 
+            rypnaSila: "85 kN",
+            rozmery: { celkovaDelka: "7801 mm", celkovaSirka: "2590", vyska: "2880 mm", sirkaPodvozku: "2512 mm", delkaPodvozku: "3660 mm", sirkaPasu: "600 mm", svetlaVyska: "478 mm", maxDosahRamene: "8296", polomerOtaceni: "2335" }}
         },
         {
           id: 10,
@@ -286,9 +263,13 @@ export default {
           nadstandart: false,
           cenaBezDPH: 3691815,
           cenaSDPH: 4467097,
-          technickeParametry:
-            [{ specifikace: [{ hmotnost: 21.1, objemLopaty: "0.8-1.2 m3", rychlost: "5.4/3.1 km/h", maxStoupani: "70°", rypnaSila: "149 kN" }] },
-            { rozmery: [{ celkovaDelka: "9625 mm", celkovaSirka: "2990", vyska: "3100 mm", sirkaPodvozku: "2990 mm", delkaPodvozku: "4255 mm", sirkaPasu: "600 mm", svetlaVyska: "475 mm", maxDosahRamene: "9940", polomerOtaceni: "3530" }] }]
+          technickeParametry:{ 
+            hmotnost: 21.1, 
+            objemLopaty: "0.8-1.2 m3", 
+            rychlost: "5.4/3.1 km/h", 
+            maxStoupani: "70°", 
+            rypnaSila: "149 kN",
+            rozmery: { celkovaDelka: "9625 mm", celkovaSirka: "2990", vyska: "3100 mm", sirkaPodvozku: "2990 mm", delkaPodvozku: "4255 mm", sirkaPasu: "600 mm", svetlaVyska: "475 mm", maxDosahRamene: "9940", polomerOtaceni: "3530" }}
         },
         {
           id: 11,
@@ -303,10 +284,14 @@ export default {
           nadstandart: false,
           cenaBezDPH: 4590000,
           cenaSDPH: 5553900,
-          technickeParametry:
-            [{ specifikace: [{ hmotnost: 24.8, objemLopaty: "1.2 m3", rychlost: "5.5/3.5 km/h", maxStoupani: "70°", rypnaSila: "163 kN" }] },
-            { rozmery: [{ celkovaDelka: "10195 mm", celkovaSirka: "3190", vyska: "3100 mm", sirkaPodvozku: "2830 mm", delkaPodvozku: "4640 mm", sirkaPasu: "600 mm", svetlaVyska: "485 mm", maxDosahRamene: "9760", polomerOtaceni: "3850" }] }]
-        },
+          technickeParametry:{ 
+            hmotnost: 24.8, 
+            objemLopaty: "1.2 m3", 
+            rychlost: "5.5/3.5 km/h", 
+            maxStoupani: "70°", 
+            rypnaSila: "163 kN",
+          rozmery: { celkovaDelka: "10195 mm", celkovaSirka: "3190", vyska: "3100 mm", sirkaPodvozku: "2830 mm", delkaPodvozku: "4640 mm", sirkaPasu: "600 mm", svetlaVyska: "485 mm", maxDosahRamene: "9760", polomerOtaceni: "3850" }}
+                },
         {
           id: 12,
           typ: "rypadlo",
@@ -321,8 +306,12 @@ export default {
           cenaBezDPH: 5301571,
           cenaSDPH: 6414901,
           technickeParametry:
-            [{ specifikace: [{ hmotnost: 36.8, objemLopaty: "1.4 m3", rychlost: "5.4/3.2 km/h", maxStoupani: "70°", rypnaSila: "263 kN" }] },
-            { rozmery: [{ celkovaDelka: "11386 mm", celkovaSirka: "3190", vyska: "3530 mm", sirkaPodvozku: "3030 mm", delkaPodvozku: "5035 mm", sirkaPasu: "600 mm", svetlaVyska: "500 mm", maxDosahRamene: "10720", polomerOtaceni: "4510" }] }]
+          { hmotnost: 36.8, 
+            objemLopaty: "1.4 m3", 
+            rychlost: "5.4/3.2 km/h", 
+            maxStoupani: "70°", 
+            rypnaSila: "263 kN",
+            rozmery: { celkovaDelka: "11386 mm", celkovaSirka: "3190", vyska: "3530 mm", sirkaPodvozku: "3030 mm", delkaPodvozku: "5035 mm", sirkaPasu: "600 mm", svetlaVyska: "500 mm", maxDosahRamene: "10720", polomerOtaceni: "4510" }}
         },
       ],
       prislusenstvi:[
