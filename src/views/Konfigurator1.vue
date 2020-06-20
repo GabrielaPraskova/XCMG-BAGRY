@@ -39,17 +39,18 @@
           <v-checkbox
             v-for="(vec, index) in Detail.nadstandart"
             v-bind:key="index"
-            v-model="checkbox1"
+            v-model="aktivniNadstandart[vec.id]"
             :label="`${(vec.nazev)}`"
           ></v-checkbox>
           <div class="barvy">
             <v-subheader>Barva</v-subheader>
 
             <button
+              v-on:click="vyberBarvu(barva)"
               v-for="(barva, index) in Detail.barvy"
               v-bind:key="index"
               v-bind:style="`background: ${barva}`"
-            >XYZ</button>
+            ></button>
           </div>
         </div>
 
@@ -81,7 +82,7 @@
       <div class="treti">
         <h1>Cena</h1>
         <p>bagr 890 000,- Kč</p>
-        <p>naklikane polozky</p>
+        <p>naklikane polozky {{aktivniNadstandart}}, {{aktivniBarva}} </p>
         <hr />
         <p>Cena celkem bez DPH</p>
 
@@ -109,6 +110,8 @@ export default {
       bagry,
       aktivniStranka: 0,
       aktivniMotor: "",
+      aktivniBarva:"",
+      aktivniNadstandart:{}
     };
   },
 
@@ -135,8 +138,9 @@ export default {
     prev() {
       this.aktivniStranka--;
     },
-
-    
+    vyberBarvu(color){
+      this.aktivniBarva = color
+    }
   }
 };
 </script>
