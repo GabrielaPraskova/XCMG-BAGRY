@@ -10,47 +10,39 @@
 
   <div id="nav">
     <div class="prvniMenu">
-      <ul class="kontakt">
-        <li class="k"></li>
-        <li class="telefon">
+      <div class="kontakt">
+        <div class="telefon">
           <v-icon color="#FFEB3B">mdi-phone</v-icon>+420 733 798 032
-        </li>
-        <li class="email">
+        </div>
+        <div class="email">
           <v-icon color="#FFEB3B">mdi-email</v-icon>xcmg@servis.com
-        </li>
-      </ul>
+        </div>
+      </div>
 
       <div class="servis">
-        <li class="servisniHodiny">Servisní hodiny (8:00 - 17:00)</li>
+        <div class="servisniHodiny">Servisní hodiny (8:00 - 17:00)</div>
       </div>
     </div>
 
     <div class="druheMenu">
       <div class="logo">
         <router-link to="/">
-          <img class="logo" src="/logo.png" alt="XCMG" />
+          <img src="/logo.png" alt="XCMG" />
         </router-link>
       </div>
 
       <ul class="menu">
-        <router-link id="a" to="/stroje">Stroje
-          <!-- <v-menu open-on-hover top offset-x>
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn color="primary" dark v-bind="attrs" v-on="on">Stroje</v-btn>
-            </template>
-
-            <v-list>
-              <v-list-item v-for="(item, index) in items" :key="index" @click>
-                <v-list-item-title>{{ item.kolovynakladac }}</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu> -->
+        <router-link class="menuLink" to="/stroje">
+          Stroje
+          <div class="podmenu">
+            <router-link class="menuLink" to="/Konfigurator1">Kolové bagry</router-link>
+            <router-link class="menuLink" to="/Konfigurator2">Rypadla</router-link>
+          </div>
         </router-link>
-
-        <router-link id="a" to="/pujcovna">Půjčovna</router-link>
-        <router-link id="a" to="/servis">Servis</router-link>
-        <router-link id="a" to="/spolecnost">O společnosti</router-link>
-        <router-link id="a" to="/kontakt">Kontakt</router-link>
+        <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>
+        <router-link class="menuLink" to="/servis">Servis</router-link>
+        <router-link class="menuLink" to="/spolecnost">O společnosti</router-link>
+        <router-link class="menuLink" to="/kontakt">Kontakt</router-link>
       </ul>
     </div>
   </div>
@@ -59,11 +51,10 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .prvniMenu {
   display: flex;
   justify-content: space-between;
-  text-align: center;
   background-color: white;
   border-top: grey solid 1px;
 }
@@ -74,22 +65,19 @@
   flex-shrink: 1;
   text-align: center;
   background-color: white;
-  border-top: grey solid 1px;
-  border-bottom: grey solid 1px;
+  /* border-top: white solid 1px;
+  border-bottom: white solid 1px; */
 }
 
 .kontakt,
 .servisniHodiny {
   display: flex;
-  list-style: none;
   margin: 5px;
   padding: 0px;
-  font-size: 17px;
 }
 
-.servisniHodiny {
-  list-style: none;
-  margin: 5px;
+.kontakt {
+  padding: 10px
 }
 
 .menu {
@@ -97,19 +85,23 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 25px;
+  font-size: 20px;
 }
 
-#a {
+.menuLink {
   display: block;
-  padding: 25px 50px;
+  position: relative;
+  padding: 20px 55px;
   color: #3498db;
   text-decoration: none;
+  white-space: nowrap;
+  text-align: left;
 }
 
-a:hover {
-  background-color: #eeeeee;
-  color: #3498db;
+.menuLink:hover {
+  background-color: white;
+  color: #16405C;
+
 }
 
 #app {
@@ -129,8 +121,12 @@ a:hover {
   color: #3498db;
 }
 
+#nav a:hover {
+  color: #16405C
+}
+
 #nav a.router-link-exact-active {
-  color: grey;
+  color: #16405C;
 }
 
 h1,
@@ -139,7 +135,26 @@ h3 {
   color: #3498db;
 }
 
-.logo {
-  max-width: 100%;
+.logo a,
+.logo img {
+  height: 100%;
+}
+
+.podmenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menuLink:hover > .podmenu {
+  display: block;
+}
+
+.telefon {
+  padding-right: 20px;
 }
 </style>

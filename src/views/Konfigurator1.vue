@@ -152,6 +152,12 @@ export default {
 }
 
 .prvni,
+.tlacitkaKonfigurator,
+.treti {
+flex-basis: 33.3%;
+}
+
+.prvni,
 .druhy {
   padding-right: 50px;
 }
