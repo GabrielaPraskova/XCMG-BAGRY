@@ -23,20 +23,20 @@
           <br />e-mail: klofac@xcmg.cz
         </p>
         <hr />
-      <br />
-      <h3>Kancelář</h3>
-      <!-- <p>
+        <br />
+        <h3>Kancelář</h3>
+        <!-- <p>
         Ivana Jarošová – asistentka
         <br />tel: +420 601 300 140
         <br />e-mail: xcmg@xcmg.cz
       </p>
       <hr />
-      <br /> -->
-      <h3>Otevírací doba:</h3>
-      <p>
-        Po – Pá 8:00 – 17:30
-        <br />nebo dle telefonické dohody
-      </p>
+        <br />-->
+        <h3>Otevírací doba:</h3>
+        <p>
+          Po – Pá 8:00 – 17:30
+          <br >nebo dle telefonické dohody
+        </p>
 
         <h3>Napište nám</h3>
         <br />
@@ -56,8 +56,6 @@
         <v-textarea outlined color="#3498db" name="input-7-4" label value></v-textarea>
         <v-btn class="ma-2" outlined color="#3498db">Odeslat</v-btn>
       </div>
-
-      
     </div>
     <div class="obrazek">
       <div>
