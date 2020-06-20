@@ -45,10 +45,11 @@
             <v-subheader>Barva</v-subheader>
 
             <button
+              v-on:click="vyberBarvu"
               v-for="(barva, index) in Detail.barvy"
               v-bind:key="index"
               v-bind:style="`background: ${barva}`"
-            >XYZ</button>
+            ></button>
           </div>
         </div>
 
@@ -107,7 +108,8 @@ export default {
       Detail,
       aktivniBagr: "",
       bagry,
-      aktivniStranka: 0
+      aktivniStranka: 0,
+      aktivniBarva:""
     };
   },
 
@@ -132,6 +134,9 @@ export default {
 
     prev() {
       this.aktivniStranka--;
+    },
+    vyberBarvu(){
+      this.aktivniBarva
     }
   }
 };
