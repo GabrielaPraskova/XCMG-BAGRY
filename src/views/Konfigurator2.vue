@@ -21,17 +21,16 @@
               v-for="(rypadlo,index) in rypadla"
               v-bind:key="index"
             >
-              <div>Hmotnost:{{rypadlo.technickeParametry.hmotnost}}t</div>
-              <div v-if="typ === 'bagr'">Nosnost:{{rypadlo.technickeParametry.nosnost}}t</div>
+              <div>Hmotnost:{{rypadlo.technickeParametry.hmotnost}}</div>
+              <div v-if="typ === 'bagr'">Nosnost:{{rypadlo.technickeParametry.nosnost}}</div>
             </button>
 
             <v-col cols="12" sm="6" md="4">
-              <v-subheader>{{aktivniMotor}}</v-subheader>
               <v-radio-group v-model="aktivniMotor" hide-details>
                 <v-radio
                   v-for="(motor, index) in aktivniRypadlo.motor"
                   v-bind:key="index"
-                  :value="motor.nazevMotoru"
+                  :value="motor"
                   :label="motor.nazevMotoru"
                 ></v-radio>
                 <!-- <v-radio value="XD50" label={{motor.nazevMotoru}}></v-radio> -->
@@ -46,7 +45,8 @@
               v-for="(vec, index) in Data.nadstandart"
               v-bind:key="index"
               v-model="aktivniNadstandart[vec.id]"
-              :label="`${(vec.nazev)}`"
+              :value="vec"
+              :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč bez DPH`"
             ></v-checkbox>
 
 
@@ -59,7 +59,7 @@
                 v-bind:key="index"
                 v-bind:style="`background: ${barva}`"
                 v-bind:class="{'btn-active':barva === aktivniBarva}"
-  i
+  
               ></button>
             </div>
         </div>
@@ -68,7 +68,7 @@
         <div class="druhy3" v-if="aktivniStranka === 2">
           <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
             <!-- <img class="prislusenstvi" v-bind:src="(`/rypadla/${polozka.obrazek}`)" alt="lzice" /> -->
-            <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :label="`${polozka.nazev}`"></v-checkbox>
+            <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
           </div>
         </div>
         
@@ -93,11 +93,16 @@
 
       <div class="treti">
         <h1>Cena</h1>
-        <p>rypadlo 890 000,- Kč</p>
-        <p>naklikane polozky {{aktivniBarva}}, {{aktivniMotor}}, {{vyberNastandart}} {{vyberPrislusenstvi}}</p>
+        <div class="cenaStroje">Cena stroje: {{aktivniRypadlo.nazev}} : {{aktivniRypadlo.cenaBezDPH}} Kč bez DPH </div>
+        <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: (zahrnuto v ceně)</div>
+        <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč bez DPH</div>
+        <div class="cenaNadstandartu"> Cena nadstandartu: {{aktivniNadstandart}}: </div>
+        <div class="cenaBarva"> Vybraná barva: {{aktivniBarva}} (zahrnuto v ceně)</div>
+        <div class="cenaPrislusenstvi"> Cena příslušenství: {{vyberPrislusenstvi}}</div>
+        <div class="cenaCelkem"> Cena celkem: bez DPH</div>
+        
         <hr />
-        <p>Cena celkem bez DPH</p>
-
+        
         <p>Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
 
         <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
@@ -120,10 +125,12 @@ export default {
       aktivniRypadlo: rypadla[0],
       rypadla,
       aktivniStranka: 0,
-      aktivniMotor: rypadla[0].motor[0].nazevMotoru,
+      aktivniMotor: rypadla[0].motor[0],
       aktivniBarva: "yellow",
       aktivniPrislusenstvi: {},
       aktivniNadstandart:{},
+      
+
     };
   },
 
@@ -162,18 +169,6 @@ export default {
       return nazvyNadstandart
     },
 
-    // vyberNastandart(){
-    //   const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
-    //     .filter(nadstandard => nadstandard[1] === true)
-    //     .map(rypadlo =>
-    //     {
-    //       const id = rypadlo[0];
-    //       const nadstandardnaPolozka = Data.nadstandart.find( polozka => polozka.id.toString() === id.toString() );
-    //       return nadstandardnaPolozka.nazev
-    //     })
-
-    //   return nazvyNadstandart
-    // },
 
     vyberPrislusenstvi() {
       const nazvyPrislusenstvi = Object.entries(this.aktivniPrislusenstvi)
@@ -193,7 +188,8 @@ export default {
   methods: {
     nastavAktivniRypadlo(rypadlo) {
       this.aktivniRypadlo = rypadlo;
-      this.aktivniMotor = this.aktivniRypadlo.motor[0].nazevMotoru;
+      this.aktivniMotor = this.aktivniRypadlo.motor[0];
+      
     },
 
     next() {
