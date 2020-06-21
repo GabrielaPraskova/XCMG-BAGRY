@@ -52,8 +52,8 @@
               v-for="(barva, index) in Data.barvy"
               v-bind:key="index"
               v-bind:style="`background: ${barva}`"
-              v-bind:class="{'btn-active':active}"
-
+              v-bind:class="{'btn-active':barva === aktivniBarva}"
+i
             ></button>
           </div>
         </div>
@@ -213,7 +213,7 @@ button {
 }
 
 .btn-active{
-  background-color: grey;
+  border: solid 5px black;
 
 }
 </style>
