@@ -3,8 +3,8 @@
     <img class="celniObr" src="/LW800KN.jpg" alt="obrazekLW800KN" />
     <img class="rypadloObr" src="/LP500JK.jpg" alt="obrazekLP500JK" />
 
-    <router-link  to="/Konfigurator1"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link>
-    <v-btn class="ma-2" outlined color="#3498db"><router-link  to="/Konfigurator2">Konfiguruj</router-link></v-btn>
+    <router-link class="linkKonfigurator"  to="/konfigurator2/bagr"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link>
+    <router-link class="linkKonfigurator" to="/konfigurator2/rypadlo"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link>
 
     
   </div>
@@ -60,6 +60,10 @@ export default {};
 
 .ikonky {
  list-style: none;
+}
+
+.linkKonfigurator{
+ text-decoration:none
 }
 
 
