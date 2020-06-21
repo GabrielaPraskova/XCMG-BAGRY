@@ -10,6 +10,7 @@ export default {
     stroje:
       [
         {
+          popis:'JAHODA',
           id: 1,
           typ: "bagr",
           nazev: "LW180K",
@@ -24,23 +25,28 @@ export default {
           cenaSDPH: 1076900,
           technickeParametry:
           {
-            rozmery: { celkovaDelka: "5980 mm", sirkaLopaty: "2060 mm", vyska: "3200 mm", rozvor: "2300", svetlaVyska: "298 mm" },
-            nosnost: 1.8,
-            hmotnost: 6.2,
-            objemLopaty: "0.9～1.1 m3",
-            rychlost: { vpredI: "9 km/h", vpredII: "26 km/h", vzadI: "9 km/h", vzadII: "26 km/h" },
-            maxTaznaSila: "45 KN",
-            maxStoupani: "28 °",
-            maxSklopnyUhel: "45 °",
-            maxSklopnaVyska: "2680",
-            fceAutoVyrovnaniLopaty: "ano",
-            maxPreklopnaSika: "55KN",
-            pracovniCyklus: "≦ 8.5 S",
-            minPolomerOtaceni: "5180 mm",
-            pneu: "16/70-20"
-          }
+            'Celkova Delka': "5980 mm", 
+            'Sirka Lopaty': "2060 mm", 
+            Vyska: "3200 mm", 
+            Rozvor: "2300", 
+            'Svetla Vyska': "298 mm" ,
+            Nosnost: 1.8,
+            Hmotnost: 6.2,
+            'Objem Lopaty': "0.9～1.1 m3",
+            // Rychlost: { vpredI: "9 km/h", vpredII: "26 km/h", vzadI: "9 km/h", vzadII: "26 km/h" },
+            'Max Tazna Sila': "45 KN",
+            'Max Stoupani': "28 °",
+            'Max Sklopny Uhel': "45 °",
+            'Max Sklopna Vyska': "2680",
+            'Auto Vyrovnani Lopaty': "ano",
+            'Max Preklopna Sika': "55KN",
+            'Pracovni Cyklus': "≦ 8.5 S",
+            'Min Polomer Otaceni': "5180 mm",
+            Pneu: "16/70-20"
+        }
         },
         {
+          popis:'KOKOS',
           id: 2,
           typ: "bagr",
           nazev: "ZL30G",
@@ -71,6 +77,7 @@ export default {
               }
               },
         {
+          popis:'Meloun',
           id: 3,
           typ: "bagr",
           nazev: "ZL40G",
@@ -100,6 +107,7 @@ export default {
           pneu: "20.5 - 25"}       
         },
         {
+          popis:'Kdoule',
           id: 4,
           typ: "bagr",
           nazev: "ZL50G",
@@ -115,7 +123,7 @@ export default {
             rozmery:{ celkovaDelka: "8513 mm", sirkaLopaty: "2986 mm", vyska: "3494 mm", rozvor: "3100", svetlaVyska: "430 mm" } ,
           nosnost: 5,
           hmotnost: 19.5,
-          objemLopaty: "3.2 m3",
+          'objem Lopaty': "3.2 m3",
           rychlost:
             { vpredI: "7 km/h", vpredII: "12 km/h", vpredIII: "23 km/h", vzadI: "7 km/h", vzadII: "12 km/h", vzadIII: "23 km/h" },
           maxTaznaSila: "183 KN",
@@ -130,6 +138,7 @@ export default {
                   }                  
         },
         {
+          popis:'Merunka',
           id: 5,
           typ: "bagr",
           nazev: "LW800KN",
@@ -159,6 +168,7 @@ export default {
             }                  
         },
         {
+          popis:'Kurkuma',
           id: 6,
           typ: "bagr",
           nazev: "LW1100KN",
@@ -188,6 +198,7 @@ export default {
           }
         },
         {
+          popis:'Mys',
           id: 7,
           typ: "rypadlo",
           nazev: "XE35U",
@@ -202,14 +213,23 @@ export default {
           cenaSDPH: 1197900,
           technickeParametry:{ 
             hmotnost: 4.2, 
-            objemLopaty: "0.11 m3", 
+            'objem Lopaty': "0.11 m3", 
             rychlost: "3.6/2.2 km/h", 
             maxStoupani: "30°", 
             rypnaSila: "27 kN" ,
-            rozmery: { celkovaDelka: "4960 mm", celkovaSirka: "1740", vyska: "2550 mm", sirkaPodvozku: "1340 mm", delkaPodvozku: "1440 mm", sirkaPasu: "300 mm", svetlaVyska: "297 mm", maxDosahRamene: "5415", polomerOtaceni: "2170"  }
+            celkovaDelka: "4960 mm", 
+            celkovaSirka: "1740", 
+            vyska: "2550 mm", 
+            sirkaPodvozku: "1340 mm", 
+            delkaPodvozku: "1440 mm", 
+            sirkaPasu: "300 mm", 
+            svetlaVyska: "297 mm", 
+            maxDosahRamene: "5415", 
+            polomerOtaceni: "2170" 
         }
       },
         {
+          popis:'Kralik',
           id: 8,
           typ: "rypadlo",
           nazev: "XE60C",
@@ -231,6 +251,7 @@ export default {
             rozmery: { celkovaDelka: "5860 mm", celkovaSirka: "1920", vyska: "2585 mm", sirkaPodvozku: "1920 mm", delkaPodvozku: "1990 mm", sirkaPasu: "400 mm", svetlaVyska: "385 mm", maxDosahRamene: "6130", polomerOtaceni: "2460" } 
         }},
         {
+          popis:'Pes',
           id: 9,
           typ: "rypadlo",
           nazev: "XE150D",
@@ -244,13 +265,22 @@ export default {
           cenaSDPH: 2878590,
           technickeParametry:{ 
             hmotnost: 14.4, 
-            objemLopaty: "0.4-0.61 m3", 
+            'objem Lopaty': "0.4-0.61 m3", 
             rychlost: "5.2/3.4 km/h", 
             maxStoupani: "70°", 
             rypnaSila: "85 kN",
-            rozmery: { celkovaDelka: "7801 mm", celkovaSirka: "2590", vyska: "2880 mm", sirkaPodvozku: "2512 mm", delkaPodvozku: "3660 mm", sirkaPasu: "600 mm", svetlaVyska: "478 mm", maxDosahRamene: "8296", polomerOtaceni: "2335" }}
+            celkovaDelka: "7801 mm", 
+            celkovaSirka: "2590", 
+            vyska: "2880 mm", 
+            sirkaPodvozku: "2512 mm", 
+            delkaPodvozku: "3660 mm", 
+            sirkaPasu: "600 mm", 
+            svetlaVyska: "478 mm", 
+            maxDosahRamene: "8296", 
+            polomerOtaceni: "2335" }
         },
         {
+          popis:'Kocka',
           id: 10,
           typ: "rypadlo",
           nazev: "XE210C",
@@ -272,6 +302,7 @@ export default {
             rozmery: { celkovaDelka: "9625 mm", celkovaSirka: "2990", vyska: "3100 mm", sirkaPodvozku: "2990 mm", delkaPodvozku: "4255 mm", sirkaPasu: "600 mm", svetlaVyska: "475 mm", maxDosahRamene: "9940", polomerOtaceni: "3530" }}
         },
         {
+          popis:'Velbloud',
           id: 11,
           typ: "rypadlo",
           nazev: "XE250C",
@@ -293,6 +324,7 @@ export default {
           rozmery: { celkovaDelka: "10195 mm", celkovaSirka: "3190", vyska: "3100 mm", sirkaPodvozku: "2830 mm", delkaPodvozku: "4640 mm", sirkaPasu: "600 mm", svetlaVyska: "485 mm", maxDosahRamene: "9760", polomerOtaceni: "3850" }}
                 },
         {
+          popis:'Klokan',
           id: 12,
           typ: "rypadlo",
           nazev: "XE370CB",
