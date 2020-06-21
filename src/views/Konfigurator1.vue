@@ -82,7 +82,7 @@
       <div class="treti">
         <h1>Cena</h1>
         <p>bagr 890 000,- Kč</p>
-        <p>naklikane polozky {{aktivniNadstandart}}, {{aktivniBarva}}, {{aktivniMotor}}</p>
+        <p>naklikane polozky  {{vyberNastandart}}, {{aktivniBarva}}, {{aktivniMotor}}</p>
         <hr />
         <p>Cena celkem bez DPH</p>
 
@@ -90,7 +90,7 @@
 
         <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
         <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
-        {{vyberNastandart}}
+       
       </div>
     </div>
   </div>
