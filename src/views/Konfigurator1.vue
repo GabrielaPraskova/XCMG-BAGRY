@@ -74,7 +74,7 @@
             class="ma-2"
             outlined
             color="#3498db"
-            v-if="aktivniStranka < 3"
+            v-if="aktivniStranka < 2"
           >NEXT</v-btn>
         </div>
       </div>

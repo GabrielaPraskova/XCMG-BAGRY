@@ -96,6 +96,7 @@
   text-decoration: none;
   white-space: nowrap;
   text-align: left;
+  font-weight: bold;
 }
 
 .menuLink:hover {
