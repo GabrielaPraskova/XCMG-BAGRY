@@ -2,107 +2,108 @@
 
 <template>
   <div>
-    <div class="kontejner">
-      <div class="prvni">
-        <img
-          class="celniObr"
-          v-bind:src="(`/${$route.params.typ}/${aktivniRypadlo.obrazek}`)"
-          alt="obrazekBagrRypadla"
-        />
-        <p>{{aktivniRypadlo.technickeParametry}}</p>
-      </div>
-
-      <div class="tlacitkaKonfigurator">
-        <div v-if="aktivniStranka === 0" class="druhy">
-          <h1>ZL50G(CE)</h1>
-          <button
-            v-on:click="nastavAktivniRypadlo(rypadlo)"
-            v-bind:class="{active: rypadlo === aktivniRypadlo}"
-            v-for="(rypadlo,index) in rypadla"
-            v-bind:key="index"
-          >
-            <div>Hmotnost:{{rypadlo.technickeParametry.hmotnost}}t</div>
-            <div v-if="typ === 'bagr'">Nosnost:{{rypadlo.technickeParametry.nosnost}}t</div>
-          </button>
-
-          <v-col cols="12" sm="6" md="4">
-            <v-subheader>{{aktivniMotor}}</v-subheader>
-            <v-radio-group v-model="aktivniMotor" hide-details>
-              <v-radio
-                v-for="(motor, index) in aktivniRypadlo.motor"
-                v-bind:key="index"
-                :value="motor.nazevMotoru"
-                :label="motor.nazevMotoru"
-              ></v-radio>
-              <!-- <v-radio value="XD50" label={{motor.nazevMotoru}}></v-radio> -->
-            </v-radio-group>
-          </v-col>
+      <div class="kontejner">
+        <div class="prvni">
+          <img
+            class="celniObr"
+            v-bind:src="(`/${$route.params.typ}/${aktivniRypadlo.obrazek}`)"
+            alt="obrazekBagrRypadla"
+          />
+          <p>{{aktivniRypadlo.technickeParametry}}</p>
         </div>
 
-         <div class="druhy2" v-if="aktivniStranka === 1">
-          <v-subheader>Nadstandartní výbava</v-subheader>
-
-          <v-checkbox v-if="typ === 'bagr'"
-            v-for="(vec, index) in Data.nadstandart"
-            v-bind:key="index"
-            v-model="aktivniNadstandart[vec.id]"
-            :label="`${(vec.nazev)}`"
-          ></v-checkbox>
-
-
-          <div class="barvy">
-            <v-subheader>Barva</v-subheader>
-
+        <div class="tlacitkaKonfigurator">
+          <div v-if="aktivniStranka === 0" class="druhy">
+            <h1>ZL50G(CE)</h1>
             <button
-              v-on:click="vyberBarvu(barva)"
-              v-for="(barva, index) in Data.barvy"
+              v-on:click="nastavAktivniRypadlo(rypadlo)"
+              v-bind:class="{active: rypadlo === aktivniRypadlo}"
+              v-for="(rypadlo,index) in rypadla"
               v-bind:key="index"
-              v-bind:style="`background: ${barva}`"
-              v-bind:class="{'btn-active':barva === aktivniBarva}"
-i
-            ></button>
+            >
+              <div>Hmotnost:{{rypadlo.technickeParametry.hmotnost}}t</div>
+              <div v-if="typ === 'bagr'">Nosnost:{{rypadlo.technickeParametry.nosnost}}t</div>
+            </button>
+
+            <v-col cols="12" sm="6" md="4">
+              <v-subheader>{{aktivniMotor}}</v-subheader>
+              <v-radio-group v-model="aktivniMotor" hide-details>
+                <v-radio
+                  v-for="(motor, index) in aktivniRypadlo.motor"
+                  v-bind:key="index"
+                  :value="motor.nazevMotoru"
+                  :label="motor.nazevMotoru"
+                ></v-radio>
+                <!-- <v-radio value="XD50" label={{motor.nazevMotoru}}></v-radio> -->
+              </v-radio-group>
+            </v-col>
+        </div>
+
+        <div class="druhy2" v-if="aktivniStranka === 1">
+            <v-subheader>Nadstandartní výbava</v-subheader>
+
+            <v-checkbox v-if="typ === 'bagr'"
+              v-for="(vec, index) in Data.nadstandart"
+              v-bind:key="index"
+              v-model="aktivniNadstandart[vec.id]"
+              :label="`${(vec.nazev)}`"
+            ></v-checkbox>
+
+
+            <div class="barvy">
+              <v-subheader>Barva</v-subheader>
+
+              <button
+                v-on:click="vyberBarvu(barva)"
+                v-for="(barva, index) in Data.barvy"
+                v-bind:key="index"
+                v-bind:style="`background: ${barva}`"
+                v-bind:class="{'btn-active':barva === aktivniBarva}"
+  i
+              ></button>
+            </div>
+        </div>
+          
+
+        <div class="druhy3" v-if="aktivniStranka === 2">
+          <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
+            <!-- <img class="prislusenstvi" v-bind:src="(`/rypadla/${polozka.obrazek}`)" alt="lzice" /> -->
+            <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :label="`${polozka.nazev}`"></v-checkbox>
           </div>
         </div>
         
+        <div>
+          <v-btn
+            v-on:click="prev"
+            class="ma-2"
+            outlined
+            color="#3498db"
+            v-if="aktivniStranka > 0"
+          >PREVIOUS</v-btn>
 
-      <div class="druhy3" v-if="aktivniStranka === 2">
-        <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
-          <!-- <img class="prislusenstvi" v-bind:src="(`/rypadla/${polozka.obrazek}`)" alt="lzice" /> -->
-          <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :label="`${polozka.nazev}`"></v-checkbox>
+          <v-btn
+            v-on:click="next"
+            class="ma-2"
+            outlined
+            color="#3498db"
+            v-if="aktivniStranka < 2"
+          >NEXT</v-btn>
         </div>
       </div>
-      <div>
-        <v-btn
-          v-on:click="prev"
-          class="ma-2"
-          outlined
-          color="#3498db"
-          v-if="aktivniStranka > 0"
-        >PREVIOUS</v-btn>
 
-        <v-btn
-          v-on:click="next"
-          class="ma-2"
-          outlined
-          color="#3498db"
-          v-if="aktivniStranka < 2"
-        >NEXT</v-btn>
+      <div class="treti">
+        <h1>Cena</h1>
+        <p>rypadlo 890 000,- Kč</p>
+        <p>naklikane polozky {{aktivniBarva}}, {{aktivniMotor}}, {{vyberNastandart}} {{vyberPrislusenstvi}}</p>
+        <hr />
+        <p>Cena celkem bez DPH</p>
+
+        <p>Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
+
+        <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
+        <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
       </div>
     </div>
-
-    <div class="treti">
-      <h1>Cena</h1>
-      <p>rypadlo 890 000,- Kč</p>
-      <p>naklikane polozky {{aktivniBarva}}, {{aktivniMotor}}, {{vyberNastandart}} {{vyberPrislusenstvi}}</p>
-      <hr />
-      <p>Cena celkem bez DPH</p>
-
-      <p>Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
-
-      <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
-      <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
-    </div>
-  </div>
   </div>
 </template>
 
