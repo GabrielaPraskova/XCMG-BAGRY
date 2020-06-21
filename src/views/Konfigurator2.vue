@@ -1,16 +1,25 @@
-
-
 <template>
   <div>
-      <div class="kontejner">
-        <div class="prvni">
-          <img
-            class="celniObr"
-            v-bind:src="(`/${$route.params.typ}/${aktivniRypadlo.obrazek}`)"
-            alt="obrazekBagrRypadla"
-          />
-          <p>{{aktivniRypadlo.technickeParametry}}</p>
+    <div class="kontejner">
+      <div class="prvni">
+        <img
+          class="celniObr"
+          v-bind:src="`/${$route.params.typ}/${aktivniRypadlo.obrazek}`"
+          alt="obrazekBagrRypadla"
+        />
+
+        <div>
+          <p>{{aktivniRypadlo.popis}}</p>
+          <!-- <table class="tabulka">
+            <tr v-for="(hodnota, nazev) in aktivniRypadlo.technickeParametry">
+              <th>{{nazev}}</th>
+              <td>{{hodnota}}</td>
+
+            </tr>
+          </table> -->
+
         </div>
+      </div>
 
         <div class="tlacitkaKonfigurator">
           <div v-if="aktivniStranka === 0" class="druhy">
@@ -39,7 +48,7 @@
         </div>
 
         <div class="druhy2" v-if="aktivniStranka === 1">
-            <v-subheader>Nadstandartní výbava</v-subheader>
+          <v-subheader>Nadstandartní výbava</v-subheader>
 
             <v-checkbox v-if="typ === 'bagr'"
               v-for="(vec, index) in Data.nadstandart"
@@ -49,9 +58,8 @@
               :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč bez DPH`"
             ></v-checkbox>
 
-
-            <div class="barvy">
-              <v-subheader>Barva</v-subheader>
+          <div class="barvy">
+            <v-subheader>Barva</v-subheader>
 
               <button
                 v-on:click="vyberBarvu(barva)"
@@ -63,7 +71,6 @@
               ></button>
             </div>
         </div>
-          
 
         <div class="druhy3" v-if="aktivniStranka === 2">
           <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
@@ -71,7 +78,6 @@
             <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
           </div>
         </div>
-        
         <div>
           <v-btn
             v-on:click="prev"
@@ -79,7 +85,8 @@
             outlined
             color="#3498db"
             v-if="aktivniStranka > 0"
-          >PREVIOUS</v-btn>
+            >PREVIOUS</v-btn
+          >
 
           <v-btn
             v-on:click="next"
@@ -87,7 +94,8 @@
             outlined
             color="#3498db"
             v-if="aktivniStranka < 2"
-          >NEXT</v-btn>
+            >NEXT</v-btn
+          >
         </div>
       </div>
 
@@ -105,7 +113,10 @@
         
         <p>Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
 
-        <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám ozveme do následujícího pracovního dne</p>
+        <p>
+          Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám
+          ozveme do následujícího pracovního dne
+        </p>
         <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
       </div>
     </div>
@@ -116,10 +127,10 @@
 import Data from "./../assets/Data/data.js";
 
 export default {
-  props: ['typ'],
+  props: ["typ"],
   data() {
-    const rypadla = Data.stroje.filter(stroj => stroj.typ === this.typ);
-  console.log( rypadla)
+    const rypadla = Data.stroje.filter((stroj) => stroj.typ === this.typ);
+    console.log(rypadla);
     return {
       Data,
       aktivniRypadlo: rypadla[0],
@@ -128,61 +139,59 @@ export default {
       aktivniMotor: rypadla[0].motor[0],
       aktivniBarva: "yellow",
       aktivniPrislusenstvi: {},
-      aktivniNadstandart:{},
-      
-
+      aktivniNadstandart: {},
     };
   },
 
-  watch: 
-  {
-    typ()
-    {
-      const filtrovaneStroje = Data.stroje.filter(stroj => stroj.typ === this.typ );
+  watch: {
+    typ() {
+      const filtrovaneStroje = Data.stroje.filter(
+        (stroj) => stroj.typ === this.typ
+      );
 
-      this.rypadla = filtrovaneStroje
+      this.rypadla = filtrovaneStroje;
       this.aktivniRypadlo = filtrovaneStroje[0];
       this.aktivniMotor = filtrovaneStroje[0].motor[0].nazevMotoru;
-
-    }
+    },
   },
 
   computed: {
     vyberRypadla() {
       const rypadla = Data.prislusenstvi.filter(
-        polozka => polozka.typ === this.typ
+        (polozka) => polozka.typ === this.typ
       );
       console.log(rypadla);
       return rypadla;
     },
 
-    vyberNastandart(){
+    vyberNastandart() {
       const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
-        .filter(nadstandard => nadstandard[1] === true)
-        .map(fruit =>
-        {
+        .filter((nadstandard) => nadstandard[1] === true)
+        .map((fruit) => {
           const id = fruit[0];
-          const nadstandardnaPolozka = Data.nadstandart.find( polozka => polozka.id.toString() === id.toString() );
-          return nadstandardnaPolozka.nazev
-        })
+          const nadstandardnaPolozka = Data.nadstandart.find(
+            (polozka) => polozka.id.toString() === id.toString()
+          );
+          return nadstandardnaPolozka.nazev;
+        });
 
-      return nazvyNadstandart
+      return nazvyNadstandart;
     },
 
 
     vyberPrislusenstvi() {
       const nazvyPrislusenstvi = Object.entries(this.aktivniPrislusenstvi)
-        .filter(prislusenstvi => prislusenstvi[1] === true)
-        .map(smetak => {
+        .filter((prislusenstvi) => prislusenstvi[1] === true)
+        .map((smetak) => {
           const id = smetak[0];
           const nadstandardnaPolozka = Data.prislusenstvi.find(
-            polozka => polozka.id.toString() === id.toString()
+            (polozka) => polozka.id.toString() === id.toString()
           );
           return nadstandardnaPolozka.nazev;
         });
 
       return nazvyPrislusenstvi;
-    }
+    },
   },
 
   methods: {
@@ -201,8 +210,8 @@ export default {
     },
     vyberBarvu(color) {
       this.aktivniBarva = color;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -252,8 +261,12 @@ button {
   display: block;
 }
 
-.btn-active{
+.btn-active {
   border: solid 5px black;
+}
 
+.tabulka {
+  text-align: left;
+  font-size: 15px;
 }
 </style>
