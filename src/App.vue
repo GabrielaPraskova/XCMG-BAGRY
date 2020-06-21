@@ -35,8 +35,8 @@
         <div class="menuLink" >
           Stroje
           <div class="podmenu">
-            <router-link class="menuLink" to="/Konfigurator1">Kolové bagry</router-link>
-            <router-link class="menuLink" to="/Konfigurator2">Rypadla</router-link>
+            <router-link class="menuLink" to="/Konfigurator2/bagr">Kolové bagry</router-link>
+            <router-link class="menuLink" to="/Konfigurator2/rypadlo">Rypadla</router-link>
           </div>
         </div>
         <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>
@@ -50,6 +50,8 @@
   <router-view />
 </div>
 </template>
+
+
 
 <style scoped>
 .prvniMenu {
