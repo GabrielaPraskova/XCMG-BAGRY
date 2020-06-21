@@ -75,7 +75,7 @@
         <div class="druhy3" v-if="aktivniStranka === 2">
           <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
             <!-- <img class="prislusenstvi" v-bind:src="(`/rypadla/${polozka.obrazek}`)" alt="lzice" /> -->
-            <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
+            <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka" :label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
           </div>
         </div>
         <div>
@@ -104,10 +104,14 @@
         <div class="cenaStroje">Cena stroje: {{aktivniRypadlo.nazev}} : {{aktivniRypadlo.cenaBezDPH}} Kč bez DPH </div>
         <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: (zahrnuto v ceně)</div>
         <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč bez DPH</div>
-        <div class="cenaNadstandartu"> Cena nadstandartu: {{aktivniNadstandart}}: </div>
+        <div 
+        v-for="polozka in nadstandartHezky"
+        class="cenaNadstandartu"> Cena nadstandartu: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
         <div class="cenaBarva"> Vybraná barva: {{aktivniBarva}} (zahrnuto v ceně)</div>
-        <div class="cenaPrislusenstvi"> Cena příslušenství: {{vyberPrislusenstvi}}</div>
-        <div class="cenaCelkem"> Cena celkem: bez DPH</div>
+        <div 
+        v-for="polozka in prislusenstviHezky" 
+        class="cenaPrislusenstvi"> Cena příslušenství: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
+        <div class="cenaCelkem"> Cena celkem: {{celkovaCena}}</div>
         
         <hr />
         
@@ -130,7 +134,7 @@ export default {
   props: ["typ"],
   data() {
     const rypadla = Data.stroje.filter((stroj) => stroj.typ === this.typ);
-    console.log(rypadla);
+
     return {
       Data,
       aktivniRypadlo: rypadla[0],
@@ -164,19 +168,48 @@ export default {
       return rypadla;
     },
 
-    vyberNastandart() {
-      const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
-        .filter((nadstandard) => nadstandard[1] === true)
-        .map((fruit) => {
-          const id = fruit[0];
-          const nadstandardnaPolozka = Data.nadstandart.find(
-            (polozka) => polozka.id.toString() === id.toString()
-          );
-          return nadstandardnaPolozka.nazev;
-        });
+    nadstandartHezky() {
+      const nadstandartNice = Object.entries(this.aktivniNadstandart)
+      .filter(polozka => polozka[1] !== null)
+      .map(y => y[1])
+     
+      return nadstandartNice
 
-      return nazvyNadstandart;
     },
+
+    celkovaCena(){
+      const cenaNadstandartu = this.nadstandartHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
+      const cenaPrislusenstvi = this.prislusenstviHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
+      return cenaNadstandartu + this.aktivniRypadlo.cenaBezDPH + this.aktivniMotor.cenaMotoruBez + cenaPrislusenstvi
+
+    },
+
+     prislusenstviHezky() {
+      const prislusenstviNice = Object.entries(this.aktivniPrislusenstvi)
+      .filter(polozka => polozka[1] !== null)
+      .map(y => y[1])
+     
+      return prislusenstviNice
+
+    },
+
+  
+
+
+
+    // vyberNastandart() {
+    //   const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
+    //     .filter((nadstandard) => nadstandard[1] === true)
+    //     .map((fruit) => {
+    //       const id = fruit[0];
+    //       const nadstandardnaPolozka = Data.nadstandart.find(
+    //         (polozka) => polozka.id.toString() === id.toString()
+    //       );
+    //       return nadstandardnaPolozka.nazev;
+    //     });
+
+    //   return nazvyNadstandart;
+    // },
 
 
     vyberPrislusenstvi() {
