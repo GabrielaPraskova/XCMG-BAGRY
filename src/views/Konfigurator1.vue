@@ -57,7 +57,7 @@
         <div class="druhy3" v-if="aktivniStranka === 2">
           <div v-for="(polozka, index) in vyberKolove" v-bind:key="index">
             <img class="prislusenstvi" v-bind:src="(`/kolove/${polozka.obrazek}`)" alt="lzice" />
-            <v-checkbox v-model="checkbox1" :label="`${polozka.nazev}`"></v-checkbox>
+            <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :label="`${polozka.nazev}`"></v-checkbox>
           </div>
         </div>
         <div>
@@ -82,7 +82,7 @@
       <div class="treti">
         <h1>Cena</h1>
         <p>bagr 890 000,- Kč</p>
-        <p>naklikane polozky  {{vyberNastandart}}, {{aktivniBarva}}, {{aktivniMotor}}</p>
+        <p>naklikane polozky  {{vyberNastandart}}, {{aktivniBarva}}, {{aktivniMotor}}, {{vyberPrislusenstvi}}</p>
         <hr />
         <p>Cena celkem bez DPH</p>
 
@@ -111,7 +111,8 @@ export default {
       aktivniStranka: 0,
       aktivniMotor: bagry[0].motor[0].nazevMotoru,
       aktivniBarva: "yellow",
-      aktivniNadstandart:{}
+      aktivniNadstandart:{},
+      aktivniPrislusenstvi:{}
     };
   },
 
@@ -136,6 +137,19 @@ export default {
 
       return nazvyNadstandart
     },
+
+    vyberPrislusenstvi(){
+      const nazvyPrislusenstvi = Object.entries(this.aktivniPrislusenstvi)
+      .filter(prislusenstvi => prislusenstvi[1] === true)
+      .map(smetak =>
+        {
+          const id = smetak[0];
+          const nadstandardnaPolozka = Data.prislusenstvi.find( polozka => polozka.id.toString() === id.toString() );
+          return nadstandardnaPolozka.nazev
+        })
+
+      return nazvyPrislusenstvi
+    }
   },
 
   methods: {
