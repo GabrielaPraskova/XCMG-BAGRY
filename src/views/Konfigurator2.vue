@@ -62,11 +62,11 @@
             <v-subheader>Barva</v-subheader>
 
               <button
-                v-on:click="vyberBarvu(barva)"
-                v-for="(barva, index) in Data.barvy"
-                v-bind:key="index"
+                v-on:click="vyberBarvu(preklad)"
+                v-for="(preklad, barva) in Data.barvy"
+                v-bind:key="barva"
                 v-bind:style="`background: ${barva}`"
-                v-bind:class="{'btn-active':barva === aktivniBarva}"
+                v-bind:class="{'btn-active':preklad === aktivniBarva}"
   
               ></button>
             </div>
