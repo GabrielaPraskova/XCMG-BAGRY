@@ -3,7 +3,7 @@
     <div class="kontejner">
       <div class="prvni">
         <img
-          class="celniObr"
+          class="vybranyStroj"
           v-bind:src="`/${$route.params.typ}/${aktivniRypadlo.obrazek}`"
           alt="obrazekBagrRypadla"
         />
@@ -57,7 +57,7 @@
               v-bind:key="index"
               v-model="aktivniNadstandart[vec.id]"
               :value="vec"
-              :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč bez DPH`"
+              :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč`"
             ></v-checkbox>
 
           
@@ -277,8 +277,8 @@ export default {
   text-align: left;
 }
 
-.celniObr {
-  max-width: 50%;
+.vybranyStroj {
+  max-width: 100%;
   align-self: center;
 }
 

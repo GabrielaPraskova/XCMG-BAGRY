@@ -48,29 +48,7 @@ export default {};
 } */
 
 
-.kont,
-.servis {
-  list-style: none;
-  text-align: left;
-  font-size: 15px;
-  padding: 10px;
-}
 
-.kont {
-  margin-right: 50px;
-  margin-left: 50px;
-  
-}
-
-.k,
-.s {
-  border: 1px solid grey;
-  border-left: none;
-  border-right: none;
-  margin-bottom: 15px;
-  padding: 10px 0;
-  font-weight: 600;
-}
 
 .ikonky {
  list-style: none;
