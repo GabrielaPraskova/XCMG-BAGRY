@@ -87,7 +87,7 @@
         </li>
       </ul> -->
       
-    </footer>
+    <!-- </footer> -->
     <div class="copy">
         copyright &copy; {{ new Date().getFullYear() }} XCMG/GM
       </div>
