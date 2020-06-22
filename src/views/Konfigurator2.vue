@@ -273,7 +273,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .kontejner {
   display: flex;
 }
