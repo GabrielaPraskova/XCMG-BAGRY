@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div class="app">
+    <div class="nav">
       <div class="prvniMenu">
         <div class="hlavickaKontakt">
           <div class="telefon">
@@ -95,7 +95,7 @@
 </template>
 
 <style scoped>
-#app {
+.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -106,20 +106,20 @@
   color: #2c3e50;
 }
 
-#nav {
+.nav {
   flex: 0 0 121px;
 }
 
-#nav a {
+.nav a {
   font-weight: bold;
   color: #3498db;
 }
 
-#nav a:hover {
+.nav a:hover {
   color: #16405c;
 }
 
-#nav a.router-link-exact-active {
+.nav a.router-link-exact-active {
   color: #16405c;
 }
 
@@ -127,7 +127,6 @@
   display: flex;
   justify-content: space-between;
   background-color: white;
-  border-top: grey solid 1px;
 }
 
 .druheMenu {
@@ -201,7 +200,7 @@ h3 {
   display: flex;
   flex: 0 0 147px;
   list-style: none;
-  background-color: #F7FFF2;
+  background-color: white;
 }
 
 .copy {
