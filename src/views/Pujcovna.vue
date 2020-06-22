@@ -37,8 +37,10 @@ export default {};
 </script>
 
 <style>
-#pujcovna p {
+#pujcovna p,h1,h3 {
   margin: 10px;
+  padding: 10px;
+  text-align: left;
 }
 
 #pujcovna .obrazky {
@@ -51,5 +53,6 @@ export default {};
 
 #pujcovna .prvni {
   display: flex;
+  
 }
 </style>

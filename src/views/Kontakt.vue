@@ -89,7 +89,7 @@ h1 {
 p {
   text-align: left;
   padding: 20px;
-  margin-left: 50px;
+  ;
 }
 
 .jmenoPrijmeni {

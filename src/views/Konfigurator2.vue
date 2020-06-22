@@ -34,6 +34,8 @@
               <div v-if="typ === 'bagr'" class="nosnost">Nosnost: {{rypadlo.technickeParametry.nosnost}}t</div>
             </button>
 
+            <h2>Výběr motoru:</h2>
+
             <v-col cols="12" sm="6" md="4">
               <v-radio-group v-model="aktivniMotor" hide-details>
                 <v-radio
@@ -48,7 +50,7 @@
         </div>
 
         <div class="druhy2" v-if="aktivniStranka === 1">
-          <v-subheader>Nadstandartní výbava</v-subheader>
+          <h2>Nadstandartní výbava</h2>
 
             <v-checkbox v-if="typ === 'bagr'"
               v-for="(vec, index) in Data.nadstandart"
@@ -58,21 +60,22 @@
               :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč bez DPH`"
             ></v-checkbox>
 
-          <div class="barvy">
-            <v-subheader>Barva</v-subheader>
-
-              <button
-                v-on:click="vyberBarvu(preklad)"
-                v-for="(preklad, barva) in Data.barvy"
-                v-bind:key="barva"
-                v-bind:style="`background: ${barva}`"
-                v-bind:class="{'btn-active':preklad === aktivniBarva}"
-  
-              ></button>
+          
+          <h2>Barva</h2>            
+            <div class="barvy">
+                <button
+                  v-on:click="vyberBarvu(preklad)"
+                  v-for="(preklad, barva) in Data.barvy"
+                  v-bind:key="barva"
+                  v-bind:style="`background: ${barva}`"
+                  v-bind:class="{'btn-active':preklad === aktivniBarva}"
+    
+                ></button>
             </div>
         </div>
 
         <div class="druhy3" v-if="aktivniStranka === 2">
+          <h2>Výběr příslušenství</h2>
           <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
            <!-- <img class="prislusenstvi" v-bind:src="(`/typ/${polozka.obrazek}`)" alt="lzice" /> -->
             <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka" :label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
@@ -323,5 +326,19 @@ button {
 
 .hmotnost{
   font-weight: bold
+}
+
+h2{
+  margin-top: 15px;
+  ;
+}
+
+.druhy2 h2,
+.druhy3 h2{
+  text-align: left;
+}
+
+.barvy{
+  text-align: left;
 }
 </style>
