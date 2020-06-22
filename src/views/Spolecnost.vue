@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="oSpolecnosti">
     <div class="kontejner">
       <div class="obrazek">
         <img src="building.png" alt="budova" />
@@ -34,6 +34,8 @@ export default {};
   padding: 20px;
   text-align: left;
 }
+
+
 
 
 

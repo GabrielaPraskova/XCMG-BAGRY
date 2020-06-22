@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="servis">
      
   
 
@@ -33,5 +33,12 @@ export default {
 </script>
 
 <style>
+#servis p{
+  text-align:left;
+  margin-left: 10px;
+  padding-left: 10px;
+  
+}
+
 
 </style>
