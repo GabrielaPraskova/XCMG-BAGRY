@@ -36,7 +36,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 #pujcovna p,h1,h3 {
   margin: 10px;
   padding: 10px;
