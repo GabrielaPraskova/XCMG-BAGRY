@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div class="app">
+    <div class="nav">
       <div class="prvniMenu">
-        <div class="kontakt">
+        <div class="hlavickaKontakt">
           <div class="telefon">
             <v-icon color="#FFEB3B">mdi-phone</v-icon>+420 733 798 032
           </div>
           <div class="email">
-            <v-icon color="#FFEB3B">mdi-email</v-icon>xcmg@servis.com
+            <v-icon color="#FFEB3B">mdi-email</v-icon>xcmg@xcmg.com
           </div>
         </div>
 
-        <div class="servis">
+        <div class="hlavickaServis">
           <div class="servisniHodiny">Servisní hodiny (8:00 - 17:00)</div>
         </div>
       </div>
@@ -50,21 +50,21 @@
     </div>
 
     <footer class="paticka">
-      <ul class="kont">
-        <li class="k">Kontakty</li>
+      <ul class="patickaKontakt">
+        <li class="patickaKontaktNadpis">Kontakty</li>
         <li>Dolní 141</li>
         <li>582 91 Světlá nad Sázavou</li>
         <li>733 798 032</li>
         <li>xcmg@servis.com</li>
       </ul>
 
-      <ul class="servis">
-        <li class="s">Servisní hodiny</li>
+      <ul class="patickaServis">
+        <li class="patickaServisNadpis">Servisní hodiny</li>
         <li>Po - Pá: 8 - 17</li>
         <li>nebo dle dohody</li>
       </ul>
 
-      <ul class="ikonky">
+      <!-- <ul class="ikonky">
         <li class="i"></li>
         <li class="facebook">
           <a href="https://www.facebook.com/zetor" target="_blank"
@@ -85,7 +85,7 @@
             ><span class="icon icon-youtube"></span
           ></a>
         </li>
-      </ul>
+      </ul> -->
       
     </footer>
     <div class="copy">
@@ -95,7 +95,7 @@
 </template>
 
 <style scoped>
-#app {
+.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -106,20 +106,20 @@
   color: #2c3e50;
 }
 
-#nav {
+.nav {
   flex: 0 0 121px;
 }
 
-#nav a {
+.nav a {
   font-weight: bold;
   color: #3498db;
 }
 
-#nav a:hover {
+.nav a:hover {
   color: #16405c;
 }
 
-#nav a.router-link-exact-active {
+.nav a.router-link-exact-active {
   color: #16405c;
 }
 
@@ -127,7 +127,6 @@
   display: flex;
   justify-content: space-between;
   background-color: white;
-  border-top: grey solid 1px;
 }
 
 .druheMenu {
@@ -201,7 +200,7 @@ h3 {
   display: flex;
   flex: 0 0 147px;
   list-style: none;
-  background-color: #F7FFF2;
+  background-color: white;
 }
 
 .copy {
@@ -210,19 +209,41 @@ h3 {
   padding: 10px;
 }
 
-.obrazekFb {
+/* .obrazekFb {
   max-width: 5%;
   border-radius: 50%;
-}
+} */
 
-.kontakt,
+.hlavickaKontakt,
 .servisniHodiny {
   display: flex;
   margin: 5px;
   padding: 0px;
 }
 
-.kontakt {
+.hlavickaKontakt {
   padding: 10px;
+}
+
+.patickaKontakt,
+.patickaServis {
+  list-style: none;
+  text-align: left;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.patickaKontakt {
+  margin-right: 50px;
+  margin-left: 50px;
+  
+}
+
+.patickaKontaktNadpis,
+.patickaServisNadpis {
+  margin-bottom: 15px;
+  padding: 10px 0;
+  font-weight: 600;
+  color: #3498db;
 }
 </style>
