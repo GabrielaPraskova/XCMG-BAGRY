@@ -96,7 +96,7 @@
 			<div v-if="prislusenstviHezky.length > 0" class="napisyZaklikanychPolozek">Příšlušenství </div>
 			<div v-for="(polozka, index) in prislusenstviHezky" v-bind:key="index" class="cenaPrislusenstvi">
 				{{polozka.nazev}}
-				{{polozka.cenaBezDPH}} Kč
+				{{polozka.cenaBezDPH | numeralFormat}} Kč
 			</div>
 
 		</div>
@@ -146,11 +146,11 @@ export default {
     typ() {
       const filtrovaneStroje = Data.stroje.filter(
         (stroj) => stroj.typ === this.typ
-      );
+	  );
 
       this.rypadla = filtrovaneStroje;
       this.aktivniRypadlo = filtrovaneStroje[0];
-      this.aktivniMotor = filtrovaneStroje[0].motor[0].nazevMotoru;
+	  this.aktivniMotor = filtrovaneStroje[0].motor[0].nazevMotoru;
     },
   },
 
