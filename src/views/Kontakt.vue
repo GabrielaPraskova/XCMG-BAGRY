@@ -1,8 +1,9 @@
 <template>
   <div class="kontejner">
+   
     <div class="kontakt">
       <div class="vedeniSpolecnosti">
-        <h1>Kontakt</h1>
+        
 
           <h3>Adresa</h3>
             <p>
@@ -15,43 +16,61 @@
           <br />
           <h3>Vedení společnosti</h3>
              <div>
-               <p>
-               Ing. Martin Prášek – jednatel
+               <p> Ing. Martin Prášek – jednatel
                 <br />tel: +420 777 728 275
-                <br />e-mail: prasek@xcmg.cz <p/></div>
-                <div class="druhyspan"> 
-                  <p><br />Ing. Radek Klofáč – jednatel
-                <br />tel: +420 777 728 063
-                <br />e-mail: klofac@xcmg.cz
-              </p>
-            </div>
+                <br />e-mail: prasek@xcmg.cz <p/>
+              </div>
+              <div class="druhyspan"> 
+                <p><br />Ing. Radek Klofáč – jednatel
+                    <br />tel: +420 777 728 063
+                    <br />e-mail: klofac@xcmg.cz
+                </p>
+              </div>
       </div>
       <div class="kancelar">
-        <h3>Kancelář</h3>
-       
-        <h3>Otevírací doba:</h3>
-          <p>
-            Po – Pá 8:00 – 17:30
-            <br />nebo dle telefonické dohody
-          </p>
+          <h3>Kancelář</h3>
+        
+          <h3>Otevírací doba:</h3>
+            <p>
+              Po – Pá 8:00 – 17:30
+              <br />nebo dle telefonické dohody
+            </p>
+        
+
+
+        <div class="napisteNam"> 
+            <h3>Napište nám</h3>
+
+            <div>
+              <label> Jméno a přijmení </label> 
+            </div>
+            <div>
+              <input class="inputKontakt" type="text">  
+            </div>
+
+            <div>
+              <label> Email </label> </div>
+            <div>
+              <input  class="inputKontakt" type="email"> 
+            </div>
+            <div>
+              <label> Text zprávy </label>     </div>
+            <div>
+              <input class="inputKontakt" type="text">
+            </div>   
+        </div>
       </div>
-
-
-      <div class="napisteNam"> 
-          <h3>Napište nám</h3>
-
-          <label> Jméno a přijmení
-            <input type="text">
-          </label>
-          
-      </div>
-    </div>
-    <div class="obrazek">
-      <div>
-        <img class="mapa" src="mapa.jpg" alt="mapa" />
+    
+      <div class="obrazek">
+        <div>
+          <img class="mapa" src="mapa.jpg" alt="mapa" />
+        </div>
       </div>
     </div>
   </div>
+      
+
+  
 </template>
 
 <script>
@@ -59,13 +78,14 @@ export default {};
 </script>
 
 <style scoped>
-.kontejner {
+
+
+.kontakt{
   display: flex;
   justify-content: space-around;
-  margin-top: 35px;
-
 }
 .kontakt h3 {
+  
   color: #3498db;
   text-align: left;
   margin-top: 10;
@@ -95,4 +115,23 @@ export default {};
 .druhyspan{
   padding-top: 5px;
 }
+
+.inputKontakt{
+  border: 1px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  margin: 10px;
+  width: 150px;
+
+}
+
+.obrazek{
+  max-width: 30%;
+}
+
+.napisteNam{
+  text-align: left;
+}
+
 </style>
