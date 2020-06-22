@@ -62,14 +62,14 @@
 	</div>
 
 	<div class="strankovani">
-
-		<v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">Předchozí
-		</v-btn>
-
-		<v-btn v-on:click="next" class="ma-2" outlined color="#3498db" v-if="aktivniStranka < 2">Další
-		</v-btn>
-
+		<div class="tlacitkoPredchozi">
+			<v-btn v-on:click="prev" class="ma-2" outlined color="#3498db" v-if="aktivniStranka > 0">Předchozí</v-btn>
+		</div>
+		<div class="tlacitkoDalsi">
+		<v-btn v-on:click="next" class="ma-2" outlined color="#3498db" v-if="aktivniStranka < 2">Další</v-btn>
+		</div>
 	</div>
+	
 
 	<div class="kalkulace">
 		<div class="cenaStroje">
@@ -333,6 +333,11 @@ export default {
 	width: 150px;
 }
 
+.strankovani {
+	display: flex;
+	justify-content: space-around;
+
+}
 
 .tlacitkaBarvy {
 	border: 1px solid #3498db;
