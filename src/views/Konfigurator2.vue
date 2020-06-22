@@ -25,22 +25,30 @@
 					<!-- <v-radio value="XD50" label={{motor.nazevMotoru}}></v-radio> -->
 				</v-radio-group>
 			</v-col>
+			<div v-if="typ === 'rypadlo'" class="barvy">
+				<button class="tlacitkaBarvy" v-on:click="vyberBarvu(preklad)" v-for="(preklad, barva) in Data.barvy"
+					v-bind:key="barva" v-bind:style="`background: ${barva}`"
+					v-bind:class="{'btn-active':preklad === aktivniBarva}"></button>
+			</div>
 		</div>
 
-		<div class="druhy2" v-if="aktivniStranka === 1">
+		<div class="druhy2" v-if="aktivniStranka === 1 && typ === 'bagr' ">
 			<!-- <h1>Nadstandartní výbava</h1> -->
+			
 
 			<v-checkbox v-if="typ === 'bagr'" v-for="(vec, index) in Data.nadstandart" v-bind:key="index"
 				v-model="aktivniNadstandart[vec.id]" :value="vec" :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč`">
 			</v-checkbox>
 
-
-			<!-- <h2>Barva</h2>             -->
-			<div class="barvy">
+			<div  class="barvy">
 				<button class="tlacitkaBarvy" v-on:click="vyberBarvu(preklad)" v-for="(preklad, barva) in Data.barvy"
 					v-bind:key="barva" v-bind:style="`background: ${barva}`"
 					v-bind:class="{'btn-active':preklad === aktivniBarva}"></button>
 			</div>
+
+
+			<!-- <h2>Barva</h2>             -->
+			
 		</div>
 
 		<div class="druhy3" v-if="aktivniStranka === 2">
@@ -230,10 +238,18 @@ export default {
     },
 
     next() {
-      this.aktivniStranka++;
+	 if (this.typ === 'rypadlo' && this.aktivniStranka === 0){
+		 this.aktivniStranka = 2
+		 return
+	 }	 
+	 this.aktivniStranka++;
     },
 
     prev() {
+		 if (this.typ === 'rypadlo' && this.aktivniStranka === 2){
+		 this.aktivniStranka = 0
+		 return
+	 }
       this.aktivniStranka--;
     },
     vyberBarvu(color) {
