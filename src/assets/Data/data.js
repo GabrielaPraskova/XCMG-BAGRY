@@ -10,7 +10,7 @@ export default {
     stroje:
       [
         {
-          popis:'JAHODA',
+          popis:'Kolový nakladač série ZL a LW společnosti XCMG vyvážející ho do 183 zemí světa patří do segmentu odolných heavy-duty nakladačů. Model vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí je uživateli vysoce hodnocen již od uvedení jeho prvního generace na mezinárodní trh před více než 30 lety.',
           id: 1,
           typ: "bagr",
           nazev: "LW180K",
@@ -46,7 +46,7 @@ export default {
         }
         },
         {
-          popis:'KOKOS',
+          popis:'Kolový nakladač série ZL a LW společnosti XCMG vyvážející ho do 183 zemí světa patří do segmentu odolných heavy-duty nakladačů. Model vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí je uživateli vysoce hodnocen již od uvedení jeho prvního generace na mezinárodní trh před více než 30 lety.',
           id: 2,
           typ: "bagr",
           nazev: "ZL30G",
@@ -76,7 +76,7 @@ export default {
               }
               },
         {
-          popis:'Meloun',
+          popis:'Kolový nakladač série ZL a LW společnosti XCMG vyvážející ho do 183 zemí světa patří do segmentu odolných heavy-duty nakladačů. Model vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí je uživateli vysoce hodnocen již od uvedení jeho prvního generace na mezinárodní trh před více než 30 lety.',
           id: 3,
           typ: "bagr",
           nazev: "ZL40G",
@@ -106,7 +106,7 @@ export default {
               pneu: "20.5 - 25"}       
         },
         {
-          popis:'Kdoule',
+          popis:'Kolový nakladač série ZL a LW společnosti XCMG vyvážející ho do 183 zemí světa patří do segmentu odolných heavy-duty nakladačů. Model vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí je uživateli vysoce hodnocen již od uvedení jeho prvního generace na mezinárodní trh před více než 30 lety.',
           id: 4,
           typ: "bagr",
           nazev: "ZL50G",
@@ -137,7 +137,7 @@ export default {
                   }                  
         },
         {
-          popis:'Merunka',
+          popis:'Kolový nakladač série ZL a LW společnosti XCMG vyvážející ho do 183 zemí světa patří do segmentu odolných heavy-duty nakladačů. Model vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí je uživateli vysoce hodnocen již od uvedení jeho prvního generace na mezinárodní trh před více než 30 lety.',
           id: 5,
           typ: "bagr",
           nazev: "LW800KN",
@@ -167,7 +167,7 @@ export default {
             }                  
         },
         {
-          popis:'Kurkuma',
+          popis:'Kolový nakladač série ZL a LW společnosti XCMG vyvážející ho do 183 zemí světa patří do segmentu odolných heavy-duty nakladačů. Model vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí je uživateli vysoce hodnocen již od uvedení jeho prvního generace na mezinárodní trh před více než 30 lety.',
           id: 6,
           typ: "bagr",
           nazev: "LW1100KN",
@@ -197,7 +197,7 @@ export default {
           }
         },
         {
-          popis:'Mys',
+          popis:'XE série je ekologický typ hydraulických rypadel specielně navržených na evropský a americký trh. Tato série slaví úspěchy zejména ve vyspělých evropských (Německo, Francie, Holandsko atd.) a spojených státech amerických kde se klade důraz na kvalitu spojenou vysokým komfortem i přes o trochu vyšší pořizovací náklady v porovnání s neznačkovými dovozy. XCMG vyvážející do 183 zemí světa patří s 30-ti letou historií tohoto modelu vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí do top 5 největších výrobců světa.',
           id: 7,
           typ: "rypadlo",
           nazev: "XE35U",
@@ -228,7 +228,7 @@ export default {
         }
       },
         {
-          popis:'Kralik',
+          popis:'XE série je ekologický typ hydraulických rypadel specielně navržených na evropský a americký trh. Tato série slaví úspěchy zejména ve vyspělých evropských (Německo, Francie, Holandsko atd.) a spojených státech amerických kde se klade důraz na kvalitu spojenou vysokým komfortem i přes o trochu vyšší pořizovací náklady v porovnání s neznačkovými dovozy. XCMG vyvážející do 183 zemí světa patří s 30-ti letou historií tohoto modelu vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí do top 5 největších výrobců světa.',
           id: 8,
           typ: "rypadlo",
           nazev: "XE60C",
@@ -250,7 +250,7 @@ export default {
             rozmery: { celkovaDelka: "5860 mm", celkovaSirka: "1920", vyska: "2585 mm", sirkaPodvozku: "1920 mm", delkaPodvozku: "1990 mm", sirkaPasu: "400 mm", svetlaVyska: "385 mm", maxDosahRamene: "6130", polomerOtaceni: "2460" } 
         }},
         {
-          popis:'Pes',
+          popis:'XE série je ekologický typ hydraulických rypadel specielně navržených na evropský a americký trh. Tato série slaví úspěchy zejména ve vyspělých evropských (Německo, Francie, Holandsko atd.) a spojených státech amerických kde se klade důraz na kvalitu spojenou vysokým komfortem i přes o trochu vyšší pořizovací náklady v porovnání s neznačkovými dovozy. XCMG vyvážející do 183 zemí světa patří s 30-ti letou historií tohoto modelu vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí do top 5 největších výrobců světa.',
           id: 9,
           typ: "rypadlo",
           nazev: "XE150D",
@@ -279,7 +279,7 @@ export default {
             polomerOtaceni: "2335" }
         },
         {
-          popis:'Kocka',
+          popis:'XE série je ekologický typ hydraulických rypadel specielně navržených na evropský a americký trh. Tato série slaví úspěchy zejména ve vyspělých evropských (Německo, Francie, Holandsko atd.) a spojených státech amerických kde se klade důraz na kvalitu spojenou vysokým komfortem i přes o trochu vyšší pořizovací náklady v porovnání s neznačkovými dovozy. XCMG vyvážející do 183 zemí světa patří s 30-ti letou historií tohoto modelu vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí do top 5 největších výrobců světa.',
           id: 10,
           typ: "rypadlo",
           nazev: "XE210C",
@@ -301,7 +301,7 @@ export default {
             rozmery: { celkovaDelka: "9625 mm", celkovaSirka: "2990", vyska: "3100 mm", sirkaPodvozku: "2990 mm", delkaPodvozku: "4255 mm", sirkaPasu: "600 mm", svetlaVyska: "475 mm", maxDosahRamene: "9940", polomerOtaceni: "3530" }}
         },
         {
-          popis:'Velbloud',
+          popis:'XE série je ekologický typ hydraulických rypadel specielně navržených na evropský a americký trh. Tato série slaví úspěchy zejména ve vyspělých evropských (Německo, Francie, Holandsko atd.) a spojených státech amerických kde se klade důraz na kvalitu spojenou vysokým komfortem i přes o trochu vyšší pořizovací náklady v porovnání s neznačkovými dovozy. XCMG vyvážející do 183 zemí světa patří s 30-ti letou historií tohoto modelu vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí do top 5 největších výrobců světa.',
           id: 11,
           typ: "rypadlo",
           nazev: "XE250C",
@@ -323,7 +323,7 @@ export default {
           rozmery: { celkovaDelka: "10195 mm", celkovaSirka: "3190", vyska: "3100 mm", sirkaPodvozku: "2830 mm", delkaPodvozku: "4640 mm", sirkaPasu: "600 mm", svetlaVyska: "485 mm", maxDosahRamene: "9760", polomerOtaceni: "3850" }}
                 },
         {
-          popis:'Klokan',
+          popis:'XE série je ekologický typ hydraulických rypadel specielně navržených na evropský a americký trh. Tato série slaví úspěchy zejména ve vyspělých evropských (Německo, Francie, Holandsko atd.) a spojených státech amerických kde se klade důraz na kvalitu spojenou vysokým komfortem i přes o trochu vyšší pořizovací náklady v porovnání s neznačkovými dovozy. XCMG vyvážející do 183 zemí světa patří s 30-ti letou historií tohoto modelu vyznačující se výkonem, ekonomičností, komfortem a spolehlivostí do top 5 největších výrobců světa.',
           id: 12,
           typ: "rypadlo",
           nazev: "XE370CB",
@@ -346,25 +346,25 @@ export default {
         },
       ],
       prislusenstvi:[
-        {id:1, typ:"bagr", nazev:"paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"smetak.jpg"},
-        {id:2, typ:"bagr", nazev:"lžíce 4 v 1", cenaSDPH: 44900, cenaBezDPH: 54329, obrazek:"lzice4v1.jpg"},
-        {id:3, typ:"bagr", nazev:"míchačka betonu", cenaSDPH: 89000, cenaBezDPH: 107690, obrazek:"michackaBetonu.jpg"},    
-        {id:4, typ:"bagr", nazev:"smeták", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"smetak.jpg"},
-        {id:5, typ:"bagr", nazev:"sněhová fréza", cenaSDPH: 87900, cenaBezDPH: 106359, obrazek:"snehovaFreza.jpg"},
-        {id:6, typ:"bagr", nazev:"snežná radlice", cenaSDPH: 34900, cenaBezDPH: 42229, obrazek:"sneznaRadlice.jpg"},
-        {id:7, typ:"bagr", nazev:"vidle na dřevo", cenaSDPH: 49000, cenaBezDPH: 59290, obrazek:"vidleNaDrevo.jpg"},
-        {id:8, typ: "rypadlo", nazev:"paletovací vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"" },
-        {id:9, typ: "rypadlo", nazev:"rozrývač", cenaSDPH: 24900, cenaBezDPH: 30129, obrazek:"" },
-        {id:10, typ: "rypadlo", nazev:"sekačka", cenaSDPH: 59000, cenaBezDPH: 71390, obrazek:"" },
-        {id:11, typ: "rypadlo", nazev:"třídící lžíce", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"" },
-        {id:12, typ: "rypadlo", nazev:"vidle na kulatinu", cenaSDPH: 44900, cenaBezDPH: 54329, obrazek:"" },
-        {id:13, typ: "rypadlo", nazev:"vrták", cenaSDPH: 54000, cenaBezDPH: 65340, obrazek:"" },
-        {id:14, typ: "rypadlo", nazev:"zametač", cenaSDPH: 56900, cenaBezDPH: 65340, obrazek:"" },
+        {id:1, typ:"bagr", nazev:"Paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"smetak.jpg"},
+        {id:2, typ:"bagr", nazev:"Lžíce 4 v 1", cenaSDPH: 44900, cenaBezDPH: 54329, obrazek:"lzice4v1.jpg"},
+        {id:3, typ:"bagr", nazev:"Míchačka betonu", cenaSDPH: 89000, cenaBezDPH: 107690, obrazek:"michackaBetonu.jpg"},    
+        {id:4, typ:"bagr", nazev:"Smeták", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"smetak.jpg"},
+        {id:5, typ:"bagr", nazev:"Sněhová fréza", cenaSDPH: 87900, cenaBezDPH: 106359, obrazek:"snehovaFreza.jpg"},
+        {id:6, typ:"bagr", nazev:"Snežná radlice", cenaSDPH: 34900, cenaBezDPH: 42229, obrazek:"sneznaRadlice.jpg"},
+        {id:7, typ:"bagr", nazev:"Vidle na dřevo", cenaSDPH: 49000, cenaBezDPH: 59290, obrazek:"vidleNaDrevo.jpg"},
+        {id:8, typ: "rypadlo", nazev:"Paletovací vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"" },
+        {id:9, typ: "rypadlo", nazev:"Rozrývač", cenaSDPH: 24900, cenaBezDPH: 30129, obrazek:"" },
+        {id:10, typ: "rypadlo", nazev:"Sekačka", cenaSDPH: 59000, cenaBezDPH: 71390, obrazek:"" },
+        {id:11, typ: "rypadlo", nazev:"Třídící lžíce", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"" },
+        {id:12, typ: "rypadlo", nazev:"Vidle na kulatinu", cenaSDPH: 44900, cenaBezDPH: 54329, obrazek:"" },
+        {id:13, typ: "rypadlo", nazev:"Vrták", cenaSDPH: 54000, cenaBezDPH: 65340, obrazek:"" },
+        {id:14, typ: "rypadlo", nazev:"Zametač", cenaSDPH: 56900, cenaBezDPH: 65340, obrazek:"" },
           ],
     nadstandart:[
-      {id:1, typ: "bagr", nazev:"klimatizace", cenaSDPH: 59290 , cenaBezDPH:49000 },
-      {id:2, typ: "bagr", nazev:"elektronicky ovládaný joystick", cenaSDPH: 30129 , cenaBezDPH:24900 },
-      {id:3, typ: "bagr", nazev:"zpětná kamera", cenaSDPH:5929 , cenaBezDPH:4900 },
+      {id:1, typ: "bagr", nazev:"Klimatizace", cenaSDPH: 59290 , cenaBezDPH:49000 },
+      {id:2, typ: "bagr", nazev:"Elektronicky ovládaný joystick", cenaSDPH: 30129 , cenaBezDPH:24900 },
+      {id:3, typ: "bagr", nazev:"Zpětná kamera", cenaSDPH:5929 , cenaBezDPH:4900 },
       {id:4, typ: "bagr", nazev:"SPZ", cenaSDPH:30129 , cenaBezDPH:24900 }
     ],
 

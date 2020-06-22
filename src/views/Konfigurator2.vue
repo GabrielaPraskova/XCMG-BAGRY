@@ -8,8 +8,8 @@
           alt="obrazekBagrRypadla"
         />
 
-        <div>
-          <p>{{aktivniRypadlo.popis}}</p>
+        <!-- <div> -->
+          <!-- <p class="popisStroje">{{aktivniRypadlo.popis}}</p> -->
           <!-- <table class="tabulka">
             <tr v-for="(hodnota, nazev) in aktivniRypadlo.technickeParametry">
               <th>{{nazev}}</th>
@@ -18,7 +18,7 @@
             </tr>
           </table> -->
 
-        </div>
+        <!-- </div> -->
       </div>
 
         <div class="tlacitkaKonfigurator">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="druhy2" v-if="aktivniStranka === 1">
-          <h1>Nadstandartní výbava</h1>
+          <!-- <h1>Nadstandartní výbava</h1> -->
 
             <v-checkbox v-if="typ === 'bagr'"
               v-for="(vec, index) in Data.nadstandart"
@@ -62,7 +62,7 @@
             ></v-checkbox>
 
           
-          <h2>Barva</h2>            
+          <!-- <h2>Barva</h2>             -->
             <div class="barvy">
                 <button
                   class="tlacitkaBarvy"
@@ -77,7 +77,7 @@
         </div>
 
         <div class="druhy3" v-if="aktivniStranka === 2">
-          <h1>Výběr příslušenství</h1>
+          <!-- <h1>Výběr příslušenství</h1> -->
           <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
            <!-- <img class="prislusenstvi" v-bind:src="(`/typ/${polozka.obrazek}`)" alt="lzice" /> -->
             <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka" :label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
@@ -106,10 +106,22 @@
 
       <div class="treti">
         <div class="cenik">
-          <h1 class="nadpisKonfigurator">Cena</h1>
-          <div class="cenaStroje"><div class="napisyZaklikanychPolozek">{{aktivniRypadlo.nazev}} </div><div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH}} Kč</div></div>
-          <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> <div class="napisyZaklikanychPolozek">Motor</div><div class="vybranePolozky">{{aktivniMotor.nazevMotoru}} (zahrnuto v ceně)</div></div>
-          <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> <div class="napisyZaklikanychPolozek">Motor</div><div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč</div></div>
+          <!-- <h1 class="nadpisKonfigurator">Cena</h1> -->
+          <div class="cenaStroje">
+            <div class="napisyZaklikanychPolozek">Stroj</div> {{aktivniRypadlo.nazev}} 
+            <div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH}} Kč</div>
+            </div>
+          
+          <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> 
+            <div class="napisyZaklikanychPolozek">Motor</div>
+            <div class="vybranePolozky">{{aktivniMotor.nazevMotoru}} (zahrnuto v ceně)</div>
+            </div>
+          <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> 
+            <div class="napisyZaklikanychPolozek">Motor</div>
+            <div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč</div>
+            </div>
+          
+          
           <div 
           v-for="(polozka, index) in nadstandartHezky"
           v-bind:key="index"
@@ -118,20 +130,22 @@
           <div 
           v-for="(polozka, index) in prislusenstviHezky" 
           v-bind:key="index"
-          class="cenaPrislusenstvi"> Cena příslušenství: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
+          class="cenaPrislusenstvi"><div class="napisyZaklikanychPolozek">Příšlušenství</div> {{polozka.nazev}}  {{polozka.cenaBezDPH}} Kč</div>
         <hr />
-          <div class="cenaCelkem"><div class="cenaCelkem">Celkem</div><div class="vypsanaCenaCelkem"> {{celkovaCena}} Kč bez DPH</div></div>
+          <div class="cenaCelkem"><div class="cenaCelkem">Cena bez DPH</div><div class="vypsanaCenaCelkem"> {{celkovaCena}} Kč</div></div>
         </div>
         
 
         <div class="infoPoptavka">
+
+          <v-btn class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
         
           <p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>
 
           <p class="ozvemeSe">Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám
             ozveme do následujícího pracovního dne.
           </p>
-          <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
+          
         </div>
       </div>
     </div>
@@ -275,11 +289,11 @@ export default {
   
 }
 
-.prvni,
-.druhy {
-  /* padding-right: 50px; */
-}
-
+/* .popisStroje {
+  text-align: left;
+  margin-left: 20px;
+  
+} */
 
 .vybranyStroj {
   max-width: 100%;
@@ -327,7 +341,7 @@ export default {
 .nadpisKonfigurator{
   color:#2c3e50;
   margin: 15px;
-  text-align: center;
+  text-align: left;
 }
 
 .infoPoptavka{
@@ -359,6 +373,9 @@ export default {
   text-transform: uppercase;
 }
 
+/* .tlacitkoPoptavka{
+  text-align: right;
+} */
 .hmotnost{
   font-weight: bold
 }
@@ -380,10 +397,11 @@ h2{
 }
 
 .casDodani {
-  padding: 20px 0
+  padding: 30px 0;
+  font-style: italic;
 }
 
 .ozvemeSe{
-   padding: 30px 0
+   font-style: italic;
 }
 </style>
