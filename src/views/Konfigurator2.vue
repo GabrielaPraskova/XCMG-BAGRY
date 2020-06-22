@@ -120,7 +120,7 @@
           v-bind:key="index"
           class="cenaPrislusenstvi"> Cena příslušenství: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
         <hr />
-          <div class="cenaCelkem">CENA CELKEM {{celkovaCena}} Kč bez DPH</div>
+          <div class="cenaCelkem"><div class="cenaCelkem">Celkem</div><div class="vypsanaCenaCelkem"> {{celkovaCena}} Kč bez DPH</div></div>
         </div>
         
 
