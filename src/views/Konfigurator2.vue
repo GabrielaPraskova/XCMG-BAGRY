@@ -158,7 +158,7 @@ export default {
 
       this.rypadla = filtrovaneStroje;
       this.aktivniRypadlo = filtrovaneStroje[0];
-	  this.aktivniMotor = filtrovaneStroje[0].motor[0].nazevMotoru;
+	  this.aktivniMotor = filtrovaneStroje[0].motor[0];
     },
   },
 
@@ -166,8 +166,8 @@ export default {
     vyberRypadla() {
       const rypadla = Data.prislusenstvi.filter(
         (polozka) => polozka.typ === this.typ
-      );
-      console.log(rypadla);
+	  );
+	  
       return rypadla;
     },
 
@@ -182,8 +182,8 @@ export default {
 
     celkovaCena(){
       const cenaNadstandartu = this.nadstandartHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
-      const cenaPrislusenstvi = this.prislusenstviHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
-      return cenaNadstandartu + this.aktivniRypadlo.cenaBezDPH + this.aktivniMotor.cenaMotoruBez + cenaPrislusenstvi
+	  const cenaPrislusenstvi = this.prislusenstviHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
+	  return cenaNadstandartu + this.aktivniRypadlo.cenaBezDPH + this.aktivniMotor.cenaMotoruBez + cenaPrislusenstvi
 
     },
 
