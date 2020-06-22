@@ -51,7 +51,7 @@
         </div>
 
         <div class="druhy2" v-if="aktivniStranka === 1">
-          <h2>Nadstandartní výbava</h2>
+          <h1>Nadstandartní výbava</h1>
 
             <v-checkbox v-if="typ === 'bagr'"
               v-for="(vec, index) in Data.nadstandart"
@@ -77,7 +77,7 @@
         </div>
 
         <div class="druhy3" v-if="aktivniStranka === 2">
-          <h2>Výběr příslušenství</h2>
+          <h1>Výběr příslušenství</h1>
           <div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
            <!-- <img class="prislusenstvi" v-bind:src="(`/typ/${polozka.obrazek}`)" alt="lzice" /> -->
             <v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka" :label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
@@ -126,10 +126,10 @@
 
         <div class="infoPoptavka">
         
-          <p class="casDodani">Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
+          <p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>
 
           <p class="ozvemeSe">Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám
-            ozveme do následujícího pracovního dne
+            ozveme do následujícího pracovního dne.
           </p>
           <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
         </div>
@@ -271,6 +271,7 @@ export default {
 .treti {
   flex-basis: 30%;
   text-align: left;
+  margin-top: 30px
   
 }
 
@@ -367,10 +368,12 @@ h2{
   ;
 }
 
-.druhy2 h2,
-.druhy3 h2{
+/* .druhy,
+.druhy2,
+.druhy3 {
   text-align: left;
-}
+  margin-top: 30px
+} */
 
 .barvy{
   text-align: left;

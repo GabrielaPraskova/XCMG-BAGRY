@@ -362,10 +362,10 @@ export default {
         {id:14, typ: "rypadlo", nazev:"zametač", cenaSDPH: 56900, cenaBezDPH: 65340, obrazek:"" },
           ],
     nadstandart:[
-      {id:1, typ: "bagr", nazev:"klimatizace", cenaSDPH: 49000, cenaBezDPH: 59290},
-      {id:2, typ: "bagr", nazev:"elektronicky ovládaný joystick", cenaSDPH: 24900, cenaBezDPH: 30129},
-      {id:3, typ: "bagr", nazev:"zpětná kamera", cenaSDPH: 4900, cenaBezDPH: 5929},
-      {id:4, typ: "bagr", nazev:"SPZ", cenaSDPH: 24900, cenaBezDPH: 30129}
+      {id:1, typ: "bagr", nazev:"klimatizace", cenaSDPH: 59290 , cenaBezDPH:49000 },
+      {id:2, typ: "bagr", nazev:"elektronicky ovládaný joystick", cenaSDPH: 30129 , cenaBezDPH:24900 },
+      {id:3, typ: "bagr", nazev:"zpětná kamera", cenaSDPH:5929 , cenaBezDPH:4900 },
+      {id:4, typ: "bagr", nazev:"SPZ", cenaSDPH:30129 , cenaBezDPH:24900 }
     ],
 
     barvy:{red: "červená", black: "černá", blue:"modrá", yellow:"žlutá", green:"zelená"}
