@@ -49,7 +49,7 @@
       <router-view />
     </div>
 
-    <footer class="paticka">
+    <!-- <footer class="paticka">
       <ul class="patickaKontakt">
         <li class="patickaKontaktNadpis">Kontakty</li>
         <li>Dolní 141</li>
@@ -62,7 +62,7 @@
         <li class="patickaServisNadpis">Servisní hodiny</li>
         <li>Po - Pá: 8 - 17</li>
         <li>nebo dle dohody</li>
-      </ul>
+      </ul> -->
 
       <!-- <ul class="ikonky">
         <li class="i"></li>
@@ -205,11 +205,7 @@ h3 {
   background-color: white;
 }
 
-.copy {
-  flex: 0 0 39;
-  background-color: #3498db;
-  padding: 10px;
-}
+
 
 /* .obrazekFb {
   max-width: 5%;
@@ -227,6 +223,7 @@ h3 {
   padding: 10px;
 }
 
+/*
 .patickaKontakt,
 .patickaServis {
   list-style: none;
@@ -247,5 +244,11 @@ h3 {
   padding: 10px 0;
   font-weight: 600;
   color: #3498db;
+} */
+
+.copy {
+  flex: 0 0 39;
+  background-color: #3498db;
+  padding: 5px;
 }
 </style>

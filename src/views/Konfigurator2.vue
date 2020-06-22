@@ -126,120 +126,120 @@
 import Data from "./../assets/Data/data.js";
 
 export default {
-	props: ["typ"],
-	data() {
-		const rypadla = Data.stroje.filter((stroj) => stroj.typ === this.typ);
+  props: ["typ"],
+  data() {
+    const rypadla = Data.stroje.filter((stroj) => stroj.typ === this.typ);
 
-		return {
-			Data,
-			aktivniRypadlo: rypadla[0],
-			rypadla,
-			aktivniStranka: 0,
-			aktivniMotor: rypadla[0].motor[0],
-			aktivniBarva: "yellow",
-			aktivniPrislusenstvi: {},
-			aktivniNadstandart: {},
-		};
-	},
+    return {
+      Data,
+      aktivniRypadlo: rypadla[0],
+      rypadla,
+      aktivniStranka: 0,
+      aktivniMotor: rypadla[0].motor[0],
+      aktivniBarva: "žlutá",
+      aktivniPrislusenstvi: {},
+      aktivniNadstandart: {},
+    };
+  },
 
-	watch: {
-		typ() {
-			const filtrovaneStroje = Data.stroje.filter(
-				(stroj) => stroj.typ === this.typ
-			);
+  watch: {
+    typ() {
+      const filtrovaneStroje = Data.stroje.filter(
+        (stroj) => stroj.typ === this.typ
+      );
 
-			this.rypadla = filtrovaneStroje;
-			this.aktivniRypadlo = filtrovaneStroje[0];
-			this.aktivniMotor = filtrovaneStroje[0].motor[0].nazevMotoru;
-		},
-	},
+      this.rypadla = filtrovaneStroje;
+      this.aktivniRypadlo = filtrovaneStroje[0];
+      this.aktivniMotor = filtrovaneStroje[0].motor[0].nazevMotoru;
+    },
+  },
 
-	computed: {
-		vyberRypadla() {
-			const rypadla = Data.prislusenstvi.filter(
-				(polozka) => polozka.typ === this.typ
-			);
-			console.log(rypadla);
-			return rypadla;
-		},
+  computed: {
+    vyberRypadla() {
+      const rypadla = Data.prislusenstvi.filter(
+        (polozka) => polozka.typ === this.typ
+      );
+      console.log(rypadla);
+      return rypadla;
+    },
 
-		nadstandartHezky() {
-			const nadstandartNice = Object.entries(this.aktivniNadstandart)
-			.filter(polozka => polozka[1] !== null)
-			.map(y => y[1])
-		 
-			return nadstandartNice
+    nadstandartHezky() {
+      const nadstandartNice = Object.entries(this.aktivniNadstandart)
+      .filter(polozka => polozka[1] !== null)
+      .map(y => y[1])
+     
+      return nadstandartNice
 
-		},
+    },
 
-		celkovaCena(){
-			const cenaNadstandartu = this.nadstandartHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
-			const cenaPrislusenstvi = this.prislusenstviHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
-			return cenaNadstandartu + this.aktivniRypadlo.cenaBezDPH + this.aktivniMotor.cenaMotoruBez + cenaPrislusenstvi
+    celkovaCena(){
+      const cenaNadstandartu = this.nadstandartHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
+      const cenaPrislusenstvi = this.prislusenstviHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
+      return cenaNadstandartu + this.aktivniRypadlo.cenaBezDPH + this.aktivniMotor.cenaMotoruBez + cenaPrislusenstvi
 
-		},
+    },
 
-		 prislusenstviHezky() {
-			const prislusenstviNice = Object.entries(this.aktivniPrislusenstvi)
-			.filter(polozka => polozka[1] !== null)
-			.map(y => y[1])
-		 
-			return prislusenstviNice
+     prislusenstviHezky() {
+      const prislusenstviNice = Object.entries(this.aktivniPrislusenstvi)
+      .filter(polozka => polozka[1] !== null)
+      .map(y => y[1])
+     
+      return prislusenstviNice
 
-		},
+    },
 
-	
-
-
-
-		// vyberNastandart() {
-		//   const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
-		//     .filter((nadstandard) => nadstandard[1] === true)
-		//     .map((fruit) => {
-		//       const id = fruit[0];
-		//       const nadstandardnaPolozka = Data.nadstandart.find(
-		//         (polozka) => polozka.id.toString() === id.toString()
-		//       );
-		//       return nadstandardnaPolozka.nazev;
-		//     });
-
-		//   return nazvyNadstandart;
-		// },
+  
 
 
-		vyberPrislusenstvi() {
-			const nazvyPrislusenstvi = Object.entries(this.aktivniPrislusenstvi)
-				.filter((prislusenstvi) => prislusenstvi[1] === true)
-				.map((smetak) => {
-					const id = smetak[0];
-					const nadstandardnaPolozka = Data.prislusenstvi.find(
-						(polozka) => polozka.id.toString() === id.toString()
-					);
-					return nadstandardnaPolozka.nazev;
-				});
 
-			return nazvyPrislusenstvi;
-		},
-	},
+    // vyberNastandart() {
+    //   const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
+    //     .filter((nadstandard) => nadstandard[1] === true)
+    //     .map((fruit) => {
+    //       const id = fruit[0];
+    //       const nadstandardnaPolozka = Data.nadstandart.find(
+    //         (polozka) => polozka.id.toString() === id.toString()
+    //       );
+    //       return nadstandardnaPolozka.nazev;
+    //     });
 
-	methods: {
-		nastavAktivniRypadlo(rypadlo) {
-			this.aktivniRypadlo = rypadlo;
-			this.aktivniMotor = this.aktivniRypadlo.motor[0];
-			
-		},
+    //   return nazvyNadstandart;
+    // },
 
-		next() {
-			this.aktivniStranka++;
-		},
 
-		prev() {
-			this.aktivniStranka--;
-		},
-		vyberBarvu(color) {
-			this.aktivniBarva = color;
-		},
-	},
+    vyberPrislusenstvi() {
+      const nazvyPrislusenstvi = Object.entries(this.aktivniPrislusenstvi)
+        .filter((prislusenstvi) => prislusenstvi[1] === true)
+        .map((smetak) => {
+          const id = smetak[0];
+          const nadstandardnaPolozka = Data.prislusenstvi.find(
+            (polozka) => polozka.id.toString() === id.toString()
+          );
+          return nadstandardnaPolozka.nazev;
+        });
+
+      return nazvyPrislusenstvi;
+    },
+  },
+
+  methods: {
+    nastavAktivniRypadlo(rypadlo) {
+      this.aktivniRypadlo = rypadlo;
+      this.aktivniMotor = this.aktivniRypadlo.motor[0];
+      
+    },
+
+    next() {
+      this.aktivniStranka++;
+    },
+
+    prev() {
+      this.aktivniStranka--;
+    },
+    vyberBarvu(color) {
+      this.aktivniBarva = color;
+    },
+  },
 };
 </script>
 

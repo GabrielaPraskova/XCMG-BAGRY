@@ -32,12 +32,12 @@ export default {};
 }*/
 
 .celniObr {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
 }
 
 .rypadloObr {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -55,7 +55,12 @@ export default {};
 }
 
 .linkKonfigurator{
- text-decoration:none
+ text-decoration:none;
+ }
+
+ .v-btn.v-size--default {
+    font-size: 30px;
+    padding: 20px;
 }
 
 
