@@ -105,9 +105,9 @@
       <div class="treti">
         <div class="cenik">
           <h1 class="nadpisKonfigurator">Cena</h1>
-          <div class="cenaStroje">Cena stroje {{aktivniRypadlo.nazev}} : {{aktivniRypadlo.cenaBezDPH}} Kč bez DPH </div>
+          <div class="cenaStroje">Cena stroje {{aktivniRypadlo.nazev}}: {{aktivniRypadlo.cenaBezDPH}} Kč bez DPH </div>
           <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: (zahrnuto v ceně)</div>
-          <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč bez DPH</div>
+          <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> Cena motoru {{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč bez DPH</div>
           <div 
           v-for="polozka in nadstandartHezky"
           class="cenaNadstandartu"> Cena nadstandartu: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>

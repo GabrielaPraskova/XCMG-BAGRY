@@ -34,7 +34,6 @@ Vue.use(VueRouter)
     name: 'Spolecnost',
     component: Spolecnost
   },
-  ,
   {
     path: '/kontakt',
     name: 'Kontakt',
