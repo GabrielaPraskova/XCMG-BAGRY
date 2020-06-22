@@ -99,6 +99,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 100vh;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -188,6 +189,7 @@
 
 .router {
   flex: 1 0 0;
+  overflow: auto;
 }
 
 h1,
