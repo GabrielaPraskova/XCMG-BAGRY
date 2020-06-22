@@ -109,11 +109,13 @@
           <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: (zahrnuto v ceně)</div>
           <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> Cena motoru {{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč bez DPH</div>
           <div 
-          v-for="polozka in nadstandartHezky"
+          v-for="(polozka, index) in nadstandartHezky"
+          v-bind:key="index"
           class="cenaNadstandartu"> Cena nadstandartu: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
           <div class="cenaBarva"> Vybraná barva: {{aktivniBarva}} (zahrnuto v ceně)</div>
           <div 
-          v-for="polozka in prislusenstviHezky" 
+          v-for="(polozka, index) in prislusenstviHezky" 
+          v-bind:key="index"
           class="cenaPrislusenstvi"> Cena příslušenství: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
           <div class="cenaCelkem">Cena celkem: {{celkovaCena}} Kč bez DPH</div>
         </div>
