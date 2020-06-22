@@ -29,6 +29,7 @@
               v-bind:class="{active: rypadlo === aktivniRypadlo}"
               v-for="(rypadlo,index) in rypadla"
               v-bind:key="index"
+              class="tlacitkoNosnostHmotnost"
             >
               <div class="hmotnost">Hmotnost: {{rypadlo.technickeParametry.hmotnost}}t</div>
               <div v-if="typ === 'bagr'" class="nosnost">Nosnost: {{rypadlo.technickeParametry.nosnost}}t</div>
@@ -64,6 +65,7 @@
           <h2>Barva</h2>            
             <div class="barvy">
                 <button
+                  class="tlacitkaBarvy"
                   v-on:click="vyberBarvu(preklad)"
                   v-for="(preklad, barva) in Data.barvy"
                   v-bind:key="barva"
@@ -88,7 +90,7 @@
             outlined
             color="#3498db"
             v-if="aktivniStranka > 0"
-            >PREVIOUS</v-btn
+            >Předchozí</v-btn
           >
 
           <v-btn
@@ -97,7 +99,7 @@
             outlined
             color="#3498db"
             v-if="aktivniStranka < 2"
-            >NEXT</v-btn
+            >Další</v-btn
           >
         </div>
       </div>
@@ -105,28 +107,28 @@
       <div class="treti">
         <div class="cenik">
           <h1 class="nadpisKonfigurator">Cena</h1>
-          <div class="cenaStroje">Cena stroje {{aktivniRypadlo.nazev}}: {{aktivniRypadlo.cenaBezDPH}} Kč bez DPH </div>
-          <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> Cena motoru: {{aktivniMotor.nazevMotoru}}: (zahrnuto v ceně)</div>
-          <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> Cena motoru {{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč bez DPH</div>
+          <div class="cenaStroje"><div class="napisyZaklikanychPolozek">{{aktivniRypadlo.nazev}} </div><div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH}} Kč</div></div>
+          <div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"> <div class="napisyZaklikanychPolozek">Motor</div><div class="vybranePolozky">{{aktivniMotor.nazevMotoru}} (zahrnuto v ceně)</div></div>
+          <div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"> <div class="napisyZaklikanychPolozek">Motor</div><div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč</div></div>
           <div 
           v-for="(polozka, index) in nadstandartHezky"
           v-bind:key="index"
-          class="cenaNadstandartu"> Cena nadstandartu: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
-          <div class="cenaBarva"> Vybraná barva: {{aktivniBarva}} (zahrnuto v ceně)</div>
+          class="cenaNadstandartu"> <div class="napisyZaklikanychPolozek">Nadstandart</div><div class="vybranePolozky"> {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div></div>
+          <div class="cenaBarva"> <div class="napisyZaklikanychPolozek">Barva</div><div class="vybranePolozky">{{aktivniBarva}} (zahrnuto v ceně)</div></div>
           <div 
           v-for="(polozka, index) in prislusenstviHezky" 
           v-bind:key="index"
           class="cenaPrislusenstvi"> Cena příslušenství: {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
-          <div class="cenaCelkem">Cena celkem: {{celkovaCena}} Kč bez DPH</div>
+        <hr />
+          <div class="cenaCelkem">CENA CELKEM {{celkovaCena}} Kč bez DPH</div>
         </div>
         
-        <hr />
 
         <div class="infoPoptavka">
         
-          <p>Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
+          <p class="casDodani">Běžný čas dodání stroje je 2 měsíce od odeslání poptávky</p>
 
-          <p>Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám
+          <p class="ozvemeSe">Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám
             ozveme do následujícího pracovního dne
           </p>
           <v-btn class="ma-2" outlined color="#3498db">Nezávazná Poptávka</v-btn>
@@ -262,24 +264,24 @@ export default {
   display: flex;
 }
 
-.prvni,
+.prvni {
+  flex-basis: 50%
+}
 .tlacitkaKonfigurator,
 .treti {
-  flex-basis: 33.3%;
+  flex-basis: 30%;
+  text-align: left;
+  
 }
 
 .prvni,
 .druhy {
-  padding-right: 50px;
+  /* padding-right: 50px; */
 }
-.druhy,
-.treti {
-  text-align: left;
-}
+
 
 .vybranyStroj {
   max-width: 100%;
-  align-self: center;
 }
 
 .active {
@@ -290,14 +292,23 @@ export default {
   margin: 10px;
 }
 
-button {
+.tlacitkoNosnostHmotnost {
+  border: 1px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  margin: 10px;
+  width: 150px;
+}
+
+
+.tlacitkaBarvy {
   border: 1px solid #3498db;
   padding: 10px;
   border-radius: 5px;
   text-align: left;
   margin: 10px;
 }
-
 .prislusenstvi {
   max-width: 10%;
   display: block;
@@ -315,6 +326,7 @@ button {
 .nadpisKonfigurator{
   color:#2c3e50;
   margin: 15px;
+  text-align: center;
 }
 
 .infoPoptavka{
@@ -324,6 +336,26 @@ button {
 
 .cenik{
   margin: 20px;
+}
+
+.napisyZaklikanychPolozek {
+  font-weight: 700;
+  font-size: 20px;
+  color: #3498db;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.vybranePolozky {
+  padding-bottom:15px;
+}
+
+.cenaCelkem {
+  font-weight: 700;
+  font-size: 20px;
+  color: #3498db;
+  padding-top: 10px;
+  text-transform: uppercase;
 }
 
 .hmotnost{
@@ -342,5 +374,13 @@ h2{
 
 .barvy{
   text-align: left;
+}
+
+.casDodani {
+  padding: 20px 0
+}
+
+.ozvemeSe{
+   padding: 30px 0
 }
 </style>
