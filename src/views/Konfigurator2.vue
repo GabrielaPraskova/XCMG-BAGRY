@@ -261,6 +261,7 @@ export default {
 
 <style scoped>
 .grid-container {
+	height:100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1.5fr 1fr 0.5fr;
