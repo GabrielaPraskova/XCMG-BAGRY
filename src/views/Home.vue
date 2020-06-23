@@ -1,15 +1,19 @@
 <template>
   <div class="home">
-    <div class="prvniObrazek">
-        <img class="obrazekStroje" src="/LW800KN.jpg" alt="obrazekLW800KN" /> 
-        <router-link class="linkKonfigurator"  to="/konfigurator2/bagr"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link> 
-    </div>
-    <div class="druhyObrazek">
-      <img class="obrazekStroje" src="/LP500JK.jpg" alt="obrazekLP500JK" />
-       <router-link class="linkKonfigurator" to="/konfigurator2/rypadlo"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link>
-    </div>
-    
+  
+    <router-link class="box" style="background-image:url(/LW800KN.jpg)" to="/konfigurator2/bagr">
+      <v-btn class="boxTlacitko" x-large color="success" dark>Konfiguruj</v-btn>
+     
+    </router-link> 
+
+
+    <router-link class="box" style="background-image:url(/LP500JK.jpg)" to="/konfigurator2/rypadlo">
+       <v-btn class="boxTlacitko" x-large color="success" dark> Konfiguruj</v-btn>
+    </router-link>
+
+       
   </div>
+    
 </template>
 
 <script>
@@ -21,15 +25,21 @@ export default {};
 
 .home{
   display: flex;
+  padding: 0 100px;
 }
-
-/*.prvniObrazek{
-  background-image: url("/LW800KN.jpg")
-}*/
 
 .obrazekStroje {
   max-width: 100%;
   height: auto;
+}
+
+.box {
+  position: relative;
+  padding: 50px 0;
+  flex: 1 0 400px;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .ikonky {
@@ -40,10 +50,14 @@ export default {};
  text-decoration:none;
  }
 
- .v-btn.v-size--default {
-    /* font-size: 20px; */
-    padding: 20px;
+.v-btn:not(.v-btn--round).v-size--x-large {
+  padding: 20px 50px;
 }
 
-.prvniObrazek > 
+.boxTlacitko {
+  position: absolute;
+  top: 150px;
+  right: 200px;
+}
+
 </style>
