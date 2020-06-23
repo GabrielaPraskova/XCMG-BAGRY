@@ -346,7 +346,7 @@ export default {
         },
       ],
       prislusenstvi:[
-        {id:1, typ:"bagr", nazev:"Paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"smetak.jpg"},
+        {id:1, typ:"bagr", nazev:"Paletové vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"paletovaciVidle.png"},
         {id:2, typ:"bagr", nazev:"Lžíce 4 v 1", cenaSDPH: 44900, cenaBezDPH: 54329, obrazek:"lzice4v1.jpg"},
         {id:3, typ:"bagr", nazev:"Míchačka betonu", cenaSDPH: 89000, cenaBezDPH: 107690, obrazek:"michackaBetonu.jpg"},    
         {id:4, typ:"bagr", nazev:"Smeták", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"smetak.jpg"},
@@ -368,5 +368,5 @@ export default {
       {id:4, typ: "bagr", nazev:"SPZ", cenaSDPH:30129 , cenaBezDPH:24900 }
     ],
 
-    barvy:{black: "černá", '#66FF66':"zelená", "#38FFF8":"modrá", "#FF52F9": "červená",  "#F4FF5C":"žlutá"}
+    barvy:{black: "Černá", '#66FF66':"Zelená", "#38FFF8":"Modrá", "#FF52F9": "Fialová",  "#F4FF5C":"Žlutá"}
   }

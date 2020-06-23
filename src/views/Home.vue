@@ -41,14 +41,6 @@ export default {};
   height: auto;
 }
 
-/* header{
-    background-image: url(hlavicka.jpg);
-    background-size: cover;
-    padding: 200px 30px;
-} */
-
-
-
 
 .ikonky {
  list-style: none;
@@ -59,7 +51,7 @@ export default {};
  }
 
  .v-btn.v-size--default {
-    font-size: 30px;
+    /* font-size: 20px; */
     padding: 20px;
 }
 
