@@ -3,7 +3,7 @@
   <div class="servis">
     <div class="servisText">
 
-        <h1>SERVIS</h1>
+        <h1>Servis</h1>
         <h3>  Záruční a pozáruční servis a prodej náhradních dílů pro stroje XCMG v České Republice zajišťuje: </h3>
         <p>PKBAU s.r.o. – Světlá nad Sázavou – prodej strojů, příslušenství a náhradních dílů, servis, půjčovna, 
               lokality: Beroun, České Budějovice, Liberec, Bruntál, Lovosice
@@ -44,12 +44,14 @@ export default {
 .kontejnerServis{
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 .servis{
   display: flex;
-  /* flex-wrap: wrap-reverse; */
-  margin-top: 30px;
-  /* min-width: 150px;  */
+  /* flex-wrap: wrap-reverse; */ 
+  width: 1150px; 
+  margin: 30px,
+  
  
 }
 
@@ -65,19 +67,18 @@ export default {
 }
 
 
-.servis p{
+.servis p {
   margin-bottom: 10px;
   text-align: justify;
   line-height: 1.5;
 }
 
 .servisObrazek{
-  margin-top: 110px;
   margin-left: 70px;
   /* flex-basis: 500px; */
 }
 
-.imgServis{
+.servisObrazek{
   width: 50%;
 }
 
