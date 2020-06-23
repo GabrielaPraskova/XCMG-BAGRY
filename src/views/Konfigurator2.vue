@@ -78,7 +78,7 @@
 			<div class="rodic">
 				<div class="prvniSloupec">{{aktivniRypadlo.nazev}} </div>
 				<div class="druhySloupec">
-					<div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH}} Kč</div>
+					<div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH | numeralFormat}} Kč</div>
 				</div>
 			</div>
 
@@ -88,14 +88,14 @@
 			</div>
 			<div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru">
 				<div class="napisyZaklikanychPolozek">Motor</div>
-				<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez}} Kč
+				<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez  | numeralFormat}} Kč
 				</div>
 			</div>
 
 
-			<div v-for="(polozka, index) in nadstandartHezky" v-bind:key="index" class="cenaNadstandartu">
+			<div v-for="(polozka, index) in nadstandartHezky" v-bind:key="index"  class="cenaNadstandartu">
 				<div class="napisyZaklikanychPolozek">Nadstandart</div>
-				<div class="vybranePolozky"> {{polozka.nazev}}:{{polozka.cenaBezDPH}} Kč</div>
+				<div class="vybranePolozky"> {{polozka.nazev}}:{{polozka.cenaBezDPH  | numeralFormat}} Kč</div>
 			</div>
 			<div class="cenaBarva">
 				<div class="napisyZaklikanychPolozek">Barva</div>
@@ -114,7 +114,7 @@
 
 		<div class="cenaCelkem">
 			<div class="cenaCelkem">Cena bez DPH</div>
-			<div class="vypsanaCenaCelkem"> {{celkovaCena}} Kč</div>
+			<div class="vypsanaCenaCelkem"> {{celkovaCena | numeralFormat}} Kč</div>
 		</div>
 
 		<v-btn class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
