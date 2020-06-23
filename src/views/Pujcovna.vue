@@ -108,4 +108,8 @@ h3 {
   text-align: justify;
   line-height: 1.5;
 }
+
+.pujcovnaDruhySloupec {
+  margin-left: 200px;
+}
 </style>
