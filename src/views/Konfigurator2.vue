@@ -17,13 +17,11 @@
 			</button>
 
 			<h2>Typ motoru</h2>
-
-			<v-col cols="12" sm="6" md="4">
 				<v-radio-group v-model="aktivniMotor" hide-details>
 					<v-radio v-for="(motor, index) in aktivniRypadlo.motor" v-bind:key="index" :value="motor"
 						:label="motor.nazevMotoru"></v-radio>
 				</v-radio-group>
-			</v-col>
+			
 			<div v-if="typ === 'rypadlo'" class="barvy">
 				<button class="tlacitkaBarvy" v-on:click="vyberBarvu(preklad)" v-for="(preklad, barva) in Data.barvy"
 					v-bind:key="barva" v-bind:style="`background: ${barva}`"
