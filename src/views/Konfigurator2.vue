@@ -379,11 +379,12 @@ export default {
 }
 
 .tlacitkaBarvy {
-	padding: 30px;
+	padding: 25px;
 	border-radius: 5px;
 	text-align: left;
 	margin-right: 10px;
 	margin-top: 50px;
+	outline: none;
 }
 
 .obrazekPrislusenstvi {
@@ -392,7 +393,7 @@ export default {
 }
 
 .btn-active {
-	border: solid 2px black;
+	box-shadow: 0px 0px 7px 0px;
 }
 
 .tabulka {
@@ -439,9 +440,6 @@ export default {
 .vypsanaCenaCelkem {
 	color: #3498db;
 	font-weight: 800;
-	
-	
-
 }
 
 .tlacitkoPoptavka{
