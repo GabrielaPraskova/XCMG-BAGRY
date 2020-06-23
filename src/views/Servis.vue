@@ -17,7 +17,7 @@
         <p>E-Mail: servis@xcmg.cz</p>
 
 
-        <h3>Náhradní díly pro stroje SANY, CAT, Volvo, Komatsu, Bobcat, JCB objednávejte:</h3>
+        <h3>Náhradní díly pro stroje XCMG, CAT, Volvo, Komatsu, Bobcat, JCB objednávejte</h3>
 
         <p>Telefon: +420 603 446 813</p>
 
@@ -26,7 +26,6 @@
 
     <div class="servisObrazek">
       <img class="imgServis" src="bagr.jpg" alt="Bagr">
-
     </div>
     
 
@@ -46,13 +45,12 @@ export default {
   justify-content: center;
   margin-top: 30px;
 }
+
 .servis{
   display: flex;
   /* flex-wrap: wrap-reverse; */ 
   width: 1150px; 
   margin: 30px,
-  
- 
 }
 
 .servisText,
@@ -78,9 +76,15 @@ export default {
   /* flex-basis: 500px; */
 }
 
-.servisObrazek{
-  width: 50%;
-}
 
+
+
+.servisObrazek{
+  margin-top: 50px;
+  margin-right: 20px;
+}
+.imgServis{
+  width: 100%;
+}
 
 </style>

@@ -64,7 +64,7 @@
       </div>
     
       <div class="obrazek">  
-          <img src="mapa.jpg" alt="mapa" />
+          <img class="mapa" src="mapa.jpg" alt="mapa">
       </div>
     </div>
   </div>
@@ -108,9 +108,16 @@ export default {};
 }
 
 
-.obrazek {
-  max-width: 50%;
+.mapa {
+  width: 100%;
+  margin-left: 70px;
 }
+
+.obrazek{
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
 
 .druhyspan{
   padding-top: 5px;
