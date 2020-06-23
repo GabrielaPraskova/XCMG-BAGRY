@@ -36,27 +36,26 @@
             <img class="celniObr" src="/LW800KN.jpg" alt="obrazekLW800KN" />
             <div>
               <h3>LW800KN</h3>
-              alsdkfj;asdifj
-              <h4>Cena</h4>
-              od 1500 Kč / den
+              <p>Kolový nakladač série LW s nosností 1.8 t.</p>
+               <h4> od 1500 Kč / den</h4>
             </div>
           </div>
           <div class="druhyObrazek">
             <img class="celniObr" src="/ZL50G.jpg" alt="obrazekLW800KN" />
             <div>
-              <h3>LW800KN</h3>
-              alsdkfj;asdifj
-              <h4>Cena</h4>
-              od 1500 Kč / den
+              <h3>ZL50G</h3>
+              <p>Kolový nakladač série ZL s nosností 5 t.</p>
+              <h4>od 2 500 Kč / den</h4>
+
             </div>
           </div>
           <div class="tretiObrazek">
             <img class="celniObr" src="/bagr/ZL30G.jpg" alt="obrazekLW800KN" />
             <div>
-              <h3>LW800KN</h3>
-              alsdkfj;asdifj
-              <h4>Cena</h4>
-              od 1500 Kč / den
+              <h3>ZL3OG</h3>
+              <p>Kolový nakladač série ZL s nosností 3 t.</p>
+              <h4>od 2 000 Kč / den</h4>
+              
             </div>
           </div>
         </div>
@@ -129,13 +128,14 @@ h3 {
   margin-top: 30px;
 }
 
-.pujcovnaSloupecDva h3,
 .pujcovnaSloupecDva h4{
   margin: 0px;
-  color:#3498db;
+  color:black;
   }
 .pujcovnaSloupecDva h3{
-  margin-top: 30px;
+  padding-top: 30px;
+  color:#3498db;
+  margin: 0;
 }
 
 
