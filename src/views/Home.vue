@@ -26,6 +26,7 @@ export default {};
 .home{
   display: flex;
   padding: 0 100px;
+  flex-wrap: wrap;
 }
 
 .obrazekStroje {
@@ -56,8 +57,8 @@ export default {};
 
 .boxTlacitko {
   position: absolute;
-  top: 150px;
-  right: 200px;
+  top: 20%;
+  right: 20%;
 }
 
  

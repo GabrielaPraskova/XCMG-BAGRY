@@ -199,14 +199,12 @@ h3 {
   color: #3498db;
 }
 
-.paticka {
+/* .paticka {
   display: flex;
   flex: 0 0 147px;
   list-style: none;
   background-color: white;
-}
-
-
+} */
 
 /* .obrazekFb {
   max-width: 5%;
@@ -249,7 +247,8 @@ h3 {
 
 .copy {
   flex: 0 0 39;
-  background-color: #3498db;
-  padding: 5px;
+  background-color: #eeee;
+  text-align: center;
+  padding: 10px;
 }
 </style>

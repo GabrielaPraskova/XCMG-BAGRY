@@ -48,14 +48,15 @@ export default {
 }
 .servis{
   display: flex;
+  /* flex-wrap: wrap-reverse; */
   margin-top: 30px;
-  width: 1150px  
-  ; 
+  /* min-width: 150px;  */
+ 
 }
 
 .servisText,
 .servisObrazek{
-    flex-basis: 50%;
+  flex-basis: 50%;
    margin-left: 30px;
   
 }
@@ -64,6 +65,8 @@ export default {
     color: #3498db;
     margin-bottom: 10px;
 }
+
+
 
 .servis p{
   margin-bottom: 10px;
@@ -74,6 +77,7 @@ export default {
 .servisObrazek{
   margin-top: 110px;
   margin-left: 70px;
+  /* flex-basis: 500px; */
 }
 
 .imgServis{

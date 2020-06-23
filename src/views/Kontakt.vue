@@ -110,7 +110,6 @@ export default {};
 
 .obrazek {
   max-width: 50%;
-  /* margin-top: 50px; */
 }
 
 .druhyspan{
@@ -123,8 +122,6 @@ export default {};
   border-radius: 5px;
   text-align: left;
   margin: 5px;
-  width: 150px;
-
 }
 
 .napisteNam{
