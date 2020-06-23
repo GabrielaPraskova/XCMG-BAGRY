@@ -1,7 +1,7 @@
 <template>
   <div class="oSpolecnosti">
     <div class="kontejner">
-      <div class="obrazek">
+      <div class="obrazekSpolecnost">
         <img src="building.png" alt="budova" />
       </div>
       <div class="predstaveni">
@@ -28,6 +28,9 @@ export default {};
 
 
 <style>
+.obrazekSpolecnost{
+  margin-top: 30px;
+}
 .kontejner{
   display: flex;
   justify-content: space-around;
