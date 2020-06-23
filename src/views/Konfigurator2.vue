@@ -196,7 +196,7 @@ export default {
       rypadla,
       aktivniStranka: 0,
       aktivniMotor: rypadla[0].motor[0],
-      aktivniBarva: "žlutá",
+      aktivniBarva: "Žlutá",
       aktivniPrislusenstvi: {},
       aktivniNadstandart: {},
     };

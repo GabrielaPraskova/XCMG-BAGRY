@@ -5,7 +5,7 @@
         <img src="building.png" alt="budova" />
       </div>
       <div class="predstaveni">
-        <h2>O nás</h2>
+        <h2>XCMG</h2>
         <p class="odstavec">Xuzhou Construction Machinery Group Co., Ltd. (XCMG) byla založena v roce 1943. Od té doby XCMG stála v čele čínského průmyslu stavebních strojů a vyvinula se v jednu z největších, nejvlivnějších a nejkonkurenceschopnějších skupin.</p>
 
         <p class="odstavec">
@@ -39,10 +39,9 @@ export default {};
   
 }
 .predstaveni {
-  
   width: 700px;
   padding: 20px;
-  text-align: justify;;
+  text-align: justify;
 }
 
 .predstaveni h2{
