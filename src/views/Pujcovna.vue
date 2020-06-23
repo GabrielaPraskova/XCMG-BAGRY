@@ -3,7 +3,7 @@
     <div class="pujcovna">
       <div class="pujcovnaSloupecJedna">
         <div class="pujcovnaPopis">
-          <h1>PUJČOVNA</h1>
+          <h1>Půjčovna strojů</h1>
           <p class="pujcovnaPrvniOdstavec">
             Každý stavař zná situaci, kdy termíny realizace zakázek tlačí a
             stávající technika vypoví službu. Ať už jste malý podnikatel s velkými

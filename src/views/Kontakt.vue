@@ -155,7 +155,5 @@ export default {};
   margin-bottom: 10px;
 }
 
-.tlacitkoOdeslat{
-  padding-top: 10px;
-}
+
 </style>
