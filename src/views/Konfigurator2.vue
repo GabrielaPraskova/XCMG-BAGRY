@@ -22,7 +22,6 @@
 				<v-radio-group v-model="aktivniMotor" hide-details>
 					<v-radio v-for="(motor, index) in aktivniRypadlo.motor" v-bind:key="index" :value="motor"
 						:label="motor.nazevMotoru"></v-radio>
-					<!-- <v-radio value="XD50" label={{motor.nazevMotoru}}></v-radio> -->
 				</v-radio-group>
 			</v-col>
 			<div v-if="typ === 'rypadlo'" class="barvy">
@@ -31,6 +30,19 @@
 					v-bind:class="{'btn-active':preklad === aktivniBarva}"></button>
 			</div>
 		</div>
+
+
+
+<!-- <div class="napisyZaklikanychPolozek">Stroj</div>
+
+			<div class="rodic">
+				<div class="prvniSloupec">{{aktivniRypadlo.nazev}} </div>
+				<div class="druhySloupec">
+					<div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH | numeralFormat}} Kč</div>
+				</div>
+			</div> -->
+
+
 
 		<div class="druhy2" v-if="aktivniStranka === 1 && typ === 'bagr' ">
 			
@@ -301,6 +313,7 @@ export default {
 	overflow: auto;
 	min-height: 0;
 	margin-top: 50px;
+	margin-right: 70px;
 }
 
 .strankovani { 
