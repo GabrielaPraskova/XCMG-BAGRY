@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>UPDATE HOME</h1>
   
     <router-link class="box" style="background-image:url(/LW800KN.jpg)" to="/konfigurator2/bagr">
       <v-btn class="boxTlacitko" x-large color="success" dark>Konfiguruj</v-btn>
