@@ -2,7 +2,7 @@
   <div class="kontejnerKontakt">
    
     <div class="kontakt">
-      <div class="vedeniSpolecnosti">
+      <div class="kancelar">
         
 
           <h2>Adresa</h2>
@@ -63,10 +63,8 @@
          <v-btn class="tlacitkoOdeslat" outlined color="#3498db">Odeslat</v-btn>
       </div>
     
-      <div class="obrazek">
-        <div>
-          <img class="mapa" src="mapa.jpg" alt="mapa" />
-        </div>
+      <div class="obrazek">  
+          <img src="mapa.jpg" alt="mapa" />
       </div>
     </div>
   </div>
@@ -110,9 +108,9 @@ export default {};
 }
 
 
-.mapa {
-  max-width: 100%;
-  margin-top: 50px;
+.obrazek {
+  max-width: 50%;
+  /* margin-top: 50px; */
 }
 
 .druhyspan{
@@ -127,10 +125,6 @@ export default {};
   margin: 5px;
   width: 150px;
 
-}
-
-.obrazek{
-  max-width: 30%;
 }
 
 .napisteNam{

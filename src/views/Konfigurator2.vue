@@ -46,7 +46,15 @@
 			
 			
 			<v-checkbox v-if="typ === 'bagr'" v-for="(vec, index) in Data.nadstandart" v-bind:key="index"
-				v-model="aktivniNadstandart[vec.id]" :value="vec" :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč`">
+				v-model="aktivniNadstandart[vec.id]" :value="vec"> 
+				<template v-slot:label>
+						<!-- div je tam protoze vyrusi flex, ktery nastavuje label -->
+						<div> 
+							{{vec.nazev}} <em>({{vec.cenaBezDPH | numeralFormat}} Kč bez DPH)</em>
+						</div>
+				</template>
+				
+			
 			</v-checkbox>
 
 			<div  class="barvy">
