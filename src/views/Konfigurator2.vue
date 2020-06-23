@@ -387,7 +387,7 @@ export default {
 }
 
 .tlacitkaBarvy {
-	padding: 25px;
+	padding: 20px;
 	border-radius: 5px;
 	text-align: left;
 	margin-right: 10px;
