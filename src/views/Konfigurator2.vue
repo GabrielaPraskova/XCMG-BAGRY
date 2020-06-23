@@ -62,8 +62,14 @@
 		
 			<div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
 				<img class="obrazekPrislusenstvi" v-bind:src="(`/${typ}/${polozka.obrazek}`)" alt="lzice" />
-				<v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka"
-					:label="`${polozka.nazev}: ${polozka.cenaBezDPH} Kč bez DPH`"></v-checkbox>
+				<v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka">
+					<template v-slot:label>
+						<!-- div je tam protoze vyrusi flex, ktery nastavuje label -->
+						<div> 
+							{{polozka.nazev}} <em>({{polozka.cenaBezDPH | numeralFormat}} Kč bez DPH)</em>
+						</div>
+					</template>
+				</v-checkbox>
 			</div>
 		</div>
 	</div>
@@ -98,23 +104,13 @@
 				<div class="prvniSloupec">
 					<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}</div>
 				</div>
-				<div class="druhySloupec">(zahrnuto v ceně)</div>
+				<div class="druhySloupec" v-if="aktivniMotor.cenaMotoruBez > 0">{{aktivniMotor.cenaMotoruBez  | numeralFormat}} Kč</div>
+				<div class="druhySloupec" v-if="aktivniMotor.cenaMotoruBez === 0">(zahrnuto v ceně)</div>
 			</div>
-
-
-			<div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"></div>
-			<div class="rodic">
-				<div class="prvniSloupec">
-					<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}</div>
-				</div>
-				<div class="druhySloupec">{{aktivniMotor.cenaMotoruBez  | numeralFormat}} Kč</div>
-			</div>
-
-
-
 
 			<div 
-			v-if="typ === 'bagr'" 
+
+			v-if="nadstandartHezky.length > 0"
 			class="napisyZaklikanychPolozek">Nadstandart</div>
 			<div v-for="(polozka, index) in nadstandartHezky" v-bind:key="index"  class="cenaNadstandartu">
 			
@@ -316,12 +312,14 @@ export default {
 
 .strankovani { 
 	grid-area: strankovani; 
+	padding-top: 30px;
 	}
 
 .kalkulace { 
 	grid-area: kalkulace; 
 	margin-top: 70px;
 	margin-right: 50px;
+	overflow: auto;
 	}
 
 .celkem { 
@@ -385,6 +383,7 @@ export default {
 	border-radius: 5px;
 	text-align: left;
 	margin-right: 10px;
+	margin-top: 50px;
 }
 
 .obrazekPrislusenstvi {
