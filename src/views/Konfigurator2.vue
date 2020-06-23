@@ -97,7 +97,7 @@
 				<div class="prvniSloupec">
 					<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}</div>
 				</div>
-				<div class="druhySloupec">{{aktivniMotor.cenaMotoruBez  | numeralFormat}}</div>
+				<div class="druhySloupec">{{aktivniMotor.cenaMotoruBez  | numeralFormat}} Kč</div>
 			</div>
 
 
@@ -125,14 +125,19 @@
 						<div class="vybranePolozky">{{aktivniBarva}}</div> 
 				</div> 
 					<div class="druhySloupec">(zahrnuto v ceně)</div>
-			</div>
+				</div>
 			</div>
 
 
 			<div v-if="prislusenstviHezky.length > 0" class="napisyZaklikanychPolozek">Příšlušenství </div>
 			<div v-for="(polozka, index) in prislusenstviHezky" v-bind:key="index" class="cenaPrislusenstvi">
-				{{polozka.nazev}}
-				{{polozka.cenaBezDPH | numeralFormat}} Kč
+				<div class="rodic">
+					<div class="prvniSloupec">
+						<div class="vybranePolozky">{{polozka.nazev}}</div> 
+				</div> 
+					<div class="druhySloupec">{{polozka.cenaBezDPH | numeralFormat}} Kč</div>
+				</div>
+					
 			</div>
 
 		</div>
@@ -360,15 +365,15 @@ export default {
 .strankovani {
 	display: flex;
 	justify-content: space-between;
+	margin-right: 70px;
 
 }
 
 .tlacitkaBarvy {
-	border: 1px solid #3498db;
-	padding: 10px;
+	padding: 30px;
 	border-radius: 5px;
 	text-align: left;
-	margin: 10px;
+	margin-right: 10px;
 }
 
 .obrazekPrislusenstvi {
@@ -377,7 +382,7 @@ export default {
 }
 
 .btn-active {
-	border: solid 5px black;
+	border: solid 2px black;
 }
 
 .tabulka {
@@ -421,6 +426,13 @@ export default {
 	text-align: left;
 }
 
+.vypsanaCenaCelkem {
+	color: #3498db;
+	font-weight: 800;
+	
+	
+
+}
 
 .tlacitkoPoptavka{
 	margin-top: 40px;

@@ -368,5 +368,5 @@ export default {
       {id:4, typ: "bagr", nazev:"SPZ", cenaSDPH:30129 , cenaBezDPH:24900 }
     ],
 
-    barvy:{red: "červená", black: "černá", blue:"modrá", yellow:"žlutá", green:"zelená"}
+    barvy:{black: "černá", '#66FF66':"zelená", "#38FFF8":"modrá", "#FF52F9": "červená",  "#F4FF5C":"žlutá"}
   }
