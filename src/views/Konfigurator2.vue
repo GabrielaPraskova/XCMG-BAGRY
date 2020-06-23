@@ -16,7 +16,7 @@
 				</div>
 			</button>
 
-			<h2>Výběr motoru:</h2>
+			<h2>Typ motoru</h2>
 
 			<v-col cols="12" sm="6" md="4">
 				<v-radio-group v-model="aktivniMotor" hide-details>
@@ -84,7 +84,6 @@
 				
 				
 			<div class="napisyZaklikanychPolozek">Motor</div>
-
 			<div class="rodic">
 				<div class="prvniSloupec">
 					<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}</div>
@@ -93,11 +92,16 @@
 			</div>
 
 
-			<div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru">
-				<div class="napisyZaklikanychPolozek">Motor</div>
-				<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez  | numeralFormat}} Kč
+			<div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru"></div>
+			<div class="rodic">
+				<div class="prvniSloupec">
+					<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}</div>
 				</div>
+				<div class="druhySloupec">{{aktivniMotor.cenaMotoruBez  | numeralFormat}}</div>
 			</div>
+
+
+
 
 			<div 
 			v-if="typ === 'bagr'" 
@@ -136,7 +140,7 @@
 	</div>
 	<div class="celkem">
 
-		<div class="cenaCelkem">
+		<div class="cenaCelkemDiv">
 
 			<div class="rodic">
 					<div class="prvniSloupec">
@@ -227,25 +231,6 @@ export default {
 
     },
 
-  
-
-
-
-    // vyberNastandart() {
-    //   const nazvyNadstandart = Object.entries(this.aktivniNadstandart)
-    //     .filter((nadstandard) => nadstandard[1] === true)
-    //     .map((fruit) => {
-    //       const id = fruit[0];
-    //       const nadstandardnaPolozka = Data.nadstandart.find(
-    //         (polozka) => polozka.id.toString() === id.toString()
-    //       );
-    //       return nadstandardnaPolozka.nazev;
-    //     });
-
-    //   return nazvyNadstandart;
-    // },
-
-
     vyberPrislusenstvi() {
       const nazvyPrislusenstvi = Object.entries(this.aktivniPrislusenstvi)
         .filter((prislusenstvi) => prislusenstvi[1] === true)
@@ -310,16 +295,23 @@ export default {
 	grid-area: ponuka;
 	overflow: auto;
 	min-height: 0;
+	margin-top: 50px;
 }
 
-.strankovani { grid-area: strankovani; }
-.kalkulace { grid-area: kalkulace; }
-.celkem { grid-area: celkem; }
+.strankovani { 
+	grid-area: strankovani; 
+	}
 
+.kalkulace { 
+	grid-area: kalkulace; 
+	margin-top: 70px;
+	margin-right: 50px;
+	}
 
-
-
-
+.celkem { 
+	grid-area: celkem; 
+	margin-right: 50px;
+}
 
 
 .kontejner {
@@ -336,6 +328,7 @@ export default {
 	margin-top: 30px
 	
 }
+
 
 /* .popisStroje {
 	text-align: left;
@@ -377,6 +370,7 @@ export default {
 	text-align: left;
 	margin: 10px;
 }
+
 .obrazekPrislusenstvi {
 	max-width: 80%;
 	display: block;
@@ -407,9 +401,9 @@ export default {
 }
 
 .napisyZaklikanychPolozek {
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 20px;
-	color: #3498db;
+	color: #2c3e50;
 	padding-bottom: 10px;
 	text-transform: uppercase;
 	text-align: left;
@@ -423,10 +417,10 @@ export default {
 	font-weight: 700;
 	font-size: 20px;
 	color: #3498db;
-	padding-top: 10px;
 	text-transform: uppercase;
 	text-align: left;
 }
+
 
 .tlacitkoPoptavka{
 	margin-top: 40px;
@@ -438,8 +432,8 @@ export default {
 }
 
 h2{
-	margin-top: 15px;
-	;
+	margin-top: 20px;
+	text-align: left;
 }
 
 /* .druhy,
@@ -456,10 +450,12 @@ h2{
 .casDodani {
 	padding: 30px 0;
 	font-style: italic;
+	text-align: left;
 }
 
 .ozvemeSe{
 	 font-style: italic;
+	 text-align: left;
 }
 
 .rodic{
@@ -476,5 +472,8 @@ h2{
 	font-style: italic;
 }
 
+.theme--light.v-label {
+    color: black
+}
 
 </style>
