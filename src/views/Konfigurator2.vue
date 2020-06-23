@@ -33,9 +33,8 @@
 		</div>
 
 		<div class="druhy2" v-if="aktivniStranka === 1 && typ === 'bagr' ">
-			<!-- <h1>Nadstandartní výbava</h1> -->
 			
-
+			
 			<v-checkbox v-if="typ === 'bagr'" v-for="(vec, index) in Data.nadstandart" v-bind:key="index"
 				v-model="aktivniNadstandart[vec.id]" :value="vec" :label="`${(vec.nazev)} : ${(vec.cenaBezDPH)} Kč`">
 			</v-checkbox>
@@ -46,13 +45,11 @@
 					v-bind:class="{'btn-active':preklad === aktivniBarva}"></button>
 			</div>
 
-
-			<!-- <h2>Barva</h2>             -->
 			
 		</div>
 
 		<div class="druhy3" v-if="aktivniStranka === 2">
-			<!-- <h1>Výběr příslušenství</h1> -->
+		
 			<div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
 				<img class="obrazekPrislusenstvi" v-bind:src="(`/${typ}/${polozka.obrazek}`)" alt="lzice" />
 				<v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka"
@@ -82,25 +79,52 @@
 				</div>
 			</div>
 
-			<div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru">
-				<div class="napisyZaklikanychPolozek">Motor</div>
-				<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}} (zahrnuto v ceně)</div>
+			
+			<div v-if="aktivniMotor.cenaMotoruBez === 0" class="cenaMotoru"></div>
+				
+				
+			<div class="napisyZaklikanychPolozek">Motor</div>
+
+			<div class="rodic">
+				<div class="prvniSloupec">
+					<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}</div>
+				</div>
+				<div class="druhySloupec">(zahrnuto v ceně)</div>
 			</div>
+
+
 			<div v-if="aktivniMotor.cenaMotoruBez > 0" class="cenaMotoru">
 				<div class="napisyZaklikanychPolozek">Motor</div>
 				<div class="vybranePolozky">{{aktivniMotor.nazevMotoru}}: {{aktivniMotor.cenaMotoruBez  | numeralFormat}} Kč
 				</div>
 			</div>
 
-
+			<div 
+			v-if="typ === 'bagr'" 
+			class="napisyZaklikanychPolozek">Nadstandart</div>
 			<div v-for="(polozka, index) in nadstandartHezky" v-bind:key="index"  class="cenaNadstandartu">
-				<div class="napisyZaklikanychPolozek">Nadstandart</div>
-				<div class="vybranePolozky"> {{polozka.nazev}}:{{polozka.cenaBezDPH  | numeralFormat}} Kč</div>
+			
+			<div class="rodic">
+				<div class="prvniSloupec">
+					<div class="vybranePolozky">{{polozka.nazev}}</div>
+				</div>
+				<div class="druhySloupec">{{polozka.cenaBezDPH  | numeralFormat}} Kč</div>
 			</div>
+			</div>
+
+
 			<div class="cenaBarva">
 				<div class="napisyZaklikanychPolozek">Barva</div>
-				<div class="vybranePolozky">{{aktivniBarva}} (zahrnuto v ceně)</div>
+
+				<div class="rodic">
+					<div class="prvniSloupec">
+						<div class="vybranePolozky">{{aktivniBarva}}</div> 
+				</div> 
+					<div class="druhySloupec">(zahrnuto v ceně)</div>
 			</div>
+			</div>
+
+
 			<div v-if="prislusenstviHezky.length > 0" class="napisyZaklikanychPolozek">Příšlušenství </div>
 			<div v-for="(polozka, index) in prislusenstviHezky" v-bind:key="index" class="cenaPrislusenstvi">
 				{{polozka.nazev}}
@@ -113,8 +137,15 @@
 	<div class="celkem">
 
 		<div class="cenaCelkem">
-			<div class="cenaCelkem">Cena bez DPH</div>
-			<div class="vypsanaCenaCelkem"> {{celkovaCena | numeralFormat}} Kč</div>
+
+			<div class="rodic">
+					<div class="prvniSloupec">
+						<div class="cenaCelkem">Cena bez DPH</div>
+					</div>
+					<div class="druhySloupec">
+						<div class="vypsanaCenaCelkem"> {{celkovaCena | numeralFormat}} Kč</div>
+					</div>
+			</div>
 		</div>
 
 		<v-btn class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
@@ -376,11 +407,12 @@ export default {
 }
 
 .napisyZaklikanychPolozek {
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 20px;
 	color: #3498db;
 	padding-bottom: 10px;
 	text-transform: uppercase;
+	text-align: left;
 }
 
 .vybranePolozky {
@@ -393,11 +425,14 @@ export default {
 	color: #3498db;
 	padding-top: 10px;
 	text-transform: uppercase;
+	text-align: left;
 }
 
-/* .tlacitkoPoptavka{
+.tlacitkoPoptavka{
+	margin-top: 40px;
 	text-align: right;
-} */
+}
+
 .hmotnost{
 	font-weight: bold
 }
@@ -433,10 +468,12 @@ h2{
 
 .prvniSloupec{
 	flex-grow: 1;
+	text-align: left;
 }
 .druhySloupec{
 	flex-grow: 1;
 	text-align: right;
+	font-style: italic;
 }
 
 
