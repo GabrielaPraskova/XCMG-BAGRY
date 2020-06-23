@@ -45,5 +45,5 @@ export default {};
     padding: 20px;
 }
 
-.prvniObrazek > 
+ 
 </style>

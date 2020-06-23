@@ -1,6 +1,7 @@
 <template>
+<div class="pujcovnaKontejner">
   <div class="pujcovna">
-    <div class="pujcovnaPrvniSloupec">
+    <div class="pujcovnaSloupec">
       <div class="pujcovnaPopis">
         <h1>PUJČOVNA</h1>
         <p class="pujcovnaPrvniOdstavec">
@@ -28,7 +29,7 @@
       </div>
     </div>
 
-    <div class="pujcovnaDruhySloupec">
+    <div class="pujcovnaSloupec">
     
       <div class="obrazky">
         <div class="prvniObrazek">
@@ -61,6 +62,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -68,8 +70,21 @@ export default {};
 </script>
 
 <style scoped>
-h1 {
+.pujcovnaKontejner{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  line-height: 1.5;
+  }
+
+.pujcovna {
+  display: flex;
+  width:1150px;
+  }
+
+.pujcovna h1 {
   margin-bottom: 20px;
+  color:#3498db
 }
 h3 {
   text-align: left;
@@ -85,16 +100,10 @@ h3 {
   display: flex;
 }
 
-.pujcovna {
-  display: flex;
-  margin: 100px;
-  justify-content: space-between;
-}
+
 
 .pujcovnaAdresa {
   list-style: none;
-  margin-bottom: 50px;
-  line-height: 1.5;
 }
 
 .pujcovnaAdresaNadpis{
@@ -104,12 +113,14 @@ h3 {
 .pujcovnaDruhyOdstavec,
 .pujcovnaPrvniOdstavec {
   padding-bottom: 30px;
-  width: 800px;
   text-align: justify;
   line-height: 1.5;
+ 
 }
 
-.pujcovnaDruhySloupec {
-  margin-left: 200px;
+.pujcovnaSloupec{
+  flex:1;
 }
+
+
 </style>

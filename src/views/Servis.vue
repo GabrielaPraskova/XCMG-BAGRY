@@ -1,4 +1,5 @@
 <template>
+  <div class="kontejnerServis">
   <div class="servis">
     <div class="servisText">
   
@@ -31,6 +32,7 @@
     
 
   </div>
+</div>
 </template>
 
 <script>
@@ -40,9 +42,14 @@ export default {
 </script>
 
 <style>
+.kontejnerServis{
+  display: flex;
+  justify-content: center;
+}
 .servis{
   display: flex;
-  margin-top: 30px   
+  margin-top: 30px;
+  width: 1150px  
   ; 
 }
 
@@ -65,8 +72,8 @@ export default {
 }
 
 .servisObrazek{
-  margin-top: 40px;
-  margin-right: 30px;
+  margin-top: 110px;
+  margin-left: 70px;
 }
 
 .imgServis{

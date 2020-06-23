@@ -1,5 +1,5 @@
 <template>
-  <div class="kontejner">
+  <div class="kontejnerKontakt">
    
     <div class="kontakt">
       <div class="vedeniSpolecnosti">
@@ -81,13 +81,16 @@ export default {};
 
 <style scoped>
 
-.kontejner{
+.kontejnerKontakt{
    margin-top: 30px;
+   display: flex;
+   justify-content: center;
 
 }
 .kontakt{
   display: flex;
   justify-content: space-around;
+  max-width: 1150px;
  
 }
 .kontakt h2{
