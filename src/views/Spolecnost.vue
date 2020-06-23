@@ -36,12 +36,13 @@ export default {};
   justify-content: space-around;
   margin-top: 30px;
   line-height: 1.5;
+  
 }
 .predstaveni {
   
   width: 700px;
   padding: 20px;
-  text-align: left;
+  text-align: justify;;
 }
 
 .predstaveni h2{
