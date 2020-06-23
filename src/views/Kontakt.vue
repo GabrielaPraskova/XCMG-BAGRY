@@ -56,7 +56,7 @@
             <div class="label">
               <label> Text zprávy </label>     </div>
             <div>
-              <input class="inputKontakt" type="text">
+              <textarea class="inputKontakt"></textarea>
             </div> 
            
         </div>
