@@ -58,7 +58,7 @@ export default {};
 .boxTlacitko {
   position: absolute;
   top: 20%;
-  right: 20%;
+  right: 10%;
 }
 
  

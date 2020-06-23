@@ -27,20 +27,14 @@
           <div class="menuLink">
             Stroje
             <div class="podmenu">
-              <router-link class="menuLink" to="/Konfigurator2/bagr"
-                >Kolové bagry</router-link
-              >
-              <router-link class="menuLink" to="/Konfigurator2/rypadlo"
-                >Rypadla</router-link
-              >
+              <router-link class="menuLink" to="/Konfigurator2/bagr">Kolové bagry</router-link>
+              <router-link class="menuLink" to="/Konfigurator2/rypadlo">Rypadla</router-link>
             </div>
-          </div>
-          <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>
-          <router-link class="menuLink" to="/servis">Servis</router-link>
-          <router-link class="menuLink" to="/spolecnost"
-            >O společnosti</router-link
-          >
-          <router-link class="menuLink" to="/kontakt">Kontakt</router-link>
+            </div>
+              <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>
+              <router-link class="menuLink" to="/servis">Servis</router-link>
+              <router-link class="menuLink" to="/spolecnost">O společnosti</router-link>
+              <router-link class="menuLink" to="/kontakt">Kontakt</router-link>
         </ul>
       </div>
     </div>
@@ -49,45 +43,6 @@
       <router-view />
     </div>
 
-    <!-- <footer class="paticka">
-      <ul class="patickaKontakt">
-        <li class="patickaKontaktNadpis">Kontakty</li>
-        <li>Dolní 141</li>
-        <li>582 91 Světlá nad Sázavou</li>
-        <li>733 798 032</li>
-        <li>xcmg@servis.com</li>
-      </ul>
-
-      <ul class="patickaServis">
-        <li class="patickaServisNadpis">Servisní hodiny</li>
-        <li>Po - Pá: 8 - 17</li>
-        <li>nebo dle dohody</li>
-      </ul> -->
-
-      <!-- <ul class="ikonky">
-        <li class="i"></li>
-        <li class="facebook">
-          <a href="https://www.facebook.com/zetor" target="_blank"
-            ><img class="obrazekFb" src="/fb.png"
-          /></a>
-        </li>
-        <li class="linked">
-          <a
-            href="https://www.linkedin.com/company/zetor-tractors-a-s-?trk=nav_account_sub_nav_company_admin"
-            target="_blank"
-            ><span class="icon icon-linkedin"></span
-          ></a>
-        </li>
-        <li class="youtube">
-          <a
-            href="https://www.youtube.com/channel/UCMNdnC74YttvjNuTzkYoigQ"
-            target="_blank"
-            ><span class="icon icon-youtube"></span
-          ></a>
-        </li>
-      </ul> -->
-      
-    <!-- </footer> -->
     <div class="copy">
         copyright &copy; {{ new Date().getFullYear() }} XCMG/GM
       </div>
@@ -199,51 +154,14 @@ h3 {
   color: #3498db;
 }
 
-/* .paticka {
-  display: flex;
-  flex: 0 0 147px;
-  list-style: none;
-  background-color: white;
-} */
-
-/* .obrazekFb {
-  max-width: 5%;
-  border-radius: 50%;
-} */
 
 .hlavickaKontakt,
 .servisniHodiny {
   display: flex;
   margin: 5px;
-  padding: 0px;
-}
-
-.hlavickaKontakt {
   padding: 10px;
 }
 
-/*
-.patickaKontakt,
-.patickaServis {
-  list-style: none;
-  text-align: left;
-  font-size: 15px;
-  padding: 10px;
-}
-
-.patickaKontakt {
-  margin-right: 50px;
-  margin-left: 50px;
-  
-}
-
-.patickaKontaktNadpis,
-.patickaServisNadpis {
-  margin-bottom: 15px;
-  padding: 10px 0;
-  font-weight: 600;
-  color: #3498db;
-} */
 
 .copy {
   flex: 0 0 39;

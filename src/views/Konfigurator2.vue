@@ -448,6 +448,7 @@ export default {
 .vypsanaCenaCelkem {
 	color: #3498db;
 	font-weight: 800;
+	font-size: 20px;
 }
 
 .tlacitkoPoptavka{

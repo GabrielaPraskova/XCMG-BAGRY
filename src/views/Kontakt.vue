@@ -127,7 +127,6 @@ export default {};
 .napisteNam{
   text-align: left;
   margin-top: 40px;
-  
 }
 
 .label{
@@ -139,7 +138,6 @@ export default {};
 .kancelar h4,
 .kancelar p{
   padding-left: 5px;
-  
 }
 
 .kancelar p{
