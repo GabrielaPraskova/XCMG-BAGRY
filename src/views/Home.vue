@@ -1,17 +1,13 @@
 <template>
-  <div id="home" class="home">
+  <div class="home">
     <div class="prvniObrazek">
-        <img class="celniObr" src="/LW800KN.jpg" alt="obrazekLW800KN" /> 
+        <img class="obrazekStroje" src="/LW800KN.jpg" alt="obrazekLW800KN" /> 
         <router-link class="linkKonfigurator"  to="/konfigurator2/bagr"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link> 
     </div>
     <div class="druhyObrazek">
-      <img class="rypadloObr" src="/LP500JK.jpg" alt="obrazekLP500JK" />
+      <img class="obrazekStroje" src="/LP500JK.jpg" alt="obrazekLP500JK" />
        <router-link class="linkKonfigurator" to="/konfigurator2/rypadlo"><v-btn class="ma-2" outlined color="#3498db">Konfiguruj</v-btn></router-link>
     </div>
-
-    
-   
-
     
   </div>
 </template>
@@ -31,16 +27,10 @@ export default {};
   background-image: url("/LW800KN.jpg")
 }*/
 
-.celniObr {
+.obrazekStroje {
   max-width: 100%;
   height: auto;
 }
-
-.rypadloObr {
-  max-width: 100%;
-  height: auto;
-}
-
 
 .ikonky {
  list-style: none;
@@ -55,5 +45,5 @@ export default {};
     padding: 20px;
 }
 
-
+.prvniObrazek > 
 </style>
