@@ -5,7 +5,7 @@
       <div class="vedeniSpolecnosti">
         
 
-          <h3>Adresa</h3>
+          <h2>Adresa</h2>
             <p>
               Dolní 141
               <br />582 91 Světlá nad Sázavou
@@ -14,7 +14,7 @@
             </p>
           
           <br />
-          <h3>Vedení společnosti</h3>
+          <h2>Vedení společnosti</h2>
              <div>
                <p> Ing. Martin Prášek – jednatel
                 <br />tel: +420 777 728 275
@@ -28,9 +28,9 @@
               </div>
       </div>
       <div class="kancelar">
-          <h3>Kancelář</h3>
+          <h2>Kancelář</h2>
         
-          <h3>Otevírací doba:</h3>
+          <h4>Otevírací doba:</h4>
             <p>
               Po – Pá 8:00 – 17:30
               <br />nebo dle telefonické dohody
@@ -39,26 +39,28 @@
 
 
         <div class="napisteNam"> 
-            <h3>Napište nám</h3>
+            <h2>Napište nám</h2>
 
-            <div>
+            <div class="label">
               <label> Jméno a přijmení </label> 
             </div>
             <div>
               <input class="inputKontakt" type="text">  
             </div>
 
-            <div>
+            <div class="label">
               <label> Email </label> </div>
             <div>
               <input  class="inputKontakt" type="email"> 
             </div>
-            <div>
+            <div class="label">
               <label> Text zprávy </label>     </div>
             <div>
               <input class="inputKontakt" type="text">
-            </div>   
+            </div> 
+           
         </div>
+         <v-btn class="tlacitkoOdeslat" outlined color="#3498db">Odeslat</v-btn>
       </div>
     
       <div class="obrazek">
@@ -79,37 +81,35 @@ export default {};
 
 <style scoped>
 
+.kontejner{
+   margin-top: 30px;
 
+}
 .kontakt{
   display: flex;
   justify-content: space-around;
+ 
 }
-.kontakt h3 {
-  
+.kontakt h2{
   color: #3498db;
   text-align: left;
-  margin-top: 10;
-  margin-bottom: 20px;
-}
+  margin-bottom: 10px;
 
-.kontakt h1 {
+}
+.kontakt h4{  
+  color: #3498db;
   text-align: left;
-  margin-bottom:20px;
-  
 }
 
-.kontakt p {
+.kontakt p{
   text-align: left;
-  padding: 0px;
-  margin-bottom: 5px;
+  line-height: 1.5;
 }
 
-.jmenoPrijmeni {
-  display: flex;
-}
 
 .mapa {
   max-width: 100%;
+  margin-top: 50px;
 }
 
 .druhyspan{
@@ -121,7 +121,7 @@ export default {};
   padding: 10px;
   border-radius: 5px;
   text-align: left;
-  margin: 10px;
+  margin: 5px;
   width: 150px;
 
 }
@@ -132,6 +132,27 @@ export default {};
 
 .napisteNam{
   text-align: left;
+  margin-top: 40px;
+  
 }
 
+.label{
+  padding-left: 5px;
+}
+
+
+.kancelar h2,
+.kancelar h4,
+.kancelar p{
+  padding-left: 5px;
+  
+}
+
+.kancelar p{
+  margin-bottom: 10px;
+}
+
+.tlacitkoOdeslat{
+  padding-top: 10px;
+}
 </style>
