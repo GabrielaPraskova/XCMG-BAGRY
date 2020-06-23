@@ -1,6 +1,6 @@
 <template>
-  <div class="oSpolecnosti">
-    <div class="kontejner">
+  <div class="spolecnost">
+    <div class="kontejnerSpolecnost">
       <div class="obrazekSpolecnost">
         <img src="building.png" alt="budova" />
       </div>
@@ -20,6 +20,7 @@
       </div>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -28,18 +29,22 @@ export default {};
 
 
 <style>
+.spolecnost{
+  display: flex;
+  justify-content: center;
+}
 .obrazekSpolecnost{
   margin-top: 30px;
+  margin-right: 30px
 }
-.kontejner{
+.kontejnerSpolecnost{
   display: flex;
-  justify-content: space-around;
   margin-top: 30px;
   line-height: 1.5;
+  max-width: 1150px;
   
 }
 .predstaveni {
-  width: 700px;
   padding: 20px;
   text-align: justify;
 }
@@ -56,6 +61,7 @@ export default {};
 .xcmguspech{
   color: #3498db;
   margin-top: 10px;
+  ;
 }
 
 
