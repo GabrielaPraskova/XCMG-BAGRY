@@ -36,6 +36,7 @@ export default {};
 
 .kontejnerDite{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
   line-height: 1.5;
   max-width: 1150px;  
@@ -48,6 +49,11 @@ export default {};
 .predstaveni {
   padding: 20px;
   text-align: justify;
+}
+
+.obrazekSpolecnost,
+.predstaveni {
+  flex-basis: 500px;
 }
 
 .predstaveni h2{
