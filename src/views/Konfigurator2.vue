@@ -173,18 +173,31 @@
 		</div>
 
 		
-
-		<div class="label">
-              <label> Email </label> 
+		<div v-if="jeEmailOdeslan === true">
+			<div class="label" > 
+				<label> Email </label> 
+			</div>
+			<div class="labelEmail">
+				<input  class="inputKontakt" type="email"> 
+			</div>
 		</div>
-        <div class="labelEmail">
-              <input  class="inputKontakt" type="email"> 
-        </div>
 
-		<v-btn class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
+		<div v-else class="ozvemeSe">
+
+			<p>Poptávka odeslána, ozveme se Vám do dvou pracovních dnů.</p>
+
+			<p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>
+
+		</div>
+
+		<v-btn v-on:click="jeEmailOdeslan = false"  v-if="jeEmailOdeslan === true" class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
+
+		
+
+		
             
 
-		<p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>
+		
 
 		
 
@@ -209,7 +222,8 @@ export default {
       aktivniMotor: rypadla[0].motor[0],
       aktivniBarva: "Žlutá",
       aktivniPrislusenstvi: {},
-      aktivniNadstandart: {},
+	  aktivniNadstandart: {},
+	  jeEmailOdeslan:true
     };
   },
 
@@ -298,8 +312,9 @@ export default {
     },
     vyberBarvu(color) {
       this.aktivniBarva = color;
-    },
-  },
+	},
+	
+	 },
 };
 </script>
 
@@ -311,7 +326,6 @@ export default {
 	grid-template-rows: 1.5fr 1fr 0.5fr;
 	gap: 1px 1px;
 	grid-template-areas: "obrazek obrazek ponuka kalkulace" "obrazek obrazek ponuka celkem" "obrazek obrazek strankovani celkem";
-
 	max-height: 100%;
     overflow: hidden;
 }
@@ -359,12 +373,9 @@ export default {
 	margin-top: 30px
 	
 }
-
-
 /* .popisStroje {
 	text-align: left;
-	margin-left: 20px;
-	
+	margin-left: 20px;	
 } */
 
 .vybranyStroj {
@@ -486,19 +497,27 @@ h2{
 	
 	margin-left: 20px;
 }
+.ozvemeSe{
+	 font-style: italic;
+	 text-align: left;
+	 margin-top: 40px;
+}
 
 .casDodani {
-	padding: 30px 0;
 	font-style: italic;
 	text-align: left;
+	padding-top: 10px;
+	line-height: 1.5	
 }
+
+
 
 .labelEmail{	
   border: 1px solid #3498db;
   padding: 10px;
   border-radius: 5px;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 15px;
  }
 
  .label{
@@ -506,12 +525,6 @@ h2{
 	 margin-top:10px
 
  }
-
-
-.ozvemeSe{
-	 font-style: italic;
-	 text-align: left;
-}
 
 .rodic{
 	display: flex;
