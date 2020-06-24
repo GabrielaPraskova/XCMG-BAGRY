@@ -60,7 +60,8 @@
 			<div  class="barvy">
 				<button class="tlacitkaBarvy" v-on:click="vyberBarvu(preklad)" v-for="(preklad, barva) in Data.barvy"
 					v-bind:key="barva" v-bind:style="`background: ${barva}`"
-					v-bind:class="{'btn-active':preklad === aktivniBarva}"></button>
+					v-bind:class="{'btn-active':preklad === aktivniBarva}">
+				</button>
 			</div>
 
 			
@@ -473,8 +474,8 @@ h2{
 } */
 
 .barvy{
-	text-align: left;
-	padding-left: 10px;
+	
+	margin-left: 20px;
 }
 
 .casDodani {
