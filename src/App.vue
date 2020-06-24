@@ -143,8 +143,7 @@
 .menuLink {
   display: block;
   position: relative;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 20px;
   color: #3498db;
   text-decoration: none;
   white-space: nowrap;
