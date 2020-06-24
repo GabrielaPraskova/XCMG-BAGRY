@@ -109,7 +109,7 @@ export default {};
 
 
 .mapa {
-  width: 100%;
+  width: 80%;
   margin-left: 70px;
 }
 
