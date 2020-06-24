@@ -2,23 +2,23 @@
 		<div class="grid-container">
 
 	<div class="obrazek">
-		<img class="vybranyStroj" v-bind:src="`/${$route.params.typ}/${aktivniRypadlo.obrazek}`"
+		<img class="vybranyStroj" v-bind:src="`/${$route.params.typ}/${aktivniStroj.obrazek}`"
 			alt="obrazekBagrRypadla" />
 	</div>
 
 	<div class="ponuka">
 		<div v-if="aktivniStranka === 0" class="druhy">
-			<h1 class="nadpisKonfigurator">{{aktivniRypadlo.nazev}}</h1>
-			<button class="tlacitkoNosnostHmotnost" v-on:click="nastavAktivniRypadlo(rypadlo)" v-bind:class="{'btn-active': rypadlo === aktivniRypadlo}" 
-				v-for="(rypadlo,index) in rypadla" v-bind:key="index">
-				<div class="hmotnost">Hmotnost: {{rypadlo.technickeParametry.hmotnost}}t</div>
-				<div v-if="typ === 'bagr'" class="nosnost">Nosnost: {{rypadlo.technickeParametry.nosnost}}t
+			<h1 class="nadpisKonfigurator">{{aktivniStroj.nazev}}</h1>
+			<button class="tlacitkoNosnostHmotnost" v-on:click="nastavAktivniStroj(stroj)" v-bind:class="{'btn-active': stroj === aktivniStroj}" 
+				v-for="(stroj,index) in stroje" v-bind:key="index">
+				<div class="hmotnost">Hmotnost: {{stroj.technickeParametry.hmotnost}}t</div>
+				<div v-if="typ === 'bagr'" class="nosnost">Nosnost: {{stroj.technickeParametry.nosnost}}t
 				</div>
 			</button>
 
 			<h2>Typ motoru</h2>
 				<v-radio-group v-model="aktivniMotor" hide-details>
-					<v-radio v-for="(motor, index) in aktivniRypadlo.motor" v-bind:key="index" :value="motor"
+					<v-radio v-for="(motor, index) in aktivniStroj.motor" v-bind:key="index" :value="motor"
 						:label="motor.nazevMotoru"></v-radio>
 				</v-radio-group>
 			
@@ -69,7 +69,7 @@
 
 		<div class="druhy3" v-if="aktivniStranka === 2">
 		
-			<div v-for="(polozka, index) in vyberRypadla" v-bind:key="index">
+			<div v-for="(polozka, index) in vyberStroje" v-bind:key="index">
 				<img class="obrazekPrislusenstvi" v-bind:src="(`/${typ}/${polozka.obrazek}`)" alt="lzice" />
 				<v-checkbox v-model="aktivniPrislusenstvi[polozka.id]" :value="polozka">
 					<template v-slot:label>
@@ -98,9 +98,9 @@
 			<div class="napisyZaklikanychPolozek">Stroj</div>
 
 			<div class="rodic">
-				<div class="prvniSloupec">{{aktivniRypadlo.nazev}} </div>
+				<div class="prvniSloupec">{{aktivniStroj.nazev}} </div>
 				<div class="druhySloupec">
-					<div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH | numeralFormat}} Kč</div>
+					<div class="vybranePolozky">{{aktivniStroj.cenaBezDPH | numeralFormat}} Kč</div>
 				</div>
 			</div>
 
@@ -199,14 +199,14 @@ import Data from "./../assets/Data/data.js";
 export default {
   props: ["typ"],
   data() {
-    const rypadla = Data.stroje.filter((stroj) => stroj.typ === this.typ);
+    const stroje = Data.stroje.filter((stroj) => stroj.typ === this.typ);
 
     return {
       Data,
-      aktivniRypadlo: rypadla[0],
-      rypadla,
+      aktivniStroj: stroje[0],
+      stroje,
       aktivniStranka: 0,
-      aktivniMotor: rypadla[0].motor[0],
+      aktivniMotor: stroje[0].motor[0],
       aktivniBarva: "Žlutá",
       aktivniPrislusenstvi: {},
 	  aktivniNadstandart: {},
@@ -220,19 +220,19 @@ export default {
         (stroj) => stroj.typ === this.typ
 	  );
 
-      this.rypadla = filtrovaneStroje;
-      this.aktivniRypadlo = filtrovaneStroje[0];
+      this.stroje = filtrovaneStroje;
+      this.aktivniStroj = filtrovaneStroje[0];
 	  this.aktivniMotor = filtrovaneStroje[0].motor[0];
     },
   },
 
   computed: {
-    vyberRypadla() {
-      const rypadla = Data.prislusenstvi.filter(
+    vyberStroje() {
+      const stroje = Data.prislusenstvi.filter(
         (polozka) => polozka.typ === this.typ
 	  );
 	  
-      return rypadla;
+      return stroje;
     },
 
     nadstandartHezky() {
@@ -247,7 +247,7 @@ export default {
     celkovaCena(){
       const cenaNadstandartu = this.nadstandartHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
 	  const cenaPrislusenstvi = this.prislusenstviHezky.reduce((sucet, radek) => sucet + radek.cenaBezDPH, 0)
-	  return cenaNadstandartu + this.aktivniRypadlo.cenaBezDPH + this.aktivniMotor.cenaMotoruBez + cenaPrislusenstvi
+	  return cenaNadstandartu + this.aktivniStroj.cenaBezDPH + this.aktivniMotor.cenaMotoruBez + cenaPrislusenstvi
 
     },
 
@@ -276,9 +276,9 @@ export default {
   },
 
   methods: {
-    nastavAktivniRypadlo(rypadlo) {
-      this.aktivniRypadlo = rypadlo;
-      this.aktivniMotor = this.aktivniRypadlo.motor[0];
+    nastavAktivniStroj(stroj) {
+      this.aktivniStroj = stroj;
+      this.aktivniMotor = this.aktivniStroj.motor[0];
       
     },
 
