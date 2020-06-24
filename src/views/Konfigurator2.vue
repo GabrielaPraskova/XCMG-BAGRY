@@ -474,6 +474,7 @@ h2{
 
 .barvy{
 	text-align: left;
+	padding-left: 10px;
 }
 
 .casDodani {
