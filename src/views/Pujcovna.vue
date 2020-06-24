@@ -80,7 +80,9 @@ export default {};
   display: flex;
   width:1150px;
   flex-wrap: wrap;
+  margin: 30px;
   }
+
 
 h1 {
   margin-bottom: 20px;
