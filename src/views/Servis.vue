@@ -1,36 +1,36 @@
 <template>
-  <div class="kontejnerServis">
-  <div class="servis">
-    <div class="servisText">
+  <div class="kontejnerRodic">
+    <div class="kontejnerDite">
+      <div class="servisText">
 
         <h1>Servis</h1>
-        <h3>  Záruční a pozáruční servis a prodej náhradních dílů pro stroje XCMG v České Republice zajišťuje: </h3>
-        <p>PKBAU s.r.o. – Světlá nad Sázavou – prodej strojů, příslušenství a náhradních dílů, servis, půjčovna, 
+          <h3>  Záruční a pozáruční servis a prodej náhradních dílů pro stroje XCMG v České Republice zajišťuje: </h3>
+            <p>PKBAU s.r.o. – Světlá nad Sázavou – prodej strojů, příslušenství a náhradních dílů, servis, půjčovna, 
               lokality: Beroun, České Budějovice, Liberec, Bruntál, Lovosice
               Rocktech s.r.o. – Plzeň – prodej strojů a příslušenství, servis strojů a příslušenství
               VZ service - Vladimír Zelenka - České Budějovice - prodej strojů a příslušenství, 
-              servis strojů a tiltrotátorů engcon</p>
-        <h3>Pro servis strojů XCMG, ale i CAT, Volvo, JCB, Bobcat, Komatsu volejte</h3>
+              servis strojů a tiltrotátorů engcon
+            </p>
 
-        <p>Telefon: +420 733 798 032</p>
+          <h3>Pro servis strojů XCMG, ale i CAT, Volvo, JCB, Bobcat, Komatsu volejte</h3>
 
-        <p>E-Mail: servis@xcmg.cz</p>
+            <p>Telefon: +420 733 798 032</p>
+
+            <p>E-Mail: servis@xcmg.cz</p>
 
 
         <h3>Náhradní díly pro stroje XCMG, CAT, Volvo, Komatsu, Bobcat, JCB objednávejte</h3>
 
-        <p>Telefon: +420 603 446 813</p>
+            <p>Telefon: +420 603 446 813</p>
 
-        <p>E-Mail: dily@xcmg.cz</p>
+            <p>E-Mail: dily@xcmg.cz</p>
+      </div>
+
+        <div class="servisObrazek">
+          <img class="imgServis" src="bagr.jpg" alt="Bagr">
+        </div>
     </div>
-
-    <div class="servisObrazek">
-      <img class="imgServis" src="bagr.jpg" alt="Bagr">
-    </div>
-    
-
   </div>
-</div>
 </template>
 
 <script>
@@ -40,13 +40,14 @@ export default {
 </script>
 
 <style>
-.kontejnerServis{
+.kontejnerRodic{
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  line-height: 1.5;
 }
 
-.servis{
+.kontejnerDite{
   display: flex;
   /* flex-wrap: wrap-reverse; */ 
   width: 1150px; 
@@ -65,10 +66,10 @@ export default {
 }
 
 
-.servis p {
+.servisText p {
   margin-bottom: 10px;
   text-align: justify;
-  line-height: 1.5;
+  
 }
 
 .servisObrazek{

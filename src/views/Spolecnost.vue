@@ -1,6 +1,6 @@
 <template>
-  <div class="spolecnost">
-    <div class="kontejnerSpolecnost">
+  <div class="kontejnerRodic">
+    <div class="kontejnerDite">
       <div class="obrazekSpolecnost">
         <img src="building.png" alt="budova" />
       </div>
@@ -29,21 +29,22 @@ export default {};
 
 
 <style>
-.spolecnost{
+.kontejnerRodic{
   display: flex;
   justify-content: center;
+}
+
+.kontejnerDite{
+  display: flex;
+  margin-top: 30px;
+  line-height: 1.5;
+  max-width: 1150px;  
 }
 .obrazekSpolecnost{
   margin-top: 30px;
   margin-right: 30px
 }
-.kontejnerSpolecnost{
-  display: flex;
-  margin-top: 30px;
-  line-height: 1.5;
-  max-width: 1150px;
-  
-}
+
 .predstaveni {
   padding: 20px;
   text-align: justify;
