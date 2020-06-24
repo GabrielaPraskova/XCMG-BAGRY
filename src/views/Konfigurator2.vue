@@ -173,7 +173,7 @@
 		</div>
 
 		
-		<div v-if="jeEmailOdeslan === true">
+		<div v-if="jeEmailOdeslan === false">
 			<div class="label" > 
 				<label> Email </label> 
 			</div>
@@ -184,7 +184,7 @@
 		
 		<p v-else class="ozvemeSe">Poptávka odeslána, ozveme se Vám do dvou pracovních dnů.</p>
 		
-		<v-btn v-on:click="jeEmailOdeslan = false"  v-if="jeEmailOdeslan === true" class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
+		<v-btn v-on:click="jeEmailOdeslan = true"  v-if="jeEmailOdeslan === false" class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
 
 		<p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>        
 
@@ -210,7 +210,7 @@ export default {
       aktivniBarva: "Žlutá",
       aktivniPrislusenstvi: {},
 	  aktivniNadstandart: {},
-	  jeEmailOdeslan:true
+	  jeEmailOdeslan:false
     };
   },
 
@@ -223,6 +223,8 @@ export default {
       this.rypadla = filtrovaneStroje;
       this.aktivniRypadlo = filtrovaneStroje[0];
 	  this.aktivniMotor = filtrovaneStroje[0].motor[0];
+	  this.jeEmailOdeslan = false;
+	  this.aktivniStranka = 0;
     },
   },
 
@@ -398,7 +400,7 @@ export default {
 	border-radius: 5px;
 	text-align: left;
 	margin-right: 10px;
-	margin-top: 50px;
+	margin-top: 30px;
 	outline: none;
 }
 

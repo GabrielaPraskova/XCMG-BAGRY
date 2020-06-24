@@ -353,7 +353,7 @@ export default {
         {id:5, typ:"bagr", nazev:"Sněhová fréza", cenaSDPH: 87900, cenaBezDPH: 106359, obrazek:"snehovaFreza.jpg"},
         {id:6, typ:"bagr", nazev:"Snežná radlice", cenaSDPH: 34900, cenaBezDPH: 42229, obrazek:"sneznaRadlice.jpg"},
         {id:7, typ:"bagr", nazev:"Vidle na dřevo", cenaSDPH: 49000, cenaBezDPH: 59290, obrazek:"vidleNaDrevo.jpg"},
-        {id:8, typ: "rypadlo", nazev:"Paletovací vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"paletovaciVidle.jpg" },
+        {id:8, typ: "rypadlo", nazev:"Paletovací vidle", cenaSDPH: 29000, cenaBezDPH: 35090, obrazek:"paletovaciVidleRypadlo.jpg" },
         {id:9, typ: "rypadlo", nazev:"Rozrývač", cenaSDPH: 24900, cenaBezDPH: 30129, obrazek:"rozryvac.jpg" },
         {id:10, typ: "rypadlo", nazev:"Sekačka", cenaSDPH: 59000, cenaBezDPH: 71390, obrazek:"sekacka.jpg" },
         {id:11, typ: "rypadlo", nazev:"Třídící lžíce", cenaSDPH: 79000, cenaBezDPH: 95590, obrazek:"tridiciLzice.png" },
