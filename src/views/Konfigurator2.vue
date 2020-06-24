@@ -325,7 +325,7 @@ export default {
 	overflow: auto;
 	min-height: 0;
 	margin-top: 50px;
-	margin-right: 70px;
+	margin-right: 20px;
 }
 
 .strankovani { 
