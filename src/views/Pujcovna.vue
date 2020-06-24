@@ -79,6 +79,7 @@ export default {};
 .kontejnerDite {
   display: flex;
   width:1150px;
+  flex-wrap: wrap;
   }
 
 h1 {
@@ -120,6 +121,7 @@ h3 {
 .pujcovnaSloupecJedna,
 .pujcovnaSloupecDva{
   flex:1;
+  flex-basis: 500px;
 }
 
 .pujcovnaSloupecDva{

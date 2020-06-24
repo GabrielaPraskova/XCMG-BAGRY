@@ -62,6 +62,14 @@
   color: #2c3e50;
 }
 
+.kontejnerRodic {
+ flex-wrap: wrap;
+}
+
+.kontejnerDite {
+  flex-basis: 700px;
+}
+
 .nav {
   flex: 0 0 121px;
 }

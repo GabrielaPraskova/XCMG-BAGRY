@@ -9,8 +9,8 @@
 	<div class="ponuka">
 		<div v-if="aktivniStranka === 0" class="druhy">
 			<h1 class="nadpisKonfigurator">{{aktivniRypadlo.nazev}}</h1>
-			<button v-on:click="nastavAktivniRypadlo(rypadlo)" v-bind:class="{active: rypadlo === aktivniRypadlo}"
-				v-for="(rypadlo,index) in rypadla" v-bind:key="index" class="tlacitkoNosnostHmotnost">
+			<button class="tlacitkoNosnostHmotnost" v-on:click="nastavAktivniRypadlo(rypadlo)" v-bind:class="{'btn-active': rypadlo === aktivniRypadlo}" 
+				v-for="(rypadlo,index) in rypadla" v-bind:key="index">
 				<div class="hmotnost">Hmotnost: {{rypadlo.technickeParametry.hmotnost}}t</div>
 				<div v-if="typ === 'bagr'" class="nosnost">Nosnost: {{rypadlo.technickeParametry.nosnost}}t
 				</div>
@@ -377,6 +377,7 @@ export default {
 	text-align: left;
 	margin: 10px;
 	width: 150px;
+	outline: none;
 }
 
 .strankovani {
