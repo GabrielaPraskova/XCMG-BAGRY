@@ -1,5 +1,5 @@
 <template>
-  <div class="kontejnerKontakt">
+  <div class="kontejnerRodic">
    
     <div class="kontakt">
       <div class="kancelar">
@@ -79,7 +79,7 @@ export default {};
 
 <style scoped>
 
-.kontejnerKontakt{
+.kontejnerRodic{
    margin-top: 30px;
    display: flex;
    justify-content: center;

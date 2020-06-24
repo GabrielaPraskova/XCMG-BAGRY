@@ -167,6 +167,6 @@ h3 {
   flex: 0 0 39;
   background-color: #eeee;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 </style>

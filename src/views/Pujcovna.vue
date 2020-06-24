@@ -1,6 +1,6 @@
 <template>
-  <div class="pujcovnaKontejner">
-    <div class="pujcovna">
+  <div class="kontejnerRodic">
+    <div class="kontejnerDite">
       <div class="pujcovnaSloupecJedna">
         <div class="pujcovnaPopis">
           <h1>Půjčovna strojů</h1>
@@ -69,19 +69,19 @@ export default {};
 </script>
 
 <style scoped>
-.pujcovnaKontejner{
+.kontejnerRodic{
   display: flex;
   justify-content: center;
   margin-top: 30px;
   line-height: 1.5;
   }
 
-.pujcovna {
+.kontejnerDite {
   display: flex;
   width:1150px;
   }
 
-.pujcovna h1 {
+h1 {
   margin-bottom: 20px;
   color:#3498db
 }
