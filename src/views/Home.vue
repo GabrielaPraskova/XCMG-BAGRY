@@ -1,13 +1,13 @@
 <template>
   <div class="home">
 
-    <router-link class="box" style="background-image:url(/LW800KN.jpg)" to="/konfigurator2/bagr">
+    <router-link class="box" style="background-image:url(/LW800KN.jpg)" to="/konfigurator/bagr">
       <v-btn class="boxTlacitko" x-large color="success" dark>Konfiguruj</v-btn>
      
     </router-link> 
 
 
-    <router-link class="box" style="background-image:url(/LP500JK.jpg)" to="/konfigurator2/rypadlo">
+    <router-link class="box" style="background-image:url(/LP500JK.jpg)" to="/konfigurator/rypadlo">
        <v-btn class="boxTlacitko" x-large color="success" dark> Konfiguruj</v-btn>
     </router-link>
 

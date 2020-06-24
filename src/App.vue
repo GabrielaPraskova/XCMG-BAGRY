@@ -27,8 +27,8 @@
           <div class="menuLink">
             Stroje
             <div class="podmenu">
-              <router-link class="menuLink" to="/Konfigurator2/bagr">Kolové bagry</router-link>
-              <router-link class="menuLink" to="/Konfigurator2/rypadlo">Rypadla</router-link>
+              <router-link class="menuLink" to="/Konfigurator/bagr">Kolové bagry</router-link>
+              <router-link class="menuLink" to="/Konfigurator/rypadlo">Rypadla</router-link>
             </div>
           </div>
             <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>

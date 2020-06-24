@@ -196,35 +196,45 @@
 <script>
 import Data from "./../assets/Data/data.js";
 
+function reset()
+{
+	return {
+		aktivniBarva: "Žlutá",
+		aktivniPrislusenstvi: {},
+		aktivniNadstandart: {},
+		jeEmailOdeslan: false,
+		aktivniStranka: 0,
+	}
+}
+
 export default {
   props: ["typ"],
   data() {
-    const stroje = Data.stroje.filter((stroj) => stroj.typ === this.typ);
+	const stroje = Data.stroje.filter((stroj) => stroj.typ === this.typ);
 
     return {
-      Data,
-      aktivniStroj: stroje[0],
-      stroje,
-      aktivniStranka: 0,
-      aktivniMotor: stroje[0].motor[0],
-      aktivniBarva: "Žlutá",
-      aktivniPrislusenstvi: {},
-	  aktivniNadstandart: {},
-	  jeEmailOdeslan:false
+		...reset(),
+		Data,
+		aktivniStroj: stroje[0],
+		stroje,
+		aktivniMotor: stroje[0].motor[0],
     };
   },
 
   watch: {
     typ() {
-      const filtrovaneStroje = Data.stroje.filter(
-        (stroj) => stroj.typ === this.typ
-	  );
+		const filtrovaneStroje = Data.stroje.filter(
+			(stroj) => stroj.typ === this.typ
+		);
 
-      this.stroje = filtrovaneStroje;
-      this.aktivniStroj = filtrovaneStroje[0];
-	  this.aktivniMotor = filtrovaneStroje[0].motor[0];
-	  this.jeEmailOdeslan = false;
-	  this.aktivniStranka = 0;
+		this.stroje = filtrovaneStroje;
+		this.aktivniStroj = filtrovaneStroje[0];
+		this.aktivniMotor = filtrovaneStroje[0].motor[0];
+
+		Object.entries( reset() ).forEach( entry =>
+		{
+			this[ entry[0] ] = entry[ 1 ];
+		})
     },
   },
 
@@ -233,6 +243,8 @@ export default {
       const stroje = Data.prislusenstvi.filter(
         (polozka) => polozka.typ === this.typ
 	  );
+	  this.prislusenstvi = {}
+	  this.nadstandart = {}
 	  
       return stroje;
     },
@@ -311,10 +323,10 @@ export default {
 .grid-container {
 	height:100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1.5fr 1fr 1fr;
 	grid-template-rows: 1.5fr 1fr 0.5fr;
 	gap: 1px 1px;
-	grid-template-areas: "obrazek obrazek ponuka kalkulace" "obrazek obrazek ponuka celkem" "obrazek obrazek strankovani celkem";
+	grid-template-areas: "obrazek ponuka kalkulace" "obrazek ponuka celkem" "obrazek strankovani celkem";
 	max-height: 100%;
     overflow: hidden;
 }
@@ -413,11 +425,6 @@ export default {
 	box-shadow: 0px 0px 7px 0px;
 }
 
-.tabulka {
-	text-align: left;
-	font-size: 15px;
-}
-
 .nadpisKonfigurator{
 	color:#2c3e50;
 	margin: 15px;
@@ -483,7 +490,7 @@ h2{
 
 .barvy{	
 	margin-left: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .ozvemeSe{
 	 font-style: italic;
