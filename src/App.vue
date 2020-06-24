@@ -30,11 +30,11 @@
               <router-link class="menuLink" to="/Konfigurator2/bagr">Kolové bagry</router-link>
               <router-link class="menuLink" to="/Konfigurator2/rypadlo">Rypadla</router-link>
             </div>
-            </div>
-              <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>
-              <router-link class="menuLink" to="/servis">Servis</router-link>
-              <router-link class="menuLink" to="/spolecnost">O společnosti</router-link>
-              <router-link class="menuLink" to="/kontakt">Kontakt</router-link>
+          </div>
+            <router-link class="menuLink" to="/pujcovna">Půjčovna</router-link>
+            <router-link class="menuLink" to="/servis">Servis</router-link>
+            <router-link class="menuLink" to="/spolecnost">O společnosti</router-link>
+            <router-link class="menuLink" to="/kontakt">Kontakt</router-link>
         </ul>
       </div>
     </div>
@@ -45,7 +45,7 @@
 
     <div class="copy">
         copyright &copy; {{ new Date().getFullYear() }} XCMG/GM
-      </div>
+    </div>
   </div>
 </template>
 
@@ -96,11 +96,14 @@
 .druheMenu {
   display: flex;
   justify-content: space-between;
-  flex-shrink: 1;
   text-align: center;
   background-color: white;
   /* border-top: white solid 1px;
     border-bottom: white solid 1px; */
+}
+
+.logo{
+  flex: 0 0 208px;
 }
 
 .logo a,
@@ -133,17 +136,22 @@
   margin: 0;
   padding: 0;
   font-size: 20px;
+  /*justify-content: space-around;*/
+  align-items: center;
 }
 
 .menuLink {
   display: block;
   position: relative;
-  padding: 20px 55px;
+  padding-left: 30px;
+  padding-right: 30px;
   color: #3498db;
   text-decoration: none;
   white-space: nowrap;
   text-align: left;
   font-weight: bold;
+  justify-content: center;
+  flex:1
 }
 
 .menuLink:hover {
