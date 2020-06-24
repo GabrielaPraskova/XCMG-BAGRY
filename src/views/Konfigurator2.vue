@@ -60,7 +60,8 @@
 			<div  class="barvy">
 				<button class="tlacitkaBarvy" v-on:click="vyberBarvu(preklad)" v-for="(preklad, barva) in Data.barvy"
 					v-bind:key="barva" v-bind:style="`background: ${barva}`"
-					v-bind:class="{'btn-active':preklad === aktivniBarva}"></button>
+					v-bind:class="{'btn-active':preklad === aktivniBarva}">
+				</button>
 			</div>
 
 			
@@ -171,13 +172,21 @@
 			</div>
 		</div>
 
+		
+
+		<div class="label">
+              <label> Email </label> 
+		</div>
+        <div class="labelEmail">
+              <input  class="inputKontakt" type="email"> 
+        </div>
+
 		<v-btn class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
+            
 
 		<p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>
 
-		<p class="ozvemeSe">Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám
-			ozveme do následujícího pracovního dne.
-		</p>
+		
 
 	</div>
 
@@ -453,7 +462,7 @@ export default {
 }
 
 .tlacitkoPoptavka{
-	margin-top: 40px;
+	margin-top: 20px;
 	text-align: right;
 }
 
@@ -474,7 +483,8 @@ h2{
 } */
 
 .barvy{
-	text-align: left;
+	
+	margin-left: 20px;
 }
 
 .casDodani {
@@ -482,6 +492,21 @@ h2{
 	font-style: italic;
 	text-align: left;
 }
+
+.labelEmail{	
+  border: 1px solid #3498db;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  margin-top: 10px;
+ }
+
+ .label{
+	 color: #3498db;
+	 margin-top:10px
+
+ }
+
 
 .ozvemeSe{
 	 font-style: italic;

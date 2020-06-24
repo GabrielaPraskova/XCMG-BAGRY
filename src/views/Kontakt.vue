@@ -62,6 +62,9 @@
         </div>
          <v-btn class="tlacitkoOdeslat" outlined color="#3498db">Odeslat</v-btn>
       </div>
+      <!--<p class="ozvemeSe">Máte-li zájem o konkrétní konfiguraci stroje, napište nám a my se vám
+			ozveme do následujícího pracovního dne.
+		</p>-->
     
       <div class="obrazek">  
           <img class="mapa" src="mapa.jpg" alt="mapa">

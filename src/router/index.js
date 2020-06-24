@@ -9,6 +9,7 @@ import Kontakt from '../views/Kontakt.vue'
 // import Konfigurator1 from '../views/Konfigurator1.vue'
 import Konfigurator2 from '../views/Konfigurator2.vue'
 
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -49,7 +50,8 @@ Vue.use(VueRouter)
     name: 'Konfigurator2',
     component: Konfigurator2,
     props: true
-  },
+  },  
+
 ]
 
 const router = new VueRouter({
