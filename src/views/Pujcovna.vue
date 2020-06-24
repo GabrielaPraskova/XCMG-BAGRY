@@ -142,5 +142,10 @@ h3 {
   margin: 0;
 }
 
+.pujcovnaSloupecJedna p,
+.pujcovnaSloupecDva p{
+  font-size: 14px
+}
+
 
 </style>

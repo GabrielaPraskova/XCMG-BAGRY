@@ -91,6 +91,7 @@ export default {};
 .kontakt p{
   text-align: left;
   line-height: 1.5;
+  font-size: 14px
 }
 .mapa {
   flex: 3;

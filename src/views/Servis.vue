@@ -70,6 +70,7 @@ export default {
   margin-bottom: 10px;
   text-align: justify;
   line-height: 1.5;
+  font-size: 14px
 }
 
 .servisObrazek{
