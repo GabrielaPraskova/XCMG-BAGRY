@@ -483,6 +483,7 @@ h2{
 
 .barvy{	
 	margin-left: 20px;
+	margin-bottom: 20px;
 }
 .ozvemeSe{
 	 font-style: italic;
