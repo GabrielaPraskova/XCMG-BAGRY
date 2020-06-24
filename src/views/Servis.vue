@@ -77,7 +77,6 @@ export default {
 }
 
 .servisObrazek{
-  margin-top: px;
   margin-right: 20px;
 }
 .imgServis{

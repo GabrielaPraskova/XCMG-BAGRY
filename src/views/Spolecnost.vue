@@ -1,9 +1,7 @@
 <template>
   <div class="kontejnerRodic">
     <div class="kontejnerDite">
-      <div class="obrazekSpolecnost">
-        <img src="building.png" alt="budova" />
-      </div>
+      <img class="obrazekSpolecnost" src="building.png" alt="budova" />
       <div class="predstaveni">
         <h2>XCMG</h2>
         <p class="odstavec">Xuzhou Construction Machinery Group Co., Ltd. (XCMG) byla založena v roce 1943. Od té doby XCMG stála v čele čínského průmyslu stavebních strojů a vyvinula se v jednu z největších, nejvlivnějších a nejkonkurenceschopnějších skupin.</p>
@@ -40,10 +38,12 @@ export default {};
   margin-top: 30px;
   line-height: 1.5;
   max-width: 1150px;  
+  margin: 30px;
 }
 .obrazekSpolecnost{
   margin-top: 30px;
-  margin-right: 30px
+  margin-right: 30px;
+  width: 80%;
 }
 
 .predstaveni {
@@ -53,7 +53,8 @@ export default {};
 
 .obrazekSpolecnost,
 .predstaveni {
-  flex-basis: 500px;
+  flex:1;
+  flex-basis: 300px;
 }
 
 .predstaveni h2{
