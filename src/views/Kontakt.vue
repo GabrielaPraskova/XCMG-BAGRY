@@ -93,7 +93,6 @@ export default {};
   line-height: 1.5;
 }
 .mapa {
-  /* margin-top: 50px; */
   flex: 3;
   width: 100%;
 }

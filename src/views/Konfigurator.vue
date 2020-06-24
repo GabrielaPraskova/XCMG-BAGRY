@@ -373,10 +373,6 @@ export default {
 	margin-top: 30px
 	
 }
-/* .popisStroje {
-	text-align: left;
-	margin-left: 20px;	
-} */
 
 .vybranyStroj {
 	max-width: 100%;
@@ -481,12 +477,6 @@ h2{
 	text-align: left;
 }
 
-/* .druhy,
-.druhy2,
-.druhy3 {
-	text-align: left;
-	margin-top: 30px
-} */
 
 .barvy{	
 	margin-left: 20px;

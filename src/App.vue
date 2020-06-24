@@ -58,7 +58,6 @@
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
 }
 
@@ -98,8 +97,6 @@
   justify-content: space-between;
   text-align: center;
   background-color: white;
-  /* border-top: white solid 1px;
-    border-bottom: white solid 1px; */
 }
 
 .logo{
@@ -136,7 +133,6 @@
   margin: 0;
   padding: 0;
   font-size: 20px;
-  /*justify-content: space-around;*/
   align-items: center;
 }
 
