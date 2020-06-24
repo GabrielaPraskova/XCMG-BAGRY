@@ -30,18 +30,6 @@
 		</div>
 
 
-
-<!-- <div class="napisyZaklikanychPolozek">Stroj</div>
-
-			<div class="rodic">
-				<div class="prvniSloupec">{{aktivniRypadlo.nazev}} </div>
-				<div class="druhySloupec">
-					<div class="vybranePolozky">{{aktivniRypadlo.cenaBezDPH | numeralFormat}} Kč</div>
-				</div>
-			</div> -->
-
-
-
 		<div class="druhy2" v-if="aktivniStranka === 1 && typ === 'bagr' ">
 			
 			
