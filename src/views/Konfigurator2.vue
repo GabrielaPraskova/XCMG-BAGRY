@@ -181,25 +181,12 @@
 				<input  class="inputKontakt" type="email"> 
 			</div>
 		</div>
-
-		<div v-else class="ozvemeSe">
-
-			<p>Poptávka odeslána, ozveme se Vám do dvou pracovních dnů.</p>
-
-			<p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>
-
-		</div>
-
+		
+		<p v-else class="ozvemeSe">Poptávka odeslána, ozveme se Vám do dvou pracovních dnů.</p>
+		
 		<v-btn v-on:click="jeEmailOdeslan = false"  v-if="jeEmailOdeslan === true" class="tlacitkoPoptavka" outlined color="#3498db">Nezávazná Poptávka</v-btn>
 
-		
-
-		
-            
-
-		
-
-		
+		<p class="casDodani">Běžná doba dodání stroje od odeslání závazné objednávky je 2 měsíce</p>        
 
 	</div>
 
@@ -358,7 +345,6 @@ export default {
 	margin-right: 50px;
 }
 
-
 .kontejner {
 	display: flex;
 }
@@ -493,24 +479,21 @@ h2{
 	margin-top: 30px
 } */
 
-.barvy{
-	
+.barvy{	
 	margin-left: 20px;
 }
 .ozvemeSe{
 	 font-style: italic;
 	 text-align: left;
-	 margin-top: 40px;
+	 margin-top: 40px;	 
 }
 
 .casDodani {
 	font-style: italic;
 	text-align: left;
-	padding-top: 10px;
+	padding-top: 30px;
 	line-height: 1.5	
 }
-
-
 
 .labelEmail{	
   border: 1px solid #3498db;
@@ -523,7 +506,6 @@ h2{
  .label{
 	 color: #3498db;
 	 margin-top:10px
-
  }
 
 .rodic{
