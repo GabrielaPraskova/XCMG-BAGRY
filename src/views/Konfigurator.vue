@@ -165,9 +165,9 @@
 			<div class="label" > 
 				<label> Email </label> 
 			</div>
-			<div class="labelEmail">
-				<input  class="inputKontakt" type="email"> 
-			</div>
+			
+			<input class="email" type="email"> 
+			
 		</div>
 		
 		<p v-else class="ozvemeSe">Poptávka odeslána, ozveme se Vám do dvou pracovních dnů.</p>
@@ -382,6 +382,7 @@ export default {
 	margin: 10px;
 	width: 150px;
 	outline: none;
+
 }
 
 .strankovani {
@@ -425,8 +426,8 @@ export default {
 }
 
 .napisyZaklikanychPolozek {
-	font-weight: 500;
-	font-size: 20px;
+	font-weight: 600;
+	font-size: 16px;
 	color: #2c3e50;
 	padding-bottom: 10px;
 	text-transform: uppercase;
@@ -435,11 +436,12 @@ export default {
 
 .vybranePolozky {
 	padding-bottom:15px;
+	font-size: 13px;
 }
 
 .cenaCelkem {
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 17px;
 	color: #3498db;
 	text-transform: uppercase;
 	text-align: left;
@@ -448,7 +450,7 @@ export default {
 .vypsanaCenaCelkem {
 	color: #3498db;
 	font-weight: 800;
-	font-size: 20px;
+	font-size: 17px;
 }
 
 .tlacitkoPoptavka{
@@ -456,8 +458,13 @@ export default {
 	text-align: right;
 }
 
-.hmotnost{
-	font-weight: bold
+.hmotnost {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.nosnost {
+	font-size: 12px;
 }
 
 h2{
@@ -473,27 +480,33 @@ h2{
 .ozvemeSe{
 	 font-style: italic;
 	 text-align: left;
-	 margin-top: 40px;	 
+	 margin-top: 40px;	
+	 font-size: 13px; 
 }
 
 .casDodani {
 	font-style: italic;
 	text-align: left;
 	padding-top: 30px;
-	line-height: 1.5	
+	line-height: 1.5;
+	font-size: 13px;
 }
 
-.labelEmail{	
+.email{	
   border: 1px solid #3498db;
   padding: 10px;
   border-radius: 5px;
   text-align: left;
-  margin-top: 15px;
+  margin-top: 5px;
+  display: block;
+  font-size: 10px;
+
  }
 
  .label{
 	 color: #3498db;
-	 margin-top:10px
+	 margin-top:20px;
+	 font-size: 13px;
  }
 
 .rodic{
@@ -503,15 +516,22 @@ h2{
 .prvniSloupec{
 	flex-grow: 1;
 	text-align: left;
+	font-size: 14px;
 }
 .druhySloupec{
 	flex-grow: 1;
 	text-align: right;
 	font-style: italic;
+	font-size: 14px;
 }
 
 .theme--light.v-label {
     color: black
 }
+</style>
 
+<style>
+.v-label {
+    font-size: 11px !important;
+}
 </style>
